@@ -1,7 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Picture } from "astro:assets";
+import headerImage from "../assets/header.jpg";
 ---
 
 <Layout title="manao" description="manao">
-  <main>hello</main>
+  <main>
+    <Picture src={headerImage} alt="Header" />
+  </main>
 </Layout>
