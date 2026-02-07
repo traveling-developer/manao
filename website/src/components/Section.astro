@@ -1,0 +1,59 @@
+---
+import { getImage } from "astro:assets";
+
+interface Props {
+  imageMetadata: ImageMetadata;
+}
+
+const { imageMetadata } = Astro.props;
+
+const smallBackground = await getImage({
+  src: imageMetadata,
+  width: 640,
+});
+
+const mediumBackground = await getImage({
+  src: imageMetadata,
+  width: 1536,
+});
+
+const largeBackground = await getImage({
+  src: imageMetadata,
+  width: 2560,
+});
+
+const originalBackground = await getImage({
+  src: imageMetadata,
+});
+---
+
+<div
+  class="responsive-bg relative flex h-28 w-full items-center justify-center bg-cover bg-center sm:h-48"
+  style={`--bg-small: url(${smallBackground.src}); --bg-medium: url(${mediumBackground.src}); --bg-large: url(${largeBackground.src}); --bg-original: url(${originalBackground.src});`}
+>
+  <div class="absolute inset-0 bg-black opacity-40"></div>
+</div>
+
+<style>
+  .responsive-bg {
+    background-image: var(--bg-small);
+  }
+
+  @media (min-width: 640px) {
+    .responsive-bg {
+      background-image: var(--bg-medium);
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .responsive-bg {
+      background-image: var(--bg-large);
+    }
+  }
+
+  @media (min-width: 2560px) {
+    .responsive-bg {
+      background-image: var(--bg-original);
+    }
+  }
+</style>
