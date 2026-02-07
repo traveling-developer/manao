@@ -11,3 +11,7 @@
   --radius-box: 1rem;
   --radius-field: 0.5rem;
 }
+
+@theme {
+  --color-manao: oklch(0.6818 0.1163 204.3);
+}
