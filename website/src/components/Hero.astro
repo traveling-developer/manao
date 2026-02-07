@@ -1,0 +1,32 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "../assets/portrait.webp";
+---
+
+<div class="hero bg-base-200 py-12">
+  <div class="hero-content flex-col gap-5 md:flex-row md:gap-20">
+    <Picture
+      src={heroImage}
+      formats={["webp"]}
+      alt={"Ein Bild von Kathrin Menzel"}
+      widths={[400]}
+      sizes={`400px`}
+      class="aspect-square w-60 rounded-full object-cover object-[center_40%] md:w-4xl"
+    />
+    <div class="space-y-6">
+      <h1 class="text-4xl">Hallo ich bin Kathrin,</h1>
+      <p>
+        Geboren 1982. Mit meiner Familie wohne ich in Neustadt/Aisch. Unsere
+        Familienhündin „Jala“ vervollständigt unser Glück. Sie hat mit mir beim
+        Therapiehunde Deutschland e.V. ihren Eignungstest sowie die Ausbildung
+        zum Therapiehund gemacht.
+      </p>
+      <p>Bitte sprich mich an, falls Ängste oder Allergien bestehen.</p>
+      <p>
+        Alltagstaugliche Werkzeuge * lösungsorientiert * keine Abhängig- keit
+        Hilfe zur Selbsthilfe * keine fixen „Programme“ sondern
+        „maßgeschneidert“ * alles ist bereits in dir!
+      </p>
+    </div>
+  </div>
+</div>
