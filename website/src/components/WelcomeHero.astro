@@ -1,0 +1,58 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "../assets/kathrin.webp";
+---
+
+<div class="hero">
+  <div
+    class="hero-content mx-5 my-10 flex-col items-start gap-5 md:flex-row md:gap-20"
+  >
+    <div
+      class="w-full max-w-xs self-center md:max-w-sm md:basis-3/5 md:self-auto lg:max-w-md"
+    >
+      <Picture
+        src={heroImage}
+        alt={"Ein Bild von Kathrin Menzel"}
+        class="w-full"
+      />
+    </div>
+    <div class="space-y-6 md:basis-2/5">
+      <h1 class="font-licorice text-manao text-5xl">
+        Zurück zu dir - vorwärts ins Leben.
+      </h1>
+      <p>
+        In einem geschützten, achtsamen Rahmen begleite ich Kinder, Jugendliche
+        & Erwachsene dabei, ihre innere Verbindung zu stärken oder
+        wiederzufinden - für mehr Klarheit, Leichtigkeit und Wohlbefinden.
+      </p>
+      <p class="text-manao text-center font-bold">
+        Glück, Zufriedenheit und Stabilität entstehen, wenn Körper, Geist und
+        Seele im Einklang sind und wir nach unseren Werten und Bedürfnissen
+        leben.
+      </p>
+      <p class="text-center">Orientierung gibt dabei unsere innere Stimme.</p>
+      <p>
+        Im Alltag oder im Laufe unseres Lebens kann es passieren, dass die
+        innere Stimme leiser wird. Dann fällt es schwerer, eigene Bedürfnisse
+        klar zu erkennen und stimmige Entscheidungen zu treffen. Innere Unruhe,
+        Unsicherheit und Orientierungslosigkeit können entstehen. In solchen
+        Phasen fühlen wir uns zunehmend als Opfer äußerer Umstände obwohl wir
+        doch alle aktive Gestalter unseres Lebens sind.
+      </p>
+      <p>
+        Ich unterstütze Menschen jeden Alters, die Verantwortung für sich
+        übernehmen wollen - ganz besonders Eltern, in ihrer tragenden Rolle -
+        sowie Kinder, die Raum brauchen, um ihre innere Stimme zu hören - für
+        Selbstwahrnehmung, Stabilität, Persönlichkeitsentwicklung und
+        Sinnfindung.
+      </p>
+      <div class="flex justify-center">
+        <a
+          href="/kontakt"
+          class="btn bg-manao text-white transition-colors duration-300 hover:bg-white hover:text-manao hover:border-manao"
+          >Jetzt Termin anfragen</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
