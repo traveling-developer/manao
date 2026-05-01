@@ -1,0 +1,86 @@
+---
+const links = [
+  { label: "Willkommen", href: "/" },
+  { label: "Angebote", href: "/" },
+  { label: "Arbeitsweise", href: "/" },
+  { label: "über mich", href: "/" },
+  { label: "Mehr", href: "/" },
+];
+
+const moreLinks = [{ label: "Stimme", href: "/stimme" }];
+---
+
+<div class="navbar bg-manao min-h-0 py-1 text-white shadow-sm">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h7"></path>
+        </svg>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu dropdown-content menu-sm bg-manao z-10 mt-3 w-52 p-2 shadow"
+      >
+        {
+          links.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+        <li></li>
+      </ul>
+      <ul class="menu menu-horizontal hidden px-1 lg:flex">
+        {
+          links.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  .navbar :global(.menu :where(li > a, li > details > summary)) {
+    background-color: transparent;
+    text-transform: uppercase;
+    text-decoration-line: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 0.35rem;
+    transition: text-decoration-color 300ms ease;
+  }
+  .navbar :global(.menu :where(li > a, li > details > summary):hover),
+  .navbar :global(.menu :where(li > a, li > details > summary):focus) {
+    background-color: transparent;
+    text-decoration-color: currentColor;
+  }
+  .navbar :global(.menu-horizontal > li:not(:last-child)) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .navbar :global(.menu-horizontal > li:not(:last-child) > a) {
+    flex: 0 0 auto;
+  }
+  .navbar :global(.menu-horizontal > li:not(:last-child)::after) {
+    content: "|";
+    color: white;
+    flex: 0 0 auto;
+    pointer-events: none;
+  }
+</style>
