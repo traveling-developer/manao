@@ -1,0 +1,34 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "../assets/intension.webp";
+---
+
+<div class="hero">
+  <div
+    class="hero-content mx-5 my-10 flex-col items-start gap-5 md:flex-row md:gap-20"
+  >
+    <div class="space-y-6 md:basis-2/5">
+      <h1 class="font-licorice text-manao text-5xl">Meine Intention</h1>
+      <p>
+        Es ist schön zu beobachten, dass sich das Bewusstsein unserer
+        Gesellschaft nicht nur in Bezug auf gesunde Ernährung, Bewegung,
+        Nachhaltigkeit etc. sondern auch im Hinblick auf Selbstwahrnehmung,
+        Stabilität, Persönlichkeitsentwicklung und Sinnfindung erweitert.
+        Zunehmend entstehen Kurse für alle Altersgruppen sowie Weiterbildungen
+        für Erwachsene und Fachpersonal. Die Vielfalt dieser Formate wächst
+        stetig und bringt wertvolle Impulse mit sich. Strukturierte Abläufe und
+        standardisierte Inhalte bieten dabei Orientierung und erleichtern die
+        Umsetzung.
+      </p>
+    </div>
+    <div
+      class="w-full max-w-50 self-center md:max-w-xs md:basis-3/5 md:self-auto lg:max-w-sm"
+    >
+      <Picture
+        src={heroImage}
+        alt={"Wasser, Wellen, Ozean"}
+        class="aspect-square w-full rounded-full object-cover"
+      />
+    </div>
+  </div>
+</div>
