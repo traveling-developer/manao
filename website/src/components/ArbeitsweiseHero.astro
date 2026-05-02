@@ -1,0 +1,45 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "../assets/manao_sprung.webp";
+---
+
+<div class="hero">
+  <div
+    class="hero-content mx-5 my-10 flex-col items-start gap-5 md:flex-row md:gap-20"
+  >
+    <div class="space-y-6 md:basis-2/5">
+      <h1 class="font-licorice text-manao text-5xl">Meine Arbeitsweise</h1>
+      <p>
+        Ich arbeite präventiv und begleitend. Dabei verbinde ich
+        Coachingmethoden, Körperarbeit und energetische Ansätze, um dich zu
+        unterstützen, wieder in Kontakt mit dir selbst zu kommen und deine
+        eigenen Ressourcen im Alltag bewusst zu nutzen. Die Begleitung kann in
+        meinen Räumen, bei dir vor Ort, in der Natur, in meinem Van, telefonisch
+        oder online stattfinden. * alltagstaugliche Werkzeuge/lösungsorientiert
+        * keine Abhängigkeit * Hilfe zur Selbsthilfe * keine fixen "Programme",
+        sondern "maßgeschneidert" * alles ist bereits in dir!
+      </p>
+      <div>
+        <a
+          href="/kontakt"
+          class="btn bg-manao hover:text-manao hover:border-manao text-white transition-colors duration-300 hover:bg-white"
+          >Meine Haltung zur Erziehung</a
+        >
+        <a
+          href="/kontakt"
+          class="btn bg-manao hover:text-manao hover:border-manao text-white transition-colors duration-300 hover:bg-white"
+          >Motopädagogik /Psychomotorik</a
+        >
+      </div>
+    </div>
+    <div
+      class="w-full max-w-xs self-center md:max-w-sm md:basis-3/5 md:self-auto lg:max-w-md"
+    >
+      <Picture
+        src={heroImage}
+        alt={"Ein Bild von Kathrin Menzel"}
+        class="w-full"
+      />
+    </div>
+  </div>
+</div>
