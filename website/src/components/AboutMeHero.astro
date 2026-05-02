@@ -1,0 +1,40 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "../assets/portrait_outdoor.webp";
+---
+
+<div class="hero">
+  <div
+    class="hero-content mx-5 my-10 flex-col items-start gap-5 md:flex-row md:gap-20"
+  >
+    <div
+      class="w-full max-w-50 self-center md:max-w-xs md:basis-3/5 md:self-auto lg:max-w-sm"
+    >
+      <Picture
+        src={heroImage}
+        alt={"Ein Bild von Kathrin"}
+        class="aspect-square w-full rounded-full object-cover"
+      />
+    </div>
+    <div class="space-y-6 md:basis-2/5">
+      <h1 class="font-licorice text-manao text-5xl">Über mich</h1>
+      <p>
+        Ich bin Kathrin, geb. 1982 - Familienmensch und Wegbegleiterin. Ich
+        liebe Kinder und Menschen mit Herz, die Natur, Musik und Kreativität.
+        Ich liebe das Leben in seiner Tiefe. Seit über 20 Jahren begleite ich
+        Familien und Kinder in Entwicklungsprozessen und erlebe dabei zunehmend
+        die Folgen von Anpassung und der Entfremdung von sich selbst. Mein
+        Fokus: Kinder, Jugendliche, Erwachsene zurück in die Verbindung mit sich
+        selbst zu begleiten. Denn dort finden wir Klarheit, Orientierung und
+        das, was im Leben wirklich trägt.
+      </p>
+      <div class="flex justify-center">
+        <a
+          href="/"
+          class="btn bg-manao hover:text-manao hover:border-manao text-white transition-colors duration-300 hover:bg-white"
+          >Mehr über mich</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
