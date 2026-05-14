@@ -1,22 +1,29 @@
 ---
+import { Image } from "astro:assets";
+import logo from "../assets/Logo_Manao.png";
+
 const links = [
   { label: "Willkommen", href: "/" },
-  { label: "Angebote", href: "/" },
-  { label: "Arbeitsweise", href: "/" },
-  { label: "über mich", href: "/" },
-  { label: "Mehr", href: "/" },
+  { label: "Intention", href: "/intention" },
+  { label: "Angebote", href: "/angebote" },
+  { label: "Arbeitsweise", href: "/arbeitsweise" },
+  { label: "Über Mich", href: "/ich" },
+  { label: "Kontakt", href: "/kontakt" },
+  { label: "Aktuelles", href: "/aktuelles" },
 ];
 
-const moreLinks = [{ label: "Stimme", href: "/stimme" }];
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
 ---
 
-<div class="navbar bg-manao min-h-0 py-1 text-white shadow-sm">
+<nav
+  class="navbar bg-manao sticky top-0 z-50 min-h-0 flex-nowrap gap-4 px-4 py-2 text-white shadow-md"
+>
   <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+    <div class="dropdown lg:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost text-white">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
+          class="h-6 w-6"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -25,46 +32,64 @@ const moreLinks = [{ label: "Stimme", href: "/stimme" }];
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h7"></path>
+            d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </div>
       <ul
         tabindex="0"
-        class="menu dropdown-content menu-sm bg-manao z-10 mt-3 w-52 p-2 shadow"
+        class="menu menu-sm dropdown-content bg-manao z-10 mt-3 w-52 p-2 shadow"
       >
         {
           links.map((link) => (
             <li>
-              <a href={link.href}>{link.label}</a>
-            </li>
-          ))
-        }
-        <li></li>
-      </ul>
-      <ul class="menu menu-horizontal hidden px-1 lg:flex">
-        {
-          links.map((link) => (
-            <li>
-              <a href={link.href}>{link.label}</a>
+              <a
+                href={link.href}
+                class:list={[{ "is-active": currentPath === link.href }]}
+              >
+                {link.label}
+              </a>
             </li>
           ))
         }
       </ul>
     </div>
+
+    <ul class="menu menu-horizontal hidden flex-nowrap px-1 lg:flex">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class:list={[{ "is-active": currentPath === link.href }]}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
-</div>
+
+  <div class="navbar-end">
+    <a href="/" class="flex items-center" aria-label="manao Startseite">
+      <Image src={logo} alt="manao Logo" class="h-10 w-auto" loading="eager" />
+    </a>
+  </div>
+</nav>
 
 <style>
-  .navbar :global(.menu :where(li > a, li > details > summary)) {
+  .navbar :global(.menu :where(li > a)) {
     background-color: transparent;
     text-transform: uppercase;
     text-decoration-line: underline;
     text-decoration-color: transparent;
     text-underline-offset: 0.35rem;
     transition: text-decoration-color 300ms ease;
+    white-space: nowrap;
   }
-  .navbar :global(.menu :where(li > a, li > details > summary):hover),
-  .navbar :global(.menu :where(li > a, li > details > summary):focus) {
+  .navbar :global(.menu :where(li > a):hover),
+  .navbar :global(.menu :where(li > a):focus),
+  .navbar :global(.menu :where(li > a.is-active)) {
     background-color: transparent;
     text-decoration-color: currentColor;
   }
