@@ -1,0 +1,65 @@
+---
+import { getImage } from "astro:assets";
+
+interface Props {
+  imageMetadata: ImageMetadata;
+  alt?: string;
+}
+
+const { imageMetadata } = Astro.props;
+
+const smallBackground = await getImage({
+  src: imageMetadata,
+  width: 640,
+});
+
+const mediumBackground = await getImage({
+  src: imageMetadata,
+  width: 1536,
+});
+
+const largeBackground = await getImage({
+  src: imageMetadata,
+  width: 2560,
+});
+
+const originalBackground = await getImage({
+  src: imageMetadata,
+});
+---
+
+<div
+  class="responsive-bg relative flex min-h-40 w-full items-center justify-end bg-cover bg-center"
+  style={`--bg-small: url(${smallBackground.src}); --bg-medium: url(${mediumBackground.src}); --bg-large: url(${largeBackground.src}); --bg-original: url(${originalBackground.src});`}
+>
+  <div class="absolute inset-0"></div>
+  <div
+    class="relative ml-auto w-full px-6 py-10 text-right text-white md:w-2/3 md:px-10 md:py-12"
+  >
+    <slot />
+  </div>
+</div>
+
+<style>
+  .responsive-bg {
+    background-image: var(--bg-small);
+  }
+
+  @media (min-width: 640px) {
+    .responsive-bg {
+      background-image: var(--bg-medium);
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .responsive-bg {
+      background-image: var(--bg-large);
+    }
+  }
+
+  @media (min-width: 2560px) {
+    .responsive-bg {
+      background-image: var(--bg-original);
+    }
+  }
+</style>
