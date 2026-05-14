@@ -1,58 +1,96 @@
 ---
 import { Picture } from "astro:assets";
 import heroImage from "../assets/kathrin.webp";
+
+const keywords = [
+  "Selbstwahrnehmung",
+  "Stabilität",
+  "Persönlichkeitsentwicklung",
+  "Sinnfindung",
+];
 ---
 
-<div class="hero">
-  <div
-    class="hero-content mx-5 my-10 flex-col items-start gap-5 md:flex-row md:gap-20"
-  >
-    <div
-      class="w-full max-w-xs self-center md:max-w-sm md:basis-3/5 md:self-auto lg:max-w-md"
-    >
-      <Picture
-        src={heroImage}
-        alt={"Ein Bild von Kathrin Menzel"}
-        class="w-full"
-      />
-    </div>
-    <div class="space-y-6 md:basis-2/5">
-      <h1 class="font-licorice text-manao text-5xl">
-        Zurück zu dir - vorwärts ins Leben.
+<section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+  <div class="space-y-10 md:space-y-14">
+    <header class="space-y-4 text-center">
+      <h1
+        class="font-licorice text-manao text-balance text-5xl md:text-6xl lg:text-7xl"
+      >
+        Wegbegleitung aus ganzheitlicher Sicht
       </h1>
-      <p>
-        In einem geschützten, achtsamen Rahmen begleite ich Kinder, Jugendliche
-        & Erwachsene dabei, ihre innere Verbindung zu stärken oder
-        wiederzufinden - für mehr Klarheit, Leichtigkeit und Wohlbefinden.
+      <p
+        class="text-manao flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs font-semibold tracking-[0.2em] uppercase sm:text-sm"
+      >
+        {
+          keywords.map((word, i) => (
+            <>
+              <span>{word}</span>
+              {i < keywords.length - 1 && (
+                <span class="text-manao/40" aria-hidden="true">
+                  |
+                </span>
+              )}
+            </>
+          ))
+        }
       </p>
-      <p class="text-manao text-center font-bold">
-        Glück, Zufriedenheit und Stabilität entstehen, wenn Körper, Geist und
-        Seele im Einklang sind und wir nach unseren Werten und Bedürfnissen
-        leben.
-      </p>
-      <p class="text-center">Orientierung gibt dabei unsere innere Stimme.</p>
-      <p>
-        Im Alltag oder im Laufe unseres Lebens kann es passieren, dass die
-        innere Stimme leiser wird. Dann fällt es schwerer, eigene Bedürfnisse
-        klar zu erkennen und stimmige Entscheidungen zu treffen. Innere Unruhe,
-        Unsicherheit und Orientierungslosigkeit können entstehen. In solchen
-        Phasen fühlen wir uns zunehmend als Opfer äußerer Umstände obwohl wir
-        doch alle aktive Gestalter unseres Lebens sind.
-      </p>
-      <p>
-        Ich unterstütze Menschen jeden Alters, die Verantwortung für sich
-        übernehmen wollen - ganz besonders Eltern, in ihrer tragenden Rolle -
-        sowie Kinder, die Raum brauchen, um ihre innere Stimme zu hören - für
-        Selbstwahrnehmung, Stabilität, Persönlichkeitsentwicklung und
-        Sinnfindung.
-      </p>
-      <div class="flex justify-center">
-        <a
-          href="/kontakt"
-          class="btn bg-manao text-white transition-colors duration-300 hover:bg-white hover:text-manao hover:border-manao"
-          >Jetzt Termin anfragen</a
-        >
+    </header>
+
+    <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+      <div
+        class="w-full max-w-xs self-center md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+      >
+        <Picture
+          src={heroImage}
+          alt="Ein Bild von Kathrin Menzel"
+          class="w-full"
+        />
+      </div>
+      <div class="space-y-5 md:basis-3/5">
+        <p>
+          In einem geschützten, achtsamen Rahmen begleite ich Kinder,
+          Jugendliche & Erwachsene dabei, ihre innere Verbindung zu stärken oder
+          wiederzufinden - für mehr Klarheit, Leichtigkeit und Wohlbefinden.
+        </p>
+        <p class="text-manao text-center font-bold">
+          Glück, Zufriedenheit und Stabilität entstehen, wenn Körper, Geist und
+          Seele im Einklang sind und wir nach unseren Werten und Bedürfnissen
+          leben.
+        </p>
+        <p class="text-center">Orientierung gibt dabei unsere innere Stimme.</p>
+        <p>
+          Im Alltag oder im Laufe unseres Lebens kann es passieren, dass die
+          innere Stimme leiser wird. Dann fällt es schwerer, eigene Bedürfnisse
+          klar zu erkennen und stimmige Entscheidungen zu treffen. Innere
+          Unruhe, Unsicherheit und Orientierungslosigkeit können entstehen. In
+          solchen Phasen fühlen wir uns zunehmend als Opfer äußerer Umstände
+          obwohl wir doch alle aktive Gestalter unseres Lebens sind.
+        </p>
+        <p>
+          Ich unterstütze Menschen jeden Alters, die Verantwortung für sich
+          übernehmen wollen - ganz besonders Eltern, in ihrer tragenden Rolle -
+          sowie Kinder, die Raum brauchen, um ihre innere Stimme zu hören - für
+          Selbstwahrnehmung, Stabilität, Persönlichkeitsentwicklung und
+          Sinnfindung.
+        </p>
       </div>
     </div>
+
+    <div
+      class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6"
+    >
+      <a
+        href="/kontakt"
+        class="btn bg-manao hover:border-manao hover:text-manao w-full text-white transition-colors duration-300 hover:bg-white sm:w-auto"
+      >
+        Termin anfragen
+      </a>
+      <a
+        href="/stimme"
+        class="btn border-manao text-manao hover:bg-manao w-full bg-white transition-colors duration-300 hover:text-white sm:w-auto"
+      >
+        Die innere Stimme
+      </a>
+    </div>
   </div>
-</div>
+</section>
