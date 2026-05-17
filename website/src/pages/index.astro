@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Picture } from "astro:assets";
-import headerImage from "../assets/header.webp";
+import headerImage from "../assets/header_big.webp";
 import haende from "../assets/haende_baum.jpg";
 import WelcomeHero from "../components/WelcomeHero.astro";
 import ImageTextSection from "../components/ImageTextSection.astro";
@@ -10,15 +10,12 @@ import ColorSection from "../components/ColorSection.astro";
 import AngeboteHero from "../components/AngeboteHero.astro";
 import ArbeitsweiseHero from "../components/ArbeitsweiseHero.astro";
 import AboutMeHero from "../components/AboutMeHero.astro";
+import Divider from "../components/Divider.astro";
 ---
 
 <Layout title="manao" description="manao">
   <main>
-    <Picture
-      src={headerImage}
-      alt="Header"
-      class="aspect-3/1 w-full object-cover"
-    />
+    <Picture src={headerImage} alt="Header" class="" />
     <WelcomeHero />
     <ImageTextSection imageMetadata={haende}
       >"Wer auf seine innere Stimme hört, lebt im Einklang mit sich selbst. Dann
@@ -26,7 +23,7 @@ import AboutMeHero from "../components/AboutMeHero.astro";
       Lehrer</ImageTextSection
     >
     <IntentionHero />
-    <ColorSection />
+    <Divider />
     <AngeboteHero />
     <ArbeitsweiseHero />
     <ImageTextSection imageMetadata={haende}
