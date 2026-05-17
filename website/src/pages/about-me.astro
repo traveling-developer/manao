@@ -1,0 +1,165 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Picture } from "astro:assets";
+import aboutImage from "../assets/kathrin.webp";
+import haende from "../assets/haende_baum.jpg";
+import ImageTextSection from "../components/ImageTextSection.astro";
+import Divider from "../components/Divider.astro";
+---
+
+<Layout title="Über mich" description="tbd">
+  <main>
+    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+      <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+        <div
+          class="order-2 w-full max-w-xs self-center md:order-1 md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+        >
+          <Picture
+            src={aboutImage}
+            alt="Portrait Kathrin"
+            class="aspect-square w-full rounded-full object-cover"
+          />
+        </div>
+        <div class="order-1 space-y-5 md:order-2 md:basis-3/5">
+          <p>
+            Als Mama von zwei wundervollen Töchtern (geb. 2011 & 2015) und
+            Ehefrau eines ebenso wundervollen Mannes, erlebe ich täglich die
+            Entwicklungsräume, die mit diesen Rollen einhergehen. Dafür bin ich
+            zutiefst dankbar.
+          </p>
+          <p>
+            Geboren wurde ich 1982. Ausgestattet mit einer ausgeprägten
+            Hochsensibilität (Persönlichkeitsmerkmal nach Elaine N. Aron - wie
+            ich später erfahren durfte), habe ich schon als Kind Reize
+            intensiver erlebt und verarbeitet. Ich habe ein sehr feines Gespür
+            für Stimmungen und erfasse meist auch das, was zwischen den Zeilen
+            mitschwingt und unausgesprochen bleibt.
+          </p>
+          <p>
+            Eng mit diesem Persönlichkeitsmerkmal verbunden ist auch die
+            Wahrnehmung von Energien, emotionalen Feldern und feinen
+            zwischenmenschlichen Dynamiken, wodurch ich meist intuitiv erfassen
+            kann, was Menschen innerlich bewegt.
+          </p>
+          <p>
+            Heute weiß ich, das sind wertvolle Gaben. Als Kind und Jugenliche
+            war ich jedoch oft überfordert, müde und erschöpft. Erst im Laufe
+            der Zeit habe ich gelernt, diese Eigenschaften sinnvoll zu nutzen
+            und zu integrieren - nicht einfach, denn das Leben hatte auch noch
+            andere Herausforderungen für mich parat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <Divider />
+
+    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+      <div class="space-y-5">
+        <p>
+          Vielseitigkeit und mein Einfühlungsvermögen gut einbringen. Auch die
+          Zusammenarbeit mit den Eltern/Erziehungsberechtigten ist mir wichtig -
+          sie im Alltag zu unterstützen, gemeinsam zum Wohl des Kindes
+          beizutragen, empfinde ich wertvoll und sinnstiftend.
+        </p>
+        <p>
+          Die Überzeugung, dass jeder Mensch einzigartige Fähigkeiten in sich
+          trägt und sich im Zusammenspiel von Körper, Geist und Seele am besten
+          entwickeln kann, hat mich relativ schnell zu einem ganzheitlichen
+          Ansatz geführt. Diesen habe ich in der Psychomotorik (IPE) gefunden.
+        </p>
+        <p>
+          Parallel beschäftigen mich seit jeher Sinnfragen und die tieferen
+          Zusammenhänge des Lebens. Am Sterbebett meiner Oma hatte ich als junge
+          Erwachsene ein sehr einschneidendes Erlebnis, das mich bestätigte:
+        </p>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+      <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+        <div class="space-y-5 md:basis-3/5">
+          <p class="text-manao text-lg font-semibold md:text-xl">
+            Das Leben ist weit mehr als das Sichtbare, es gibt noch viel tiefere
+            Dimensionen.
+          </p>
+        </div>
+        <div
+          class="w-full max-w-xs self-center md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+        >
+          <Picture
+            src={aboutImage}
+            alt="Portrait Kathrin"
+            class="aspect-square w-full rounded-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+      <div class="space-y-5">
+        <p>
+          Diese Erfahrung wurde durch eine ernsthafte Krankheit im Alter von 26
+          Jahren weiter vertieft. Die Beschwerden hielten lange an und die
+          Schulmedizin fand keine Ursache. Ich suchte Hilfe in alternativen
+          Heilmethoden, die mir durch meine Kindheit bereits vertraut waren. Der
+          Weg führte mich allerdings letztendlich zu energetischer Arbeit.
+          Dadurch konnten Themen gelöst werden, bei denen zuvor lange keine
+          Veränderung möglich schien. Ich erfuhr Heilung auf mehreren Ebenen.
+        </p>
+        <p>Fasziniert davon begann ein bewusster Weg der Weiterbildung.</p>
+        <p>
+          Mit meiner ersten Schwangerschaft, der Geburt und der damit
+          verbundenen Erfahrung der Mutterschaft, erweiterte sich mein
+          Bewusstsein für mich selbst und für die Zusammenhänge des Lebens - und
+          damit auch Klarheit und innere Stabilität.
+        </p>
+        <p>
+          Diese geben mir die Kraft, selbst in stürmischen Zeiten im Vertrauen
+          zu bleiben und zu erkennen, dass alles im Leben seine Zeit und seinen
+          Sinn hat. Dadurch erlebe ich (mehr) Zufriedenheit, Leichtigkeit und
+          Lebensfreude.
+        </p>
+      </div>
+    </section>
+
+    <ImageTextSection imageMetadata={haende}
+      >"Hinter jedem Winter steckt ein zitternder Frühling und hinter dem
+      Schleier jeder Nacht verbirgt sich ein lächelnder Morgen."
+      <br />
+      Khalil Gibran - libanesisch-amerikanischer Dichter, Philosoph, Maler und Schriftsteller
+    </ImageTextSection>
+
+    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+      <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+        <div class="space-y-5 md:basis-3/5">
+          <p>
+            Eine meiner Töchter brachte zum Thema des alleingeborenen Zwillings,
+            die Gabe der Hochsensibilität ebenfalls mit auf die Welt. Somit
+            konnte und kann ich dank ihr auch Erfahrungen zu dieser Thematik aus
+            der Perspektive der Mutterschaft sammeln.
+          </p>
+          <p>
+            Fachliche Expertise und meine persönlichen Lebenserfahrungen bilden
+            die Grundlage meiner Arbeit.
+          </p>
+          <p>
+            Mein Ziel ist es, jeden Menschen dabei zu unterstützen,
+            Zusammenhänge zu erkennen, die eigenen Stärken zu entdecken,
+            Vertrauen in die eigenen Fähigkeiten zu entwickeln und nachhaltige
+            Lösungen zu finden.
+          </p>
+        </div>
+        <div
+          class="w-full max-w-xs self-center md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+        >
+          <Picture
+            src={aboutImage}
+            alt="Portrait Kathrin"
+            class="aspect-square w-full rounded-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
