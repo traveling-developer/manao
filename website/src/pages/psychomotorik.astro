@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Picture } from "astro:assets";
+import psychomotorikImage from "../assets/sun.webp";
+import haende from "../assets/haende_baum.jpg";
+import ImageTextSection from "../components/ImageTextSection.astro";
+import Divider from "../components/Divider.astro";
+---
+
+<Layout title="Psychomotorik" description="tbd">
+  <main>
+    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+      <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+        <div
+          class="order-2 w-full max-w-xs self-center md:order-1 md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+        >
+          <Picture
+            src={psychomotorikImage}
+            alt="Platzhalter"
+            class="aspect-square w-full rounded-full object-cover"
+          />
+        </div>
+        <div class="order-1 space-y-5 md:order-2 md:basis-3/5">
+          <p>
+            Schon zu Beginn meiner Berufslaufbahn lagen mir Kinder und
+            Jugendliche am Herzen, die mit besonderen Herausforderungen
+            konfrontiert waren. Dabei spielt wiederum auch der Zusammenhang von
+            Körper, Geist und Seele eine wichtige Rolle: wer sich nicht
+            wohlfühlt, nimmt oft Rollen ein, die seiner
+            Persönlichkeitsentwicklung nicht dienlich sind oder entwickelt z.B.
+            negative Verhaltensmuster und Lernblockaden. Auf der Suche nach
+            einer ganzheitlichen und stärkenorientierten Arbeitsweise entschied
+            ich mich daher ganz bewusst für die Psychomotorik und habe die
+            Ausbildung 2006 erfolgreich abgeschlossen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <Divider />
+
+    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+      <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+        <div class="space-y-5 md:basis-3/5">
+          <p>
+            Psychomotorik (IPE) ist eine bewegungsorientierte
+            integrative-pädagogisch-therapeutische Entwicklungsförderung für
+            alle Altersgruppen, die auf einem ressourcen- und
+            stärkenorientierten Ansatz basiert. Es geht in erster Linie um die
+            Erweiterung der Handlungskompetenz im sozialen Kontext und um die
+            Entwicklung einer stabilen, kompetenten Persönlichkeit - im Rahmen
+            der jeweiligen individuellen Möglichkeiten und unter Beachtung von
+            Werten wie Rücksicht, Respekt und Toleranz gegenüber anderen.
+          </p>
+          <p>
+            Mit „Psychomotorik“ ist die wechselseitige Beziehung zwischen Körper
+            und Psyche, zwischen Handeln und Lernen, zwischen Spüren und
+            Wahrnehmen und Erleben gemeint. Bewegung dient dabei nicht nur der
+            körperlichen Entwicklung, sondern als Medium, über das die Umwelt
+            wahrgenommen, Erfahrungen gesammelt und Kompetenzen aufgebaut werden
+            - Psychomotorik (IPE) unterstützt alle Entwicklungsbereiche.
+          </p>
+        </div>
+        <div
+          class="w-full max-w-xs self-center md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+        >
+          <Picture
+            src={psychomotorikImage}
+            alt="Platzhalter"
+            class="aspect-square w-full rounded-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <Divider />
+
+    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+      <div class="space-y-5">
+        <p>
+          Im Coaching - sowohl mit Kindern als auch mit Erwachsenen - liegt ihr
+          zentraler Mehrwert darin, dass Veränderung nicht nur über Sprache und
+          Einsicht erfolgt. Innere Themen werden über Körper, Wahrnehmung und
+          Handlung direkt erfahrbar. Der Schritt vom Verstehen ins Tun wird
+          unmittelbar unterstützt - so entsteht nachhaltige Veränderung, ähnlich
+          wie in der tiergestützten Arbeit oder in verhaltenstherapeutischen
+          Ansätzen. (mehr darüber <a
+            href="https://www.majewski-akademie.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-manao underline hover:no-underline">www.majewski-akademie.de</a>)
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>
