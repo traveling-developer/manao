@@ -19,7 +19,13 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
   class="navbar bg-manao sticky top-0 z-50 min-h-0 flex-nowrap gap-4 px-4 py-2 text-white shadow-md"
 >
   <div class="navbar-start">
-    <div class="dropdown lg:hidden">
+    <a href="/" class="flex items-center" aria-label="manao Startseite">
+      <Image src={logo} alt="manao Logo" class="h-10 w-auto" loading="eager" />
+    </a>
+  </div>
+
+  <div class="navbar-end">
+    <div class="dropdown dropdown-end lg:hidden">
       <div tabindex="0" role="button" class="btn btn-ghost text-white">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -68,12 +74,6 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
         ))
       }
     </ul>
-  </div>
-
-  <div class="navbar-end">
-    <a href="/" class="flex items-center" aria-label="manao Startseite">
-      <Image src={logo} alt="manao Logo" class="h-10 w-auto" loading="eager" />
-    </a>
   </div>
 </nav>
 
