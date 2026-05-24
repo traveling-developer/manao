@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Divider from "../components/Divider.astro";
+import ContactButtons from "../components/ContactButtons.astro";
 ---
 
 <Layout
@@ -87,13 +88,8 @@ import Divider from "../components/Divider.astro";
           >Donnerstag, den 30. Juli 2026</span
         >.
       </p>
-      <div class="mt-8 flex justify-center">
-        <a
-          href="/kontakt"
-          class="btn bg-manao hover:border-manao hover:text-manao text-white transition-colors duration-300 hover:bg-white"
-        >
-          Jetzt anmelden
-        </a>
+      <div class="mt-8">
+        <ContactButtons />
       </div>
     </section>
   </main>
