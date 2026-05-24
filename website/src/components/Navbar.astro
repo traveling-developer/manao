@@ -16,16 +16,18 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
 ---
 
 <nav
-  class="navbar bg-manao sticky top-0 z-50 min-h-0 flex-nowrap gap-4 px-4 py-2 text-white shadow-md"
+  class="bg-manao sticky top-0 z-50 flex items-center justify-between gap-4 px-4 py-2 text-white shadow-md md:px-6 lg:px-8"
 >
-  <div class="navbar-start">
-    <a href="/" class="flex items-center" aria-label="manao Startseite">
-      <Image src={logo} alt="manao Logo" class="h-10 w-auto" loading="eager" />
-    </a>
-  </div>
+  <a
+    href="/"
+    class="flex shrink-0 items-center"
+    aria-label="manao Startseite"
+  >
+    <Image src={logo} alt="manao Logo" class="h-10 w-auto" loading="eager" />
+  </a>
 
-  <div class="navbar-end">
-    <div class="dropdown dropdown-end lg:hidden">
+  <div class="flex items-center">
+    <div class="dropdown dropdown-end xl:hidden">
       <div tabindex="0" role="button" class="btn btn-ghost text-white">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +62,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
       </ul>
     </div>
 
-    <ul class="menu menu-horizontal hidden flex-nowrap px-1 lg:flex">
+    <ul class="menu menu-horizontal hidden flex-nowrap px-1 xl:flex">
       {
         links.map((link) => (
           <li>
@@ -78,7 +80,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
 </nav>
 
 <style>
-  .navbar :global(.menu :where(li > a)) {
+  nav :global(.menu :where(li > a)) {
     background-color: transparent;
     text-transform: uppercase;
     text-decoration-line: underline;
@@ -87,22 +89,22 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
     transition: text-decoration-color 300ms ease;
     white-space: nowrap;
   }
-  .navbar :global(.menu :where(li > a):hover),
-  .navbar :global(.menu :where(li > a):focus),
-  .navbar :global(.menu :where(li > a.is-active)) {
+  nav :global(.menu :where(li > a):hover),
+  nav :global(.menu :where(li > a):focus),
+  nav :global(.menu :where(li > a.is-active)) {
     background-color: transparent;
     text-decoration-color: currentColor;
   }
-  .navbar :global(.menu-horizontal > li:not(:last-child)) {
+  nav :global(.menu-horizontal > li:not(:last-child)) {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 0.25rem;
   }
-  .navbar :global(.menu-horizontal > li:not(:last-child) > a) {
+  nav :global(.menu-horizontal > li:not(:last-child) > a) {
     flex: 0 0 auto;
   }
-  .navbar :global(.menu-horizontal > li:not(:last-child)::after) {
+  nav :global(.menu-horizontal > li:not(:last-child)::after) {
     content: "|";
     color: white;
     flex: 0 0 auto;
