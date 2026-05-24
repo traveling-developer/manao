@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactButtons from "../components/ContactButtons.astro";
+---
+
+<Layout
+  title="Kinderbetreuung"
+  description="Verlässliche Kinderbetreuung nach individueller Absprache - eine helfende Hand und Auszeit für Eltern."
+>
+  <main>
+    <section class="mx-auto max-w-3xl px-5 py-12 md:py-16">
+      <div class="space-y-10">
+        <header class="space-y-5">
+          <h1
+            class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
+          >
+            Kinderbetreuung
+          </h1>
+          <p>
+            Manchmal braucht es keine große Krise, sondern einfach eine
+            helfende Hand oder eine Auszeit für Mama & Papa.
+          </p>
+          <p>
+            Wenn der Alltag, Termine oder besondere Situationen es erfordern,
+            kann eine verlässliche Betreuung entlasten.
+          </p>
+          <p>
+            Dann tut es gut zu wissen, dass das eigene Kind liebevoll umsorgt
+            ist.
+          </p>
+        </header>
+
+        <p>Die Betreuung erfolgt nach individueller Absprache.</p>
+
+        <div class="space-y-4">
+          <h2 class="text-manao text-2xl font-semibold">Investition</h2>
+          <p class="text-sm">Preise pro 60 min Betreuung:</p>
+          <dl class="divide-manao/20 divide-y">
+            <div
+              class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0"
+            >
+              <dt>1 Kind (Einzelbetreuung)</dt>
+              <dd class="text-manao font-semibold">23 €</dd>
+            </div>
+            <div
+              class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0"
+            >
+              <dt>ab 2 Kinder (Gruppe)</dt>
+              <dd class="text-manao font-semibold">19 € pro Kind</dd>
+            </div>
+            <div
+              class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0"
+            >
+              <dt>3 – 4 Kinder (Gruppe)</dt>
+              <dd class="text-manao font-semibold">15 € pro Kind</dd>
+            </div>
+            <div
+              class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0"
+            >
+              <dt>Essen & Getränke (optional)</dt>
+              <dd class="text-manao font-semibold">4 € pro Kind</dd>
+            </div>
+          </dl>
+          <p class="text-sm">
+            Ein Geschwisterrabatt ist bereits in den Gruppenpreisen enthalten.
+          </p>
+        </div>
+
+        <div class="text-base-content/70 space-y-3 text-sm">
+          <p>
+            Sollte die vereinbarte Abholzeit nicht eingehalten werden können,
+            bitte ich um rechtzeitige Information – falls absehbar. Ansonsten
+            erlaube ich mir, jede angefangene 15 min mit 10 € pro Kind zu
+            berechnen.
+          </p>
+          <p>
+            Kinderbetreuung kann in der Einkommenssteuererklärung als
+            Sonderausgabe geltend gemacht werden. Gerne erstelle ich eine
+            Rechnung.
+          </p>
+        </div>
+
+        <ContactButtons />
+      </div>
+    </section>
+  </main>
+</Layout>

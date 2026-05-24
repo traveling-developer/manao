@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Picture } from "astro:assets";
+import angeboteImage from "../assets/kurs_angebote.webp";
+import haende from "../assets/haende_baum.jpg";
+import ImageTextSection from "../components/ImageTextSection.astro";
+import Divider from "../components/Divider.astro";
+---
+
+<Layout title="Angebote" description="tbd">
+  <main>
+    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+      <div class="space-y-8">
+        <div class="space-y-5">
+          <h1
+            class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
+          >
+            Meine Angebote
+          </h1>
+          <p>
+            Seit über 20 Jahren begleite ich Kinder und Familien auf ihrem
+            persönlichen Weg. Gerade in unserer heutigen Zeit ist es mir eine
+            Herzensangelegenheit, Menschen in die Verbindung mit sich selbst zu
+            begleiten - als Basis für Resilienz und ganzeitliche Gesundheit.
+          </p>
+        </div>
+
+        <div class="mx-auto w-full max-w-2xl space-y-3">
+          <div
+            class="collapse-arrow border-manao bg-manao hover:text-manao collapse rounded-lg border text-white transition-colors duration-300 hover:bg-white"
+          >
+            <input type="checkbox" data-accordion="angebote" />
+            <div class="collapse-title px-5 py-4 font-semibold">
+              Beratung & Coaching
+            </div>
+            <div class="collapse-content text-base-content bg-white">
+              <ul class="marker:text-manao list-disc space-y-2 py-3 pl-6">
+                <li>
+                  <a href="/erziehungsberatung" class="hover:text-manao underline"
+                    >Beratung- und Erziehungsberatung</a
+                  >
+                </li>
+                <li>
+                  <a href="/coaching" class="hover:text-manao underline"
+                    >Coaching für Kinder, Jugendliche und Erwachsene</a
+                  >
+                </li>
+                <li>
+                  <a href="/hochsensibilitaet" class="hover:text-manao underline"
+                    >Hochsensibilität Beratung & Coaching</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a
+            href="/fachberatung"
+            class="bg-manao hover:border-manao hover:text-manao flex items-center justify-between rounded-lg border border-transparent px-5 py-4 font-semibold text-white transition-colors duration-300 hover:bg-white"
+          >
+            Fachberatung
+          </a>
+          <div
+            class="collapse-arrow border-manao bg-manao hover:text-manao collapse rounded-lg border text-white transition-colors duration-300 hover:bg-white"
+          >
+            <input type="checkbox" data-accordion="angebote" />
+            <div class="collapse-title px-5 py-4 font-semibold">
+              Körper- & Energiearbeit
+            </div>
+            <div class="collapse-content text-base-content bg-white">
+              <ul class="marker:text-manao list-disc space-y-2 py-3 pl-6">
+                <li>
+                  <a href="/skyourself" class="hover:text-manao underline"
+                    >SKYourself®</a
+                  >
+                </li>
+                <li>
+                  <a href="/energetische-anwendung" class="hover:text-manao underline"
+                    >Energetische Anwendung</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a
+            href="/psychomotorische-entwicklungsfoerderung"
+            class="bg-manao hover:border-manao hover:text-manao flex items-center justify-between rounded-lg border border-transparent px-5 py-4 font-semibold text-white transition-colors duration-300 hover:bg-white"
+          >
+            Psychomotorische Entwicklungsförderung
+          </a>
+
+          <a
+            href="/licht-in-mir-konzept"
+            class="bg-manao hover:border-manao hover:text-manao flex items-center justify-between rounded-lg border border-transparent px-5 py-4 font-semibold text-white transition-colors duration-300 hover:bg-white"
+          >
+            Das Licht in mir Konzept
+          </a>
+
+          <div
+            class="collapse-arrow border-manao bg-manao hover:text-manao collapse rounded-lg border text-white transition-colors duration-300 hover:bg-white"
+          >
+            <input type="checkbox" data-accordion="angebote" />
+            <div class="collapse-title px-5 py-4 font-semibold">
+              Kurse & Workshops
+            </div>
+            <div class="collapse-content text-base-content bg-white">
+              <ul class="marker:text-manao list-disc space-y-2 py-3 pl-6">
+                <li>
+                  <a href="/kurs-licht-in-mir-1" class="hover:text-manao underline"
+                    >Das Licht in mir - entdecke deine innere Stärke (Kurs I)</a
+                  >
+                </li>
+                <li>
+                  <a href="/kurs-licht-in-mir-2" class="hover:text-manao underline"
+                    >Das Licht in mir - entfache deine innnere Kraft (Kurs II)</a
+                  >
+                </li>
+                <li>
+                  <a href="/licht-in-mir-freiraum" class="hover:text-manao underline"
+                    >Das Licht in mir - Freiraum</a
+                  >
+                </li>
+                <li>
+                  <a href="/deep-talk" class="hover:text-manao underline"
+                    >Deep Talk</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <a
+            href="/kinderbetreuung"
+            class="bg-manao hover:border-manao hover:text-manao flex items-center justify-between rounded-lg border border-transparent px-5 py-4 font-semibold text-white transition-colors duration-300 hover:bg-white"
+          >
+            Kinderbetreuung
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  const accordionInputs = document.querySelectorAll<HTMLInputElement>(
+    'input[data-accordion="angebote"]',
+  );
+  accordionInputs.forEach((input) => {
+    input.addEventListener("change", () => {
+      if (input.checked) {
+        accordionInputs.forEach((other) => {
+          if (other !== input) other.checked = false;
+        });
+      }
+    });
+  });
+</script>
