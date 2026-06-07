@@ -4,9 +4,15 @@ import { getImage } from "astro:assets";
 interface Props {
   imageMetadata: ImageMetadata;
   alt?: string;
+  minHeightClass?: string;
+  overlay?: boolean;
 }
 
-const { imageMetadata } = Astro.props;
+const {
+  imageMetadata,
+  minHeightClass = "min-h-40",
+  overlay = false,
+} = Astro.props;
 
 const smallBackground = await getImage({
   src: imageMetadata,
@@ -29,10 +35,13 @@ const originalBackground = await getImage({
 ---
 
 <div
-  class="responsive-bg relative flex min-h-40 w-full items-center justify-end bg-cover bg-center"
+  class:list={[
+    "responsive-bg relative flex w-full items-center justify-end bg-cover bg-center",
+    minHeightClass,
+  ]}
   style={`--bg-small: url(${smallBackground.src}); --bg-medium: url(${mediumBackground.src}); --bg-large: url(${largeBackground.src}); --bg-original: url(${originalBackground.src});`}
 >
-  <div class="absolute inset-0"></div>
+  <div class:list={["absolute inset-0", overlay && "bg-black/40"]}></div>
   <div
     class="relative ml-auto w-full px-6 py-10 text-right text-white md:w-2/3 md:px-10 md:py-12"
   >

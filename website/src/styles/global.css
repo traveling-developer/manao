@@ -21,6 +21,38 @@
 }
 
 @font-face {
+  font-family: "Caveat";
+  src: url("/fonts/Caveat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caveat";
+  src: url("/fonts/Caveat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caveat";
+  src: url("/fonts/Caveat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caveat";
+  src: url("/fonts/Caveat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Ubuntu";
   src: url("/fonts/Ubuntu-Light.ttf") format("truetype");
   font-weight: 300;
@@ -54,6 +86,8 @@
 
 @theme {
   --color-manao: oklch(0.6818 0.1163 204.3);
+  --color-manao-dark: oklch(0.48 0.1 204.3);
   --font-licorice: "Licorice", cursive;
+  --font-caveat: "Caveat", cursive;
   --font-sans: "Ubuntu", sans-serif;
 }
