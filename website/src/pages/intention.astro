@@ -1,10 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Picture } from "astro:assets";
-import intentionImage from "../assets/intension.webp";
-import haende from "../assets/haende_baum.jpg";
+import wave from "../assets/intension.webp";
+import intentionImage from "../assets/seifenblasen.webp";
+import familie_wald from "../assets/familie_wald.webp";
+import rollstuhl from "../assets/rollstuhl.webp";
+import haende from "../assets/haende_baum.webp";
 import ImageTextSection from "../components/ImageTextSection.astro";
-import ColorSection from "../components/ColorSection.astro";
 import Divider from "../components/Divider.astro";
 ---
 
@@ -19,12 +21,10 @@ import Divider from "../components/Divider.astro";
             Meine Intention
           </h1>
           <p>
-            Moderne medizinische und wissenschaftliche Forschung, insbesondere
-            die Psychoneuroimmunologie belegt, wie eng Psyche, Nervensystem,
-            Hormonsystem und Immunsystem miteinander verbunden sind. Unsere
-            Gedanken, Emotionen, Stressreaktionen und sozialen Beziehungen
-            beeinflussen nachweislich unser körperliches Wohlbefinden und unser
-            Immunsystem.
+            Moderne Forschung, insbesondere die Psychoneuroimmunologie, belegt
+            die enge Verbindung von Psyche, Nervensystem, Hormon- und
+            Immunsystem. Gedanken, Emotionen, Stress und soziale Beziehungen
+            beeinflussen nachweislich unser Wohlbefinden und unsere Gesundheit.
           </p>
           <p>
             Ergänzend dazu zeigen bereits einige Länder mit Konzepten wie Social
@@ -34,9 +34,9 @@ import Divider from "../components/Divider.astro";
           </p>
           <p>
             Auch bei uns in Deutschland gibt es Bildungsansätze (z.B.
-            Montessori, Waldorf) und diverse Programme (z.B. Papilio, OUPS,
-            Schulfach Glück) die den Fokus deutlich stärker auf diese
-            Entwicklungsfelder legen, doch es braucht mehr.
+            Montessori, Waldorf, Jenaplan-Schulen) und diverse Programme (z.B.
+            Papilio, OUPS, Schulfach Glück) die dahingehend wichtige Impulse
+            setzen, doch es braucht mehr.
           </p>
           <p>
             "Viele Inhalte, die in der Schule gelehrt werden, geraten in
@@ -61,7 +61,7 @@ import Divider from "../components/Divider.astro";
           </p>
         </div>
         <div
-          class="w-full max-w-xs self-center md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+          class="w-full max-w-xs self-center md:mt-90 md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
         >
           <Picture
             src={intentionImage}
@@ -71,36 +71,23 @@ import Divider from "../components/Divider.astro";
         </div>
       </div>
     </section>
-    <ImageTextSection imageMetadata={haende}
-      >"Kinder sind die Seismografen der Gesellschaft. Ihre Erschöfpung ist ein
-      wichtiges Signal." <br /> Margret Rasfeld - deutsche Pädagogin und Mitgründerin
-      der Initiative Schule im Aufbruch
-    </ImageTextSection>
+
+    <Divider />
+
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
       <div class="space-y-5">
         <p>
-          Auch wenn wir das Bildungssystem und gesellschaftliche Strukturen
-          nicht von heute auf morgen verändern können, so hat doch jeder
-          Gestaltungsspielraum in seinem eigenen Denken, in seiner Haltung und
-          in seinem Handeln.
+          Vor diesem Hintergrund entstehen zahlreiche Kurse für alle
+          Altersgruppen sowie Weiterbildungen für Erwachsene und Fachpersonal.
+          Die Vielfalt dieser Formate wächst stetig und bringt wertvolle Impulse
+          mit sich. Strukturierte Abläufe und standardisierte Inhalte bieten
+          dabei Orientierung und erleichtern die Umsetzung.
         </p>
         <p>
-          Vor diesem Hintergrund ist es schön zu beobachten, dass sich das
-          Bewusstsein unserer Gesellschaft im Hinblick auf die Bereiche
-          Selbstwahrnehmung, Emotionsregulation und soziale Fähigkeiten
-          zunehmend erweitert. Ergänzend gewinnen Themen wie innere Stabilität,
-          Resilienz sowie Intuition und Sinnfindung an Bedeutung.
+          In der Praxis wird jedoch deutlich, dass der Fokus häufig stärker auf
+          den Programmen selbst liegt als auf dem einzelnen Menschen.
         </p>
-        <p>
-          Zahlreiche Kurse für alle Altersgruppen sowie Weiterbildungen für
-          Erwachsene und Fachpersonal entstehen. Die Vielfalt dieser Formate
-          wächst stetig und bringt wertvolle Impulse mit sich. Strukturierte
-          Abläufe und standardisierte Inhalte bieten dabei Orientierung und
-          erleichtern die Umsetzung. In der Praxis wird jedoch deutlich, dass
-          der Fokus häufig stärker auf den Programmen selbst liegt als auf dem
-          einzelnen Menschen.
-        </p>
-        <p class="text-manao font-semibold">
+        <p class="text-manao-dark font-bold italic">
           Hier setze ich bewusst einen anderen Schwerpunkt.
         </p>
         <p>
@@ -114,58 +101,91 @@ import Divider from "../components/Divider.astro";
       </div>
     </section>
 
+    <ImageTextSection imageMetadata={haende} minHeightClass="lg:min-h-60"
+      ><span class="font-caveat text-3xl md:text-4xl"
+        >"Kinder sind die Seismografen der Gesellschaft. Ihre Erschöfpung ist
+        ein wichtiges Signal."</span
+      >
+      <br /><span class="text-sm"
+        >Margret Rasfeld - deutsche Pädagogin und Mitgründerin der Initiative
+        Schule im Aufbruch</span
+      >
+    </ImageTextSection>
+
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
       <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
         <div
-          class="order-2 w-full max-w-xs self-center md:order-1 md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+          class="order-2 w-full max-w-xs self-center md:order-1 md:mt-120 md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
         >
           <Picture
-            src={intentionImage}
+            src={familie_wald}
             alt="Wasser, Wellen, Ozean"
             class="aspect-square w-full rounded-full object-cover"
           />
         </div>
         <div class="order-1 space-y-5 md:order-2 md:basis-3/5">
           <p>
-            Für eine gesunde Entwicklung von Kindern spielt die Rolle der
-            Eltern/Erziehungsberechtigten eine zentrale Rolle - sie bilden die
-            wichtigste Beziehungs- und Entwicklungsbasis. Wird diese
-            Verantwortung unterschätzt, hat das nicht nur individuelle, sondern
-            auch gesellschaftliche Konsequenzen.
+            Pädagogische Fachkräfte haben den wichtigen Auftrag, Kinder achtsam
+            zu begleiten, sie in ihrer Entwicklung zu fördern und ihr Wohl zu
+            schützen. Viele erfüllen diese verantwortungsvolle Aufgabe mit
+            großem Engagement und hoher Professionalität.
+          </p><p>
+            Gleichzeitig können sie strukturelle Herausforderungen - wie
+            staatliche Vorgaben, Fachkräftemangel oder bestehende
+            Rahmenbedingungen - nicht ausgleichen.
+          </p><p class="border-manao border-l-4 p-4">
+            Auch wenn wir das Bildungssystem und gesellschaftliche Strukturen
+            nicht von heute auf morgen ändern können, so hat doch jeder
+            Gestaltungsspielraum in seinem eigenen Denken, in seiner Haltung und
+            in seinem Handeln.
+          </p><p class="text-manao-dark mt-10 font-bold">
+            Eltern/Erziehungsberechtigten kommt dabei eine besondere Rolle zu:
+          </p><p class="text-manao-dark font-bold">
+            Sie bilden die zentrale Beziehungs- und Entwicklungsbasis.
+          </p>
+          <p class="italic">
+            Wird diese Verantwortung unterschätzt, hat das nicht nur
+            individuelle sondern auch gesellschaftliche Folgen.
           </p>
           <p>
-            Entwicklungspsychologische Forschung zeigt: Frühe
-            Bindungserfahrungen beeinflussen langfristig emotionale Regulation,
-            Selbstwertgefühl, Stressverarbeitung, psychische Stabilität und
-            Beziehungsfähigkeit.
+            Entwicklungspsychologische Forschung zeigt, dass frühe
+            Bindungserfahrungen die spätere Emotionsregulation, den Selbstwert,
+            Stressverarbeitung, psychische Stabilität und Beziehungsfähigkeit
+            prägen.
           </p>
           <p>
-            Im Sinne der Bindungstheorie (John Bowlby und Mary Ainsworth)
-            entstehen diese frühen Bindungserfahrungen vor allem durch die
-            emotionale Verfügbarkeit, Feinfühligkeit und Verlässlichkeit der
-            Bezugspersonen.
+            Nach der Bindungstheorie (Bowlby, Ainsworth) entstehen sie vor allem
+            durch die emotionale Verfügbarkeit, Feinfühligkeit und
+            Verlässlichkeit der Bezugspersonen.
           </p>
+          <p></p>
           <p>
             Parallel dazu wirkt die alltägliche Entwicklungsumwelt - gibt es
             Raum für Ruhe, Regulation, freies Spiel, Langeweile und Verarbeitung
-            oder ist alles stark verdichtet und durchstrukturiert? Dabei geht es
-            nicht um Perfektion, sondern in erster Linie um Bewusstsein. Der
-            Umgang der Eltern mit ihren eigenen Gefühlen, ihrer Selbstregulation
-            und Selbstfürsorge sowie ihr Verhalten im Kontakt mit dem Kind,
-            prägen maßgeblich, wie dieses später in Beziehung zu sich selbst und
-            anderen tritt.
+            oder ist alles stark verdichtet und durchstrukturiert?
           </p>
           <p>
-            Es geht auch nicht um Schuld oder Unschuld, sondern darum, die
-            Verantwortung zu erkennen und zu übernehmen. Kinder wissen in
-            Situationen meist genau, was sie wollen - nicht jedoch was sie
-            brauchen. Hier ist die Führungsrolle durch die
+            Dabei geht es <span class="text-manao font-bold"
+              >nicht um Perfektion</span
+            >, sondern in erster Linie um Bewusstsein. Der Umgang der
+            Eltern/Erziehungsberechtigten mit ihren eigenen Gefühlen, ihrer
+            Selbstregulation und Selbstfürsorge sowie ihr Verhalten im Kontakt
+            mit dem Kind, prägen maßgeblich, wie dieses später in Beziehung zu
+            sich selbst und anderen tritt.
+          </p>
+          <p>
+            Es geht auch <span class="text-manao font-bold"
+              >nicht um Schuld oder Unschuld</span
+            >, sondern darum, die Verantwortung zu erkennen und zu übernehmen.
+            <br />Kinder wissen in Situationen meist genau, was sie wollen -
+            nicht jedoch was sie brauchen. Hier ist die Führungsrolle durch die
             Eltern/Erziehungsberechtigten notwendig.
           </p>
           <p>
-            Betreuungseinrichtungen unterstützen, entlasten und ermöglichen
-            Einkommenssicherung. Sie übernehmen damit eine wichtige ergänzende
-            Funktion.
+            Betreuungseinrichtungen bieten Kindern einen wertvollen
+            Entwicklungsrahmen, unterstützen und entlasten Familien und
+            ermöglichen Einkommenssicherung. Sie übernehmen damit eine wichtige,
+            ergänzende Funktion.
           </p>
           <p>
             Zentrale Entwicklungs- und Bildungsprozesse sind jedoch nicht
@@ -174,6 +194,19 @@ import Divider from "../components/Divider.astro";
             Eltern/Erziehungsberechtigten geprägt werden (vgl. u. a. Manfred
             Spitzer).
           </p>
+          <p class="border-manao border-l-4 p-4">
+            Auch wenn nicht immer alles ideal verläuft oder verlaufen ist:<br />
+            Elternsein bleibt ein fortlaufender Prozess, der <span
+              class="italic"
+            >
+              nicht auf Perfektion</span
+            > abzielt, sondern auf <span class="text-manao font-bold"
+              >Bewusstheit</span
+            >,
+            <span class="text-manao font-bold">Kontakt</span> und die <span
+              class="text-manao font-bold">Bereitschaft</span
+            >, Beziehung immer wieder neu zu gestalten.
+          </p>
         </div>
       </div>
     </section>
@@ -181,13 +214,16 @@ import Divider from "../components/Divider.astro";
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
       <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
         <div class="space-y-5 md:basis-3/5">
-          <p>
+          <p class="text-manao-dark font-bold">
             Nachhaltige Gesundheit entsteht, wenn wir den Menschen in seiner
-            Ganzheit betrachten. Daher möchte ich mit meiner Arbeit eine Brücke
-            schaffen, zwischen wissenschaftlich fundierten Erkenntnissen und
-            einer bewussten Auseinandersetzung mit den grundlegenden Fragen des
-            Menschseins - im Sinne einer offenen und greifbaren Spiritualität,
-            frei von religiösen oder dogmatischen Konzepten:
+            Ganzheit betrachten.
+          </p>
+          <p>
+            Daher möchte ich mit meiner Arbeit eine Brücke schaffen, zwischen
+            wissenschaftlich fundierten Erkenntnissen und einer bewussten
+            Auseinandersetzung mit den grundlegenden Fragen des Menschseins - im
+            Sinne einer offenen und greifbaren Spiritualität, frei von
+            religiösen oder dogmatischen Konzepten:
           </p>
           <ul class="marker:text-manao list-disc space-y-2 pl-6">
             <li>Wo komme ich her?</li>
@@ -211,7 +247,14 @@ import Divider from "../components/Divider.astro";
             Einschränkungen - etwa im Rollstuhl - als gesund gelten und ein
             zufriedenes und erfülltes Leben führen.
           </p>
-          <p>
+          <div class="mx-auto w-full max-w-xs md:hidden">
+            <Picture
+              src={rollstuhl}
+              alt="Wasser, Wellen, Ozean"
+              class="aspect-square w-full rounded-full object-cover"
+            />
+          </div>
+          <p class="mt-10 md:mt-20">
             In diesem Kontext wird Spiritualität in der Wissenschaft zunehmend
             als ergänzende Dimension verstanden - als mögliche Ressource für
             Sinn, Orientierung und innere Stabilität (u. a. transpersonale
@@ -220,40 +263,44 @@ import Divider from "../components/Divider.astro";
           <p>
             Das bedeutet: Menschen mit einer spirituellen Ausrichtung erleben
             oft mehr Sinn, Hoffnung und Kraft - besonders in herausfordernden
-            Lebensphasen. Ein moderner ganzheitlicher Ansatz - "ganzheitlich"
-            ist hier keine Floskel, es ist der einzig realistische Weg, den
-            Menschen wirklich zu erreichen - verbindet daher:
+            Lebensphasen.
           </p>
-          <ul class="marker:text-manao list-disc space-y-2 pl-6">
-            <li>Klarheit und Struktur wissenschaftlicher Erkenntnisse</li>
-            <li>
-              mit der Tiefe persönlicher Sinn- und Bewusstseinsentwicklung
-            </li>
-          </ul>
+          <div class="border-manao space-y-5 border-l-4 p-4">
+            <p>
+              Ein <span class="text-manao font-bold"
+                >moderner ganzheitlicher Ansatz</span
+              >
+              - "ganzheitlich" ist hier keine Floskel, es ist der einzig realistische
+              Weg, den Menschen wirklich zu erreichen - verbindet daher:
+            </p>
+            <ul class="marker:text-manao list-disc space-y-2 pl-6">
+              <li>Klarheit und Struktur wissenschaftlicher Erkenntnisse</li>
+              <li>
+                mit der Tiefe persönlicher Sinn- und Bewusstseinsentwicklung
+              </li>
+            </ul>
+          </div>
         </div>
         <div
-          class="w-full max-w-xs self-center md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+          class="hidden w-full max-w-xs self-center md:mt-100 md:block md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
         >
           <Picture
-            src={intentionImage}
+            src={rollstuhl}
             alt="Wasser, Wellen, Ozean"
             class="aspect-square w-full rounded-full object-cover"
           />
         </div>
       </div>
     </section>
-    <ImageTextSection imageMetadata={haende}
-      >"Wer auf seine innere Stimme hört, lebt im Einklang mit sich selbst. Dann
-      entstehen Freude, Freiheit und Gesundheit." <br />Osho - spiritueller
-      Lehrer</ImageTextSection
-    >
+    <Divider />
+
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
       <div class="space-y-5">
         <p>
           Ein spiritueller Weg geht über eine reine ich-zentrierte Perspektive
-          hinaus. Die Identifikation mit Gedanken, Gefühlen und inneren Mustern
-          lockert sich, Erfahrungen werden bewusster als Prozesse wahrgenommen -
-          mit Anfang, Verlauf und Ende.
+          hinaus. <br />Die Identifikation mit Gedanken, Gefühlen und inneren
+          Mustern lockert sich, Erfahrungen werden bewusster als Prozesse
+          wahrgenommen - mit Anfang, Verlauf und Ende.
         </p>
         <p>
           Gleichzeitig vertieft sich die Verbundenheit - mit sich selbst, mit
@@ -268,11 +315,12 @@ import Divider from "../components/Divider.astro";
         </p>
       </div>
     </section>
-    <ImageTextSection imageMetadata={haende}
-      >"Wer still ist, erkennt den Fluss des Lebens und bleibt
-      unerschütterlich."
-      <br />
-      Lao Tse - chinesischer Philosoph
+    <ImageTextSection imageMetadata={wave} overlay
+      ><span class="font-caveat text-3xl md:text-4xl"
+        >"Wer still ist, erkennt den Fluss des Lebens und bleibt
+        unerschütterlich."</span
+      >
+      <br /><span class="text-sm">Lao Tse - chinesischer Philosoph</span>
     </ImageTextSection>
   </main>
 </Layout>
