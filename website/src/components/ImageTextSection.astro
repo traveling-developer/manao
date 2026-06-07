@@ -6,12 +6,14 @@ interface Props {
   alt?: string;
   minHeightClass?: string;
   overlay?: boolean;
+  textPosition?: "left" | "right";
 }
 
 const {
   imageMetadata,
   minHeightClass = "min-h-40",
   overlay = false,
+  textPosition = "right",
 } = Astro.props;
 
 const smallBackground = await getImage({
@@ -43,7 +45,10 @@ const originalBackground = await getImage({
 >
   <div class:list={["absolute inset-0", overlay && "bg-black/40"]}></div>
   <div
-    class="relative ml-auto w-full px-6 py-10 text-right text-white md:w-2/3 md:px-10 md:py-12"
+    class:list={[
+      "relative w-full px-6 py-10 text-white md:w-2/3 md:px-10 md:py-12",
+      textPosition === "left" ? "mr-auto text-left" : "ml-auto text-right",
+    ]}
   >
     <slot />
   </div>
