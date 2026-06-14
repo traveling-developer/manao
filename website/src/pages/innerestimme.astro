@@ -5,6 +5,7 @@ import intentionImage from "../assets/innere_Stimme.webp";
 import haende from "../assets/kind_haende.webp";
 import aquarell from "../assets/aquarell.webp";
 import ImageTextSection from "../components/ImageTextSection.astro";
+import Divider from "../components/Divider.astro";
 ---
 
 <Layout
@@ -20,7 +21,7 @@ import ImageTextSection from "../components/ImageTextSection.astro";
           >
             Die innere Stimme
           </h1>
-          <p class="text-manao-dark font-bold">
+          <p class="text-manao font-bold">
             Sensitivität und Intuition - als unsere innere Stimme - sind
             angeborene, individuell ausgeprägte Fähigkeiten.
           </p><p>
@@ -29,31 +30,33 @@ import ImageTextSection from "../components/ImageTextSection.astro";
             B. Reize, Atmosphäre.
           </p><p>
             Für die Orientierung, was wir brauchen, zeigt sich oft zuerst die
-            Intuition. Sie ist das unmittelbare innere Wissen, das jedoch häufig
-            von äußeren Einflüssen oder dem Verstand überlagert wird. Geprägt
-            von Erfahrungen, Mustern und erlernten Überzeugungen bewertet
-            dieser, gleicht ab und ordnet ein.
+            Intuition.<br />Sie ist das unmittelbare innere Wissen, das jedoch
+            häufig von äußeren Einflüssen oder dem Verstand überlagert wird.
+            Geprägt von Erfahrungen, Mustern und erlernten Überzeugungen
+            bewertet dieser, gleicht ab und ordnet ein.
           </p><p>
             Die Intuition folgt keiner Bewertung, sondern einer inneren
             Klarheit. Sie zeigt Wege auf, warnt und korrigiert. Dabei steht sie
             oft nicht im Einklang mit dem Verstand, sondern kommt aus einer viel
             tieferen Ebene.
-          </p><p>
-            "Die Intuition ist die am meisten unterschätzte und missverstandene
-            menschliche Kompetenz. Das ist fatal, denn wir brauchen die
-            Intuition um kraftvolle Entscheidungen in Übereinstimmung mit
-            unserer Vision und entsprechend unserem Potential treffen zu können.
-            In der aktuellen Zeit ist die Intuition der Future Skill, der die
-            Richtung, die wir individuell und kollektiv einschlagen,
-            entscheidend beeinflussen wird." - Zitat von Alexandra Sorgenicht -
-            Intuitionstrainerin & Gründerin der Academy for Intuitive Living
+          </p><p class="mt-10">
+            <span class="italic"
+              >"Die Intuition ist die am meisten unterschätzte und
+              missverstandene menschliche Kompetenz. Das ist fatal, denn wir
+              brauchen die Intuition um kraftvolle Entscheidungen in
+              Übereinstimmung mit unserer Vision und entsprechend unserem
+              Potential treffen zu können. In der aktuellen Zeit ist die
+              Intuition der Future Skill, der die Richtung, die wir individuell
+              und kollektiv einschlagen, entscheidend beeinflussen wird."</span
+            > - Zitat von Alexandra Sorgenicht - Intuitionstrainerin & Gründerin der
+            Academy for Intuitive Living
           </p>
-          <p
-            class="text-manao font-caveat border-manao border-l-4 p-4 text-3xl"
-          >
+          <Divider />
+          <p class="text-manao-dark font-caveat text-center text-3xl">
             Wenn wir Sensitivität und Intuition Raum geben, können wir unser
             Leben bewusster, selbstbestimmter und stimmiger gestalten.
           </p>
+          <Divider />
           <div class="mx-auto w-full max-w-xs md:hidden">
             <Picture
               src={intentionImage}
@@ -61,20 +64,19 @@ import ImageTextSection from "../components/ImageTextSection.astro";
               class="aspect-square w-full rounded-full object-cover"
             />
           </div>
-          <p class="text-manao-dark mt-10 font-bold">
-            Auf diesen Fähigkeiten basierend entwickeln wir:
-          </p>
+          <p class="mt-10">Auf diesen Fähigkeiten basierend entwickeln wir:</p>
           <ul class="list-disc space-y-3 pl-5">
             <li>
-              <span class="font-bold">Emotionale Intelligenz:</span> Die Fähigkeit
-              innere Zustände nicht nur wahrzunehmen, sondern auch zu verstehen und
-              zu steuern sowie Selbstmotivation, Empathie und soziale Kompetenz (Daniel
-              Goleman).
+              <span class="text-manao font-bold">Emotionale Intelligenz</span>:
+              Die Fähigkeit innere Zustände nicht nur wahrzunehmen, sondern auch
+              zu verstehen und zu steuern sowie Selbstmotivation, Empathie und
+              soziale Kompetenz (Daniel Goleman).
             </li>
             <li>
-              <span class="font-bold">Resilienz:</span> Die Fähigkeit, sich positiv
-              an widrige Lebensumstände anzupassen, Stress zu bewältigen und sich
-              nach Belastungen psychisch zu erholen.
+              <span class="text-manao font-bold">Resilienz</span>: Die
+              Fähigkeit, sich positiv an widrige Lebensumstände anzupassen,
+              Stress zu bewältigen und sich nach Belastungen psychisch zu
+              erholen.
             </li>
           </ul>
         </div>
@@ -115,7 +117,7 @@ import ImageTextSection from "../components/ImageTextSection.astro";
           Zum einen werden dabei Stabilität und Lebensfreude immer stärker von
           äußeren Faktoren abhängig gemacht, zum anderen ist das Nervensystem
           vieler Menschen durch Schnelllebigkeit und hohe Reizdichte stark
-          belastet.<br /> Auch wietere Einflussfaktoren wie biografische Prägungen
+          belastet.<br /> Auch weitere Einflussfaktoren wie biografische Prägungen
           sowie individuelle Schutz- und Bewältigungsmechanismen wirken mit.
         </p>
         <p class="italic">
@@ -147,10 +149,10 @@ import ImageTextSection from "../components/ImageTextSection.astro";
         <p>
           Ob Kinder ihre innere Stimme wahrnehmen und ihr vertrauen können,
           hängt wesentlich davon ab, ob sie in einer <span
-            class="text-manao-dark font-bold">sicheren Bindung</span
+            class="text-manao font-bold">sicheren Bindung</span
           > aufwachsen.
         </p>
-        <p class="border-manao text-manao-dark border-l-4 p-4 font-bold">
+        <p class="border-manao border-l-4 p-4">
           Wenn ihre Bedürfnisse gesehen und verlässlich beantwortet werden,
           entsteht Vertrauen in sich selbst.<br />Kinder lernen: Das, was ich
           fühle, ist bedeutsam und richtig.

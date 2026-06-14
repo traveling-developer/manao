@@ -91,3 +91,7 @@
   --font-caveat: "Caveat", cursive;
   --font-sans: "Ubuntu", sans-serif;
 }
+
+html {
+  font-size: 110%;
+}

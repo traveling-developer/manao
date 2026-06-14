@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { Picture } from "astro:assets";
 import steine from "../assets/steine.webp";
-import arbeitsweiseImage from "../assets/sun.webp";
+import arbeitsweiseImage from "../assets/manao_symbol.webp";
 import aquarell from "../assets/aquarell.webp";
 import himmel from "../assets/himmel.webp";
 import kathrin from "../assets/kathrin.webp";
@@ -36,16 +36,17 @@ import Divider from "../components/Divider.astro";
             begleiten sowie innere Stabilität und ganzheitliche Gesundheit zu
             erhalten und zu fördern.
           </p>
-          <p>
+          <Divider />
+          <p class="text-manao-dark font-caveat text-center text-3xl">
             Da stetige Veränderung unser Dasein bestimmt, dürfen wir lernen, der
             inneren Stimme zu lauschen, unserer Intuition zu vertrauen und uns
             so dem Wandel zu öffnen.
           </p>
+          <Divider />
           <p class="border-manao border-l-4 p-4">
-            Die tiefe <span class="text-manao font-bold">Rückverbindung</span>
-            und eine solche <span class="text-manao font-bold">Ausrichtung</span
-            > schenken Klarheit und neue Kraft. <br /> Auf diese Weise entdecken wir
-            unsere ganz eigenen Wege und Möglichkeiten - mana'o.
+            Die tiefe Rückverbindung und eine solche Ausrichtung schenken
+            Klarheit und neue Kraft. <br /> Auf diese Weise entdecken wir unsere ganz
+            eigenen Wege und Möglichkeiten - mana'o.
           </p>
           <p>
             Diesen Ansatz haben meine eigenen Lebensaufgaben und die bewusste
@@ -132,12 +133,13 @@ import Divider from "../components/Divider.astro";
           sowie Präsenz und die Fähigkeit bewusst zu handeln.
         </p>
         <p class="font-caveat text-manao-dark text-center text-3xl">
-          Tiere öffnen das Herz, erden die Seele und erinnern an das
-          Wesentliche.
+          Tiere öffnen das Herz, erden die Seele <br
+            class="hidden lg:block"
+          />und erinnern an das Wesentliche.
         </p>
       </div>
       <div
-        class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-20"
+        class="mt-15 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-20"
       >
         <a
           href="/erziehung"
@@ -158,7 +160,7 @@ import Divider from "../components/Divider.astro";
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
       <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
         <div class="space-y-5 md:basis-3/5">
-          <p class="text-manao-dark font-bold">
+          <p class="text-manao font-bold">
             Mein Fundament als Erzieherin und Motopädagogin ergänzen Aus- und
             Weiterbildungen in ganzheitlich orientierten Arbeitsfeldern.
           </p>
@@ -179,11 +181,18 @@ import Divider from "../components/Divider.astro";
             ausschließlich im Rahmen von mana'o und in enger Absprache mit den
             Eltern an.
           </p>
-          <p class="text-manao-dark mt-10 font-bold">
+          <div class="mx-auto w-full max-w-xs md:hidden">
+            <Picture
+              src={arbeitsweiseImage}
+              alt="Platzhalter"
+              class="aspect-square w-full rounded-full object-cover"
+            />
+          </div>
+          <p class="text-manao mt-10 font-bold">
             Ebenso wertvolle Aus- und Weiterbildungen sowie Fachwissen aus
             Selbststudium und Selbsterfahrung:
           </p>
-          <ul class="marker:text-manao list-disc space-y-2 pl-6">
+          <ul class="list-disc space-y-2 pl-6">
             <li>
               GFK - Gewaltfreie Kommunikation inklusive Giraffentraum® (GFK für
               Kinder)
@@ -198,6 +207,11 @@ import Divider from "../components/Divider.astro";
               a. Matrix Energetics® nach Dr. Richard Bartlett, Quantenheilung
               nach Dr. Frank Kinslow einschließlich der Zwei-Punkt-Methode sowie
               Psychologische Astrologie)
+            </li>
+            <li>Trauma und Traumafolgen</li>
+            <li>
+              Energetische Psychotherapie (u. a. Dr. Fred Gallo, Dr. Michael
+              Bohne - PEP®-Methode)
             </li>
             <li>
               Qigong für Frauen (Paracelsus Akademie) sowie weitere Methoden der
@@ -243,7 +257,7 @@ import Divider from "../components/Divider.astro";
               Weitere Bereiche
             </div>
             <div class="collapse-content">
-              <ul class="marker:text-manao list-disc space-y-2 pl-6">
+              <ul class="list-disc space-y-2 pl-6">
                 <li>Edu-Kinestetik - Brain-Gym®</li>
                 <li>
                   Bandschi®-Konzept (Rückenschule für Kinder nach Sabine
@@ -297,7 +311,7 @@ import Divider from "../components/Divider.astro";
           </p>
         </div>
         <div
-          class="w-full max-w-xs self-center md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+          class="hidden w-full max-w-xs self-center md:block md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
         >
           <Picture
             src={arbeitsweiseImage}
@@ -345,7 +359,7 @@ import Divider from "../components/Divider.astro";
           <blockquote class="border-manao space-y-2 border-l-4 pl-4 italic">
             <p>
               „Jeder Mensch, dem du begegnest, weiß etwas, das du nicht weißt.
-              Lerne von ihm.“
+              <br class="hidden lg:block" />Lerne von ihm.“
             </p>
             <footer class="text-sm not-italic">
               H. Jackson Brown Jr. - US-amerikanischer Autor und

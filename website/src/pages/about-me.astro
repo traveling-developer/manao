@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { Picture } from "astro:assets";
 import portrait from "../assets/portrait.webp";
 import himmel from "../assets/himmel.webp";
-import flower from "../assets/flower.webp";
+import bird from "../assets/bird.webp";
 import ImageTextSection from "../components/ImageTextSection.astro";
 import Divider from "../components/Divider.astro";
 ---
@@ -84,8 +84,8 @@ import Divider from "../components/Divider.astro";
           unterschiedlich Menschen mit ihren Lebensumständen umgehen und wie
           sehr innere Prozesse das Erleben, Verhalten und die persönliche
           Entwicklung beeinflussen.<br />Mit dem Eintritt in mein Berufsleben
-          wurde für mich zudem deutlich, in welch frühem Alter diese Prozesse
-          bereits wirksam sind.
+          bestätigte sich für mich, dass diese Prozesse bereits früh wirksam
+          sind.
         </p>
         <p>
           Diese Beobachtungen sowie meine eigenen Lebenserfahrungen bis dahin
@@ -99,10 +99,13 @@ import Divider from "../components/Divider.astro";
           Am Sterbebett meiner Oma hatte ich als junge Erwachsene ein sehr
           einschneidendes Erlebnis, das mich erneut bestätigte:
         </p>
-        <p class="font-caveat text-manao-dark text-center text-3xl font-bold">
-          Das Leben ist weit mehr als das Sichtbare, es gibt noch viel tiefere
-          Dimensionen.
+        <Divider />
+        <p class="font-caveat text-manao-dark text-center text-3xl">
+          Das Leben ist weit mehr als das Sichtbare,<br
+            class="hidden lg:block"
+          /> es gibt noch viel tiefere Dimensionen.
         </p>
+        <Divider />
         <div class="mx-auto mt-10 w-full max-w-xs md:max-w-sm">
           <Picture
             src={himmel}
@@ -128,27 +131,28 @@ import Divider from "../components/Divider.astro";
           Fasziniert davon begann ein bewusster Weg der persönlichen inneren
           Arbeit und der fachlichen Weiterbildung in diesem Bereich.
         </p>
+        <Divider />
         <p class="mt-5 text-center">
-          <span class="text-manao-dark font-caveat text-3xl md:text-4xl"
+          <span class="text-manao-dark font-caveat text-3xl"
             >"Geist" ist der Maschinist, der die Maschine (Körper)<br /> mittels Kraftstoff
             (Seele) zum Laufen bringt."</span
           >
-          <br /><span class="text-manao-dark text-sm"
+          <br /><span class="text-sm"
             >Aldo Berti - Geistheilung und Energiearbeit</span
           >
         </p>
+        <Divider />
       </div>
     </section>
-
-    <Divider />
 
     <section class="mx-auto max-w-5xl px-5 py-5 md:py-10">
       <div class="space-y-5">
         <p>
-          Mit meiner ersten Schwangerschaft, der Geburt und der damit
-          verbundenen Erfahrung der Mutterschaft, hat sich mein Bewusstsein für
-          mich selbst und für die Zusammenhänge des Lebens zusätzlich vertieft -
-          folglich wuchsen auch Klarheit und innere Stabilität.
+          Mit meiner ersten Schwangerschaft, der Geburt und den damit
+          verbundenen Herausforderungen der Mutterschaft, hat sich mein
+          Bewusstsein für mich selbst und für die Zusammenhänge des Lebens
+          zusätzlich vertieft - folglich wuchsen auch Klarheit und innere
+          Stabilität.
         </p>
         <p>
           Diese geben mir die Kraft, selbst in stürmischen Zeiten im Vertrauen
@@ -160,14 +164,14 @@ import Divider from "../components/Divider.astro";
     </section>
 
     <ImageTextSection
-      imageMetadata={flower}
-      minHeightClass="lg:min-h-50"
+      imageMetadata={bird}
+      minHeightClass="lg:min-h-50 2xl:min-h-100"
       textPosition="left"
-      ><span class="text-manao-dark font-caveat text-3xl md:text-4xl"
+      ><span class="font-caveat text-3xl md:text-4xl"
         >"Hinter jedem Winter steckt ein zitternder Frühling und hinter dem
         Schleier jeder Nacht <br />verbirgt sich ein lächelnder Morgen."</span
       >
-      <br /><span class="text-manao-dark text-sm"
+      <br /><span class="text-sm"
         >Khalil Gibran - libanesisch-amerikanischer Dichter, Philosoph, Maler
         und Schriftsteller</span
       >
@@ -191,11 +195,11 @@ import Divider from "../components/Divider.astro";
           eigenen Fähigkeiten zu entwickeln und nachhaltige Lösungen zu finden.
         </p>
         <p class="mt-15 text-center">
-          <span class="text-manao-dark font-caveat text-3xl md:text-4xl"
+          <span class="text-manao-dark font-caveat text-3xl"
             >"Glücklich zu sein ist keine Kunst.<br />Die wirkliche Kunst ist zu
             wissen, was man tun kann, wenn man unglücklich ist."</span
           >
-          <br /><span class="text-manao-dark text-sm"
+          <br /><span class="text-sm"
             >Jesper Juul - dänischer Familientherapeut, Pädagoge und Autor</span
           >
         </p>

@@ -23,8 +23,11 @@ import Divider from "../components/Divider.astro";
           <p>
             Moderne Forschung, insbesondere die Psychoneuroimmunologie, belegt
             die enge Verbindung von Psyche, Nervensystem, Hormon- und
-            Immunsystem. Gedanken, Emotionen, Stress und soziale Beziehungen
-            beeinflussen nachweislich unser Wohlbefinden und unsere Gesundheit.
+            Immunsystem.
+          </p>
+          <p class="border-manao border-l-4 p-4">
+            Gedanken, Emotionen, Stress und soziale Beziehungen beeinflussen
+            nachweislich unser Wohlbefinden und unsere Gesundheit.
           </p>
           <p>
             Ergänzend dazu zeigen bereits einige Länder mit Konzepten wie Social
@@ -39,21 +42,22 @@ import Divider from "../components/Divider.astro";
             setzen, doch es braucht mehr.
           </p>
           <p>
-            "Viele Inhalte, die in der Schule gelehrt werden, geraten in
-            Vergessenheit, kaum dass die entsprechende Prüfung bestanden ist.
-            Die psychologische Prägung, die aus diesen Jahren resultiert, bleibt
-            jedoch ein Leben lang erhalten. Und obwohl wir wissen, dass eine
-            Landschaft aus Selbstzweifeln, Minderwertigkeitskomplexen und
-            Ängsten auch später noch positiv beeinflusst werden kann, wissen wir
-            auch wie viel Zeit, Mühe und Selbstdisziplin dies erfordert und dass
-            wir selbst dann in alte Muster zurückfallen können, wenn es uns
-            gelingt.
-          </p>
-          <p>
-            Wenn Kinder schon in jungen Jahren ein starkes Selbstbewusstsein
-            entwickeln, wenn sie lernen, einen positiven inneren Dialog zu
-            führen und achtsam mit sich und anderen umzugehen, werden sie davon
-            ihr Leben lang profitieren."
+            <span class="italic">
+              "Viele Inhalte, die in der Schule gelehrt werden, geraten in
+              Vergessenheit, kaum dass die entsprechende Prüfung bestanden ist.
+              Die psychologische Prägung, die aus diesen Jahren resultiert,
+              bleibt jedoch ein Leben lang erhalten. Und obwohl wir wissen, dass
+              eine Landschaft aus Selbstzweifeln, Minderwertigkeitskomplexen und
+              Ängsten auch später noch positiv beeinflusst werden kann, wissen
+              wir auch wie viel Zeit, Mühe und Selbstdisziplin dies erfordert
+              und dass wir selbst dann in alte Muster zurückfallen können, wenn
+              es uns gelingt.<br /><span class="text-manao font-bold">
+                Wenn Kinder schon in jungen Jahren ein starkes Selbstbewusstsein
+                entwickeln, wenn sie lernen, einen positiven inneren Dialog zu
+                führen und achtsam mit sich und anderen umzugehen, werden sie
+                davon ihr Leben lang profitieren.</span
+              >"
+            </span>
           </p>
           <p>
             Zitat aus dem Buch "Sophias Geheimnis - Ein Roman über das, was im
@@ -87,7 +91,7 @@ import Divider from "../components/Divider.astro";
           In der Praxis wird jedoch deutlich, dass der Fokus häufig stärker auf
           den Programmen selbst liegt als auf dem einzelnen Menschen.
         </p>
-        <p class="text-manao-dark font-bold italic">
+        <p class="text-manao font-bold">
           Hier setze ich bewusst einen anderen Schwerpunkt.
         </p>
         <p>
@@ -103,8 +107,9 @@ import Divider from "../components/Divider.astro";
 
     <ImageTextSection imageMetadata={haende} minHeightClass="lg:min-h-60"
       ><span class="font-caveat text-3xl md:text-4xl"
-        >"Kinder sind die Seismografen der Gesellschaft. Ihre Erschöfpung ist
-        ein wichtiges Signal."</span
+        >"Kinder sind die Seismografen der Gesellschaft.<br
+          class="hidden lg:block"
+        />Ihre Erschöfpung ist ein wichtiges Signal."</span
       >
       <br /><span class="text-sm"
         >Margret Rasfeld - deutsche Pädagogin und Mitgründerin der Initiative
@@ -133,25 +138,28 @@ import Divider from "../components/Divider.astro";
             Gleichzeitig können sie strukturelle Herausforderungen - wie
             staatliche Vorgaben, Fachkräftemangel oder bestehende
             Rahmenbedingungen - nicht ausgleichen.
-          </p><p class="border-manao border-l-4 p-4">
+          </p>
+          <Divider />
+          <p class="font-caveat text-manao-dark text-center text-3xl">
             Auch wenn wir das Bildungssystem und gesellschaftliche Strukturen
             nicht von heute auf morgen ändern können, so hat doch jeder
             Gestaltungsspielraum in seinem eigenen Denken, in seiner Haltung und
             in seinem Handeln.
-          </p><p class="text-manao-dark mt-10 font-bold">
+          </p>
+          <Divider />
+          <p class="text-manao mt-10 font-bold">
             Eltern/Erziehungsberechtigten kommt dabei eine besondere Rolle zu:
-          </p><p class="text-manao-dark font-bold">
+          </p><p class="text-manao font-bold">
             Sie bilden die zentrale Beziehungs- und Entwicklungsbasis.
           </p>
           <p class="italic">
             Wird diese Verantwortung unterschätzt, hat das nicht nur
             individuelle sondern auch gesellschaftliche Folgen.
           </p>
-          <p>
-            Entwicklungspsychologische Forschung zeigt, dass frühe
-            Bindungserfahrungen die spätere Emotionsregulation, den Selbstwert,
-            Stressverarbeitung, psychische Stabilität und Beziehungsfähigkeit
-            prägen.
+          <p class="border-manao border-l-4 p-4">
+            Entwicklungspsychologische Forschung zeigt:<br /> Frühe Bindungserfahrungen
+            prägen die spätere Emotionsregulation, den Selbstwert, Stressverarbeitung,
+            psychische Stabilität und Beziehungsfähigkeit.
           </p>
           <p>
             Nach der Bindungstheorie (Bowlby, Ainsworth) entstehen sie vor allem
@@ -196,16 +204,9 @@ import Divider from "../components/Divider.astro";
           </p>
           <p class="border-manao border-l-4 p-4">
             Auch wenn nicht immer alles ideal verläuft oder verlaufen ist:<br />
-            Elternsein bleibt ein fortlaufender Prozess, der <span
-              class="italic"
-            >
-              nicht auf Perfektion</span
-            > abzielt, sondern auf <span class="text-manao font-bold"
-              >Bewusstheit</span
-            >,
-            <span class="text-manao font-bold">Kontakt</span> und die <span
-              class="text-manao font-bold">Bereitschaft</span
-            >, Beziehung immer wieder neu zu gestalten.
+            Elternsein bleibt ein fortlaufender Prozess, der nicht auf Perfektion
+            abzielt, sondern auf Bewusstheit, Kontaktund die Bereitschaft, Beziehung
+            immer wieder neu zu gestalten.
           </p>
         </div>
       </div>
@@ -214,7 +215,7 @@ import Divider from "../components/Divider.astro";
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
       <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
         <div class="space-y-5 md:basis-3/5">
-          <p class="text-manao-dark font-bold">
+          <p class="text-manao font-bold">
             Nachhaltige Gesundheit entsteht, wenn wir den Menschen in seiner
             Ganzheit betrachten.
           </p>
@@ -222,10 +223,11 @@ import Divider from "../components/Divider.astro";
             Daher möchte ich mit meiner Arbeit eine Brücke schaffen, zwischen
             wissenschaftlich fundierten Erkenntnissen und einer bewussten
             Auseinandersetzung mit den grundlegenden Fragen des Menschseins - im
-            Sinne einer offenen und greifbaren Spiritualität, frei von
-            religiösen oder dogmatischen Konzepten:
+            Sinne einer <span class="text-manao font-bold"
+              >offenen und greifbaren Spiritualität</span
+            >, frei von religiösen oder dogmatischen Konzepten:
           </p>
-          <ul class="marker:text-manao list-disc space-y-2 pl-6">
+          <ul class="list-disc space-y-2 pl-6">
             <li>Wo komme ich her?</li>
             <li>Was gibt meinem Leben Bedeutung?</li>
             <li>Was trägt mich - auch in schwierigen Zeiten?</li>
@@ -267,13 +269,11 @@ import Divider from "../components/Divider.astro";
           </p>
           <div class="border-manao space-y-5 border-l-4 p-4">
             <p>
-              Ein <span class="text-manao font-bold"
-                >moderner ganzheitlicher Ansatz</span
-              >
-              - "ganzheitlich" ist hier keine Floskel, es ist der einzig realistische
-              Weg, den Menschen wirklich zu erreichen - verbindet daher:
+              Ein moderner ganzheitlicher Ansatz - "ganzheitlich" ist hier keine
+              Floskel, es ist der einzig realistische Weg, den Menschen wirklich
+              zu erreichen - verbindet daher:
             </p>
-            <ul class="marker:text-manao list-disc space-y-2 pl-6">
+            <ul class="list-disc space-y-2 pl-6">
               <li>Klarheit und Struktur wissenschaftlicher Erkenntnisse</li>
               <li>
                 mit der Tiefe persönlicher Sinn- und Bewusstseinsentwicklung
