@@ -15,7 +15,11 @@ import Divider from "../components/Divider.astro";
 
 <Layout title="manao" description="manao">
   <main>
-    <Picture src={headerImage} alt="Header" class="mt-2 lg:mt-10" />
+    <Picture
+      src={headerImage}
+      alt="Header"
+      class="h-29 w-full object-cover object-center md:h-auto md:object-contain"
+    />
     <WelcomeHero />
     <ImageTextSection
       imageMetadata={haende}
