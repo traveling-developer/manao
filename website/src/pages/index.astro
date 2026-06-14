@@ -17,7 +17,10 @@ import Divider from "../components/Divider.astro";
   <main>
     <Picture src={headerImage} alt="Header" class="mt-2 lg:mt-10" />
     <WelcomeHero />
-    <ImageTextSection imageMetadata={haende} minHeightClass="lg:min-h-60"
+    <ImageTextSection
+      imageMetadata={haende}
+      minHeightClass="lg:min-h-60"
+      bgPositionClass="bg-left md:bg-center"
       ><span class="font-caveat text-3xl md:text-4xl"
         >"Wer auf seine innere Stimme hört, lebt im Einklang mit sich selbst.
         <br class="hidden lg:block" />Dann entstehen Freude, Freiheit und

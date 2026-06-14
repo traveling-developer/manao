@@ -7,6 +7,7 @@ interface Props {
   minHeightClass?: string;
   overlay?: boolean;
   textPosition?: "left" | "right";
+  bgPositionClass?: string;
 }
 
 const {
@@ -14,6 +15,7 @@ const {
   minHeightClass = "min-h-40",
   overlay = false,
   textPosition = "right",
+  bgPositionClass = "bg-center",
 } = Astro.props;
 
 const smallBackground = await getImage({
@@ -38,7 +40,8 @@ const originalBackground = await getImage({
 
 <div
   class:list={[
-    "responsive-bg relative flex w-full items-center justify-end bg-cover bg-center",
+    "responsive-bg relative flex w-full items-center justify-end bg-cover",
+    bgPositionClass,
     minHeightClass,
   ]}
   style={`--bg-small: url(${smallBackground.src}); --bg-medium: url(${mediumBackground.src}); --bg-large: url(${largeBackground.src}); --bg-original: url(${originalBackground.src});`}
