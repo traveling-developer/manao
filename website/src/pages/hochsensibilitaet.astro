@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactButtons from "../components/ContactButtons.astro";
+import { Picture } from "astro:assets";
+import schmetterling from "../assets/schmetterlin.webp";
 ---
 
 <Layout
@@ -8,30 +10,42 @@ import ContactButtons from "../components/ContactButtons.astro";
   description="Beratung und Coaching rund um Hochsensibilität - für Erwachsene, Kinder und Eltern."
 >
   <main>
-    <section class="mx-auto max-w-3xl px-5 py-12 md:py-16">
+    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
       <div class="space-y-10">
-        <header class="space-y-5">
-          <h1
-            class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
+        <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+          <header class="space-y-5 md:basis-3/5">
+            <h1
+              class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
+            >
+              Hochsensibilität Beratung & Coaching
+            </h1>
+            <p>
+              Die Ausbildung jeder Persönlichkeit, einschließlich
+              Hochsensibilität, entsteht durch ein Zusammenspiel von
+              genetischen, biologischen und sozialen Faktoren.
+            </p>
+            <p>
+              Jeder Mensch besitzt Sensibilität: die Fähigkeit, Informationen
+              (= Reize) aus der Umwelt wahrzunehmen und zu verarbeiten.
+            </p>
+            <p>
+              Etwa 15 - 20 % der Menschen haben ein besonders sensibles
+              Nervensystem, das auf äußere und innere Reize intensiver reagiert
+              und sie gründlicher verarbeitet. Diese Menschen werden als
+              Hochsensible (highly sensitive person) bezeichnet.
+            </p>
+          </header>
+
+          <div
+            class="hidden w-full max-w-xs self-center md:block md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
           >
-            Hochsensibilität Beratung & Coaching
-          </h1>
-          <p>
-            Die Ausbildung jeder Persönlichkeit, einschließlich Hochsensibilität,
-            entsteht durch ein Zusammenspiel von genetischen, biologischen und
-            sozialen Faktoren.
-          </p>
-          <p>
-            Jeder Mensch besitzt Sensibilität: die Fähigkeit, Informationen
-            (= Reize) aus der Umwelt wahrzunehmen und zu verarbeiten.
-          </p>
-          <p>
-            Etwa 15 - 20 % der Menschen haben ein besonders sensibles Nervensystem,
-            das auf äußere und innere Reize intensiver reagiert und sie
-            gründlicher verarbeitet. Diese Menschen werden als Hochsensible
-            (highly sensitive person) bezeichnet.
-          </p>
-        </header>
+            <Picture
+              src={schmetterling}
+              alt="Schmetterling"
+              class="aspect-square w-full rounded-full object-cover"
+            />
+          </div>
+        </div>
 
         <div class="space-y-4">
           <p>
@@ -39,7 +53,7 @@ import ContactButtons from "../components/ContactButtons.astro";
             Erforschung von Hochsensibilität und identifizierte vier zentrale
             Merkmale, die HSP auszeichnen:
           </p>
-          <ul class="marker:text-manao list-disc space-y-2 pl-6">
+          <ul class="list-disc space-y-2 pl-6">
             <li>hohe Reizwahrnehmung</li>
             <li>tiefe Reizverarbeitung</li>
             <li>leichte Überreizung</li>
@@ -52,6 +66,14 @@ import ContactButtons from "../components/ContactButtons.astro";
           </p>
         </div>
 
+        <div class="mx-auto w-full max-w-xs md:hidden">
+          <Picture
+            src={schmetterling}
+            alt="Schmetterling"
+            class="aspect-square w-full rounded-full object-cover"
+          />
+        </div>
+
         <div class="space-y-4">
           <p>
             Vielleicht ahnst du schon, dass du oder dein Kind hochsensibel bist,
@@ -59,7 +81,7 @@ import ContactButtons from "../components/ContactButtons.astro";
           </p>
           <p class="text-manao font-semibold">Hier helfe ich gerne weiter.</p>
           <p>Zudem können mögliche Themen sein:</p>
-          <ul class="marker:text-manao list-disc space-y-2 pl-6">
+          <ul class="list-disc space-y-2 pl-6">
             <li>Verständnis, Orientierung</li>
             <li>Selbstliebe entwickeln</li>
             <li>Gesundes Selbstmanagement erlernen</li>
@@ -92,7 +114,7 @@ import ContactButtons from "../components/ContactButtons.astro";
             unterstützen.
           </p>
           <p>Mögliche Themen:</p>
-          <ul class="marker:text-manao list-disc space-y-2 pl-6">
+          <ul class="list-disc space-y-2 pl-6">
             <li>Klarheit, ist mein Kind hochsensibel?</li>
             <li>Verständnis für die Bedürfnisse des Kindes</li>
             <li>Hochsensibilität im Alltag, Struktur und Organisation</li>
@@ -100,6 +122,11 @@ import ContactButtons from "../components/ContactButtons.astro";
             <li>Stärkung der Elternrolle und spürbare Entlastung</li>
           </ul>
         </div>
+
+        <p class="text-manao font-bold">
+          → Die Preisgestaltung entspricht den jeweiligen Formaten (Beratungs-
+          und Erziehungsberatung bzw. Coaching).
+        </p>
 
         <ContactButtons />
       </div>

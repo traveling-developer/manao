@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactButtons from "../components/ContactButtons.astro";
+import Divider from "../components/Divider.astro";
 ---
 
 <Layout
@@ -17,38 +18,37 @@ import ContactButtons from "../components/ContactButtons.astro";
             Fachberatung
           </h1>
           <p>
-            Fachliche Beratung & Unterstützung zum Thema Hochsensibilität,
-            Psychomotorik und zum Konzept „Das Licht in mir".
+            Beratung & Unterstützung für Fachkräfte in Kita, Schule, Betreuung
+            und Jugendarbeit zum Thema Hochsensibilität, Psychomotorik und zum
+            Konzept „Das Licht in mir".
           </p>
         </header>
 
         <div class="space-y-6">
           <h2 class="text-manao text-2xl font-semibold">Impuls-Workshop</h2>
+          <div
+            class="text-manao -mt-4 text-sm font-semibold tracking-wide uppercase"
+          >
+            individuell · praxisnah · alltagstauglich
+          </div>
 
           <div class="space-y-4">
-            <p
-              class="text-manao text-sm font-semibold tracking-wide uppercase"
-            >
-              Dauer: ca. 2 – 2,5 Stunden · individuell · praxisnah ·
-              alltagstauglich
-            </p>
-            <p>
-              Für Fachkräfte in Kita, Schule, Betreuung und Jugendarbeit, die
-              ihre pädagogische Arbeit gezielt weiterentwickeln möchten.
+            <p class="text-manao text-sm font-semibold tracking-wide uppercase">
+              Dauer: ca. 2 – 2,5 Stunden
             </p>
             <p>
               Die Impuls-Workshops sind flexibel buchbar – einzeln, kombiniert
               oder als Reihe zu einem Thema.
             </p>
             <p>
-              <span class="text-manao font-semibold">Honorar:</span> 260 € —
-              zzgl. Fahrtkosten ab 20 km
+              <span class="text-manao font-semibold">Honorar:</span> 260 € — zzgl.
+              Fahrtkosten ab 20 km
             </p>
           </div>
 
           <div class="space-y-3">
             <h3 class="text-manao font-semibold">Haltung & Arbeitsweise</h3>
-            <ul class="marker:text-manao list-disc space-y-2 pl-6">
+            <ul class="list-disc space-y-2 pl-6">
               <li>
                 wertschätzender Blick auf vorhandene Qualifikation, Erfahrung
                 und Weiterbildung
@@ -67,7 +67,7 @@ import ContactButtons from "../components/ContactButtons.astro";
               Die Inhalte sind so aufgebaut, dass sie nicht nur Wissen
               vermitteln, sondern direkt im Gruppenalltag wirksam werden:
             </p>
-            <ul class="marker:text-manao list-disc space-y-2 pl-6">
+            <ul class="list-disc space-y-2 pl-6">
               <li>
                 mehr Sicherheit im Umgang mit unterschiedlichen kindlichen
                 Bedürfnissen
@@ -89,8 +89,8 @@ import ContactButtons from "../components/ContactButtons.astro";
           <h2 class="text-manao text-2xl font-semibold">„Das Licht in mir"</h2>
           <p>
             Ein ressourcenorientierter und ganzheitlicher Ansatz zur Stärkung
-            von Selbstwahrnehmung, Emotionsregulation, innerer Stabilität sowie
-            sozialer Kompetenz.
+            von Selbstwahrnehmung, Intuition, Emotionsregulation, innerer
+            Stabilität, Resilienz sowie sozialer Kompetenz.
           </p>
           <p>
             Kinder entwickeln ein besseres Verständnis für sich selbst – mit
@@ -98,13 +98,28 @@ import ContactButtons from "../components/ContactButtons.astro";
             Gruppendynamik.
           </p>
           <p>
-            Als Impuls-Workshop buchbar oder als separater Kurs →
+            Je nach Bedarf richtet sich das Angebot an Fachpersonal oder direkt
+            an Kinder/Jugendliche:
+          </p>
+          <ul class="list-disc space-y-2 pl-6">
+            <li>
+              Fachkräfte erhalten im Impuls-Workshop konkrete methodische
+              Einblicke und praktische Umsetzungsideen für den Alltag mit
+              Kindern/Jugendlichen
+            </li>
+            <li>
+              Im Kursformat setze ich das Konzept direkt mit den
+              Kindern/Jugendlichen um
+            </li>
+          </ul>
+          <div class="mt-5 flex justify-center">
             <a
               href="/licht-in-mir-konzept"
-              class="text-manao underline hover:no-underline"
-              >Details zum Konzept</a
+              class="btn bg-manao hover:border-manao hover:text-manao text-white transition-colors duration-300 hover:bg-white"
             >
-          </p>
+              Details zum Konzept
+            </a>
+          </div>
         </div>
 
         <div class="space-y-3">
@@ -114,7 +129,7 @@ import ContactButtons from "../components/ContactButtons.astro";
             Alltag.
           </p>
           <p>Der Fokus liegt auf:</p>
-          <ul class="marker:text-manao list-disc space-y-2 pl-6">
+          <ul class="list-disc space-y-2 pl-6">
             <li>sicherem Einordnen von Verhalten</li>
             <li>Entlastung im pädagogischen Handeln</li>
             <li>Reduktion von Überforderung im Gruppenalltag</li>
@@ -125,12 +140,14 @@ import ContactButtons from "../components/ContactButtons.astro";
           <h2 class="text-manao text-2xl font-semibold">Psychomotorik</h2>
           <p>Bewegung als entwicklungsfördernde Grundlage.</p>
           <p>Psychomotorische Impulse unterstützen:</p>
-          <ul class="marker:text-manao list-disc space-y-2 pl-6">
+          <ul class="list-disc space-y-2 pl-6">
             <li>Körper- und Selbstwahrnehmung</li>
             <li>emotionale Regulation</li>
             <li>soziale Interaktion und Gruppensicherheit</li>
           </ul>
         </div>
+
+        <Divider />
 
         <ContactButtons />
       </div>
