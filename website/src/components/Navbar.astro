@@ -27,8 +27,11 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
   </a>
 
   <div class="flex items-center">
-    <div class="dropdown dropdown-end xl:hidden">
-      <div tabindex="0" role="button" class="btn btn-ghost text-white">
+    <details class="dropdown dropdown-end xl:hidden">
+      <summary
+        class="btn btn-ghost list-none text-white [&::-webkit-details-marker]:hidden"
+        aria-label="Menü öffnen"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -42,9 +45,8 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
             stroke-width="2"
             d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
-      </div>
+      </summary>
       <ul
-        tabindex="0"
         class="menu menu-sm dropdown-content bg-manao z-10 mt-3 w-52 p-2 shadow"
       >
         {
@@ -60,7 +62,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
           ))
         }
       </ul>
-    </div>
+    </details>
 
     <ul class="menu menu-horizontal hidden flex-nowrap px-1 xl:flex">
       {
@@ -78,6 +80,26 @@ const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
     </ul>
   </div>
 </nav>
+
+<script>
+  const dropdown = document.querySelector<HTMLDetailsElement>(
+    "nav details.dropdown",
+  );
+  if (dropdown) {
+    // Bei Klick auf einen Link schließen
+    dropdown.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        dropdown.open = false;
+      });
+    });
+    // Beim Tippen/Klicken außerhalb schließen
+    document.addEventListener("click", (event) => {
+      if (dropdown.open && !dropdown.contains(event.target as Node)) {
+        dropdown.open = false;
+      }
+    });
+  }
+</script>
 
 <style>
   nav :global(.menu :where(li > a)) {

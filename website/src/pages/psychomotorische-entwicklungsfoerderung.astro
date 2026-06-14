@@ -41,7 +41,7 @@ import ContactButtons from "../components/ContactButtons.astro";
 
         <div class="space-y-4">
           <h2 class="text-manao text-2xl font-semibold">Investition</h2>
-          <div class="overflow-x-auto">
+          <div class="hidden overflow-x-auto md:block">
             <table class="w-full border-collapse text-left">
               <thead>
                 <tr class="border-manao/30 border-b">
@@ -72,18 +72,58 @@ import ContactButtons from "../components/ContactButtons.astro";
                 </tr>
                 <tr>
                   <th scope="row" class="py-3 pr-4 font-semibold"
-                    >Kleinstgruppe<br /><span class="font-normal"
-                      >(2 – 3 Kinder)</span
-                    ></th
-                  >
-                  <td class="text-manao py-3 pr-4 font-semibold">
-                    48 € pro Kind
-                  </td>
+                    >Kleinstgruppe pro Kind<br /><span
+                      class="text-sm font-normal">(2 – 3 Kinder)</span
+                    >
+                  </th>
+                  <td class="text-manao py-3 pr-4 font-semibold"> 48 € </td>
                   <td class="text-manao py-3 pr-4 font-semibold">230 €</td>
                   <td class="text-manao py-3 font-semibold">430 €</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          <div class="space-y-4 md:hidden">
+            <div class="border-manao/30 space-y-2 rounded-lg border p-4">
+              <p class="font-semibold">1 Kind</p>
+              <dl class="divide-manao/20 divide-y">
+                <div class="flex justify-between py-2 first:pt-0 last:pb-0">
+                  <dt>60 min</dt>
+                  <dd class="text-manao font-semibold">68 €</dd>
+                </div>
+                <div class="flex justify-between py-2 first:pt-0 last:pb-0">
+                  <dt>5er-Paket</dt>
+                  <dd class="text-manao font-semibold">320 €</dd>
+                </div>
+                <div class="flex justify-between py-2 first:pt-0 last:pb-0">
+                  <dt>10er-Paket</dt>
+                  <dd class="text-manao font-semibold">610 €</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="border-manao/30 space-y-2 rounded-lg border p-4">
+              <p class="font-semibold">
+                Kleinstgruppe pro Kind <br /><span class="text-sm font-normal"
+                  >(2 – 3 Kinder)</span
+                >
+              </p>
+              <dl class="divide-manao/20 divide-y">
+                <div class="flex justify-between py-2 first:pt-0 last:pb-0">
+                  <dt>60 min</dt>
+                  <dd class="text-manao font-semibold">48 €</dd>
+                </div>
+                <div class="flex justify-between py-2 first:pt-0 last:pb-0">
+                  <dt>5er-Paket</dt>
+                  <dd class="text-manao font-semibold">230 €</dd>
+                </div>
+                <div class="flex justify-between py-2 first:pt-0 last:pb-0">
+                  <dt>10er-Paket</dt>
+                  <dd class="text-manao font-semibold">430 €</dd>
+                </div>
+              </dl>
+            </div>
           </div>
         </div>
 
@@ -102,9 +142,8 @@ import ContactButtons from "../components/ContactButtons.astro";
             Verfügung habe.
           </p>
           <p>
-            Sollte ein Kind erkranken, so werde ich diesen Termin mit dem Kind
-            nachholen. Handelt es sich um mehrere Termine, erlaube ich mir den
-            Aufpreis zur Einzelstunde nachzufordern.
+            Sollte ein Kind erkranken, so kann dieser Termin gegen Aufpreis zur
+            Einzelstunde nachgeholt werden.
           </p>
         </div>
 

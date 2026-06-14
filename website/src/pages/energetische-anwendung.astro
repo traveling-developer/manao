@@ -63,10 +63,14 @@ import ContactButtons from "../components/ContactButtons.astro";
           <h2 class="text-manao text-2xl font-semibold">Investition</h2>
           <dl class="divide-manao/20 divide-y">
             <div
-              class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0"
+              class="flex items-baseline justify-between gap-x-4 py-3 first:pt-0 last:pb-0"
             >
-              <dt>Anwendung (60 min, davon 10 – 15 min Nachruhe)</dt>
-              <dd class="text-manao font-semibold">65 €</dd>
+              <dt>
+                Anwendung<br />
+                <span class="text-sm"
+                  >(60 min, davon 10 – 15 min Nachruhe)</span>
+              </dt>
+              <dd class="text-manao shrink-0 font-semibold">65 €</dd>
             </div>
           </dl>
         </div>
@@ -94,10 +98,12 @@ import ContactButtons from "../components/ContactButtons.astro";
           </a>
         </div>
 
-        <p class="text-manao">
-          → Bei Fragen oder für nähere Informationen kannst du mich gerne
-          kontaktieren.
-        </p>
+        <ul class="text-manao list-['→_'] space-y-2 pl-6">
+          <li>
+            Bei Fragen oder für nähere Informationen kannst du mich gerne
+            kontaktieren.
+          </li>
+        </ul>
 
         <ContactButtons />
       </div>
