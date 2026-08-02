@@ -1,6 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactButtons from "../components/ContactButtons.astro";
+import SymbolDivider from "../components/SymbolDivider.astro";
+import { Picture } from "astro:assets";
+import liege from "../assets/liege.webp";
 ---
 
 <Layout
@@ -16,27 +19,74 @@ import ContactButtons from "../components/ContactButtons.astro";
           >
             Energetische Anwendung
           </h1>
-          <p>
-            <span class="text-manao font-semibold">Ein Moment für Dich</span> – eine
-            achtsame Anwendung, die darauf ausgerichtet ist, die natürliche Ordnung
-            und Balance in deinem Energiesystem zu unterstützen. Der Energiefluss
-            kann dabei angeregt und die eigene Regulationsfähigkeit unterstütz werden.
+
+          <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+            <div class="space-y-5 md:basis-3/5">
+              <p>
+                <span class="text-manao font-semibold">Ein Moment für Dich</span
+                > – eine HMO® (Heilmagnetische Ordnungstherapie) Anwendung, um die
+                natürliche Ordnung und Balance in deinem gesamten System zu unterstützen.
+              </p><p>
+                Biophysikalisch steht der Mensch in ständiger Wechselwirkung mit
+                dem Magnetfeld der Erde, das als natürlicher Lebens- und
+                Taktgeber fungiert. Die Lehre der HMO® betrachtet den Menschen
+                eingebettet in diesen Kosmos - als Einheit von Körper, Geist und
+                Seele - und nutzt magnetische Felder als Bindeglied zwischen der
+                feinstofflichen und der körperlichen Ebene.
+              </p><p>
+                Dieses übergeordnete Magnetfeld fungiert als ordnende Matrix für
+                das Licht unserer Zellen (die Biophotonen nach Prof. Dr.
+                Fritz-Albert Popp). Nur innerhalb eines stabil ausgerichteten
+                Feldes kann diese zelluläre Lichtstrahlung harmonisch fließen
+                und die Lebensprozesse fehlerfrei steuern.
+              </p>
+            </div>
+
+            <div
+              class="mx-auto w-full max-w-xs self-center md:mx-0 md:basis-2/5 md:self-auto"
+            >
+              <Picture
+                src={liege}
+                alt="Behandlungsliege mit Kissen, daneben Kerzen und eine Klangschale"
+                class="aspect-square w-full rounded-full object-cover"
+              />
+            </div>
+          </div>
+
+          <p class="mt-10">
+            Die HMO® nach Johanna Arnold basiert auf den überlieferten Ansätzen
+            des Heilmagnetismus, der im 18. Jahrhundert durch den Arzt Franz
+            Anton Mesmer bekannt wurde, sowie auf den Praxiserfahrungen ihres
+            Vaters.
+          </p><p>
+            Sie selbst stellte in ihrer eigenen Arbeit als Heilpraktikerin fest,
+            dass zu den vielfältigen menschlichen Erfahrungen und tieferen
+            Prägungen auch weitere irdische Belastungen des modernen Alltags –
+            wie Reizüberflutung, Dauerstress und Elektrosmog – sowie kosmische
+            Einflüsse wie z. B. Sonnenstürme hinzukommen. All diese Faktoren
+            verlangen nach neuen, tieferen Formen der Regeneration.
+          </p><p>
+            Auf diesen Grundlagen entwickelte sie das Konzept der HMO®. Ihr Ziel
+            war es, dieses alte Wissen wieder zugänglich zu machen und es
+            präzise an die heutigen Bedürfnisse des Menschen anzupassen.
           </p>
         </header>
 
+        <SymbolDivider />
         <div class="space-y-4">
           <p>
-            Zu Beginn klären wir kurz, ob ein konkretes Anliegen im Vordergrund
-            steht und wählen dann den jeweiligen Ansatz, der dich in diesem
-            Moment am Besten unterstützt.
+            Zu Beginn klären wir kurz, was dich gerade bewegt und wählen dann
+            den passenden Schwerpunkt innerhalb der HMO<sup
+              class="inline-block align-super text-[0.5em] no-underline">®</sup
+            >, der dich in diesem Moment am besten unterstützt.
           </p>
           <p>
             Die Anwendung kann auf der Liege erfolgen und wird je nach Wunsch
             mit leichter Berührung oder vollständig berührungslos durchgeführt.
           </p>
           <p>
-            Diese Unterstützung steht auch Babys, Kindern und Tieren offen. Den
-            Rahmen passe ich dementsprechend flexibel an.
+            Sie ist für alle Altersgruppen geeignet und auch für Tiere. Das
+            Vorgehen sowie den Rahmen passe ich flexibel an.
           </p>
         </div>
 
@@ -58,6 +108,43 @@ import ContactButtons from "../components/ContactButtons.astro";
           </ul>
         </div>
 
+        <div class="space-y-3">
+          <ul class="text-manao list-['→_'] space-y-2 pl-6">
+            <li>
+              Bei Fragen oder für nähere Informationen kannst du mich gerne
+              kontaktieren.
+            </li>
+          </ul>
+          <p>
+            Weitere Informationen findest du zudem hier:
+            <a
+              href="https://mit-deinen-haenden-heilen.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-manao underline"
+              >www.mit-deinen-haenden-heilen.de</a
+            > /
+            <a
+              href="https://gesundheitspraxis-ja.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-manao underline">www.gesundheitspraxis-ja.de</a
+            >
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="text-manao text-2xl font-semibold">Anwendungen</h2>
+          <p>
+            HMO<sup class="align-super text-[0.5em]">®</sup>-Anwendungen sind
+            möglich:
+          </p>
+          <ul class="list-disc space-y-2 pl-6">
+            <li>persönlich</li>
+            <li>als Fernanwendung</li>
+          </ul>
+        </div>
+
         <div class="space-y-4">
           <h2 class="text-manao text-2xl font-semibold">Investition</h2>
           <dl class="divide-manao/20 divide-y">
@@ -74,24 +161,40 @@ import ContactButtons from "../components/ContactButtons.astro";
           </dl>
         </div>
 
-        <div class="text-base-content/70 space-y-2 text-sm">
-          <p>
-            Diese Anwendung versteht sich als begleitender Prozess zur
-            Selbsterfahrung und persönlichen Entwicklung.
-          </p>
-          <p>
-            Sie stellt keine medizinische, psychotherapeutische oder
-            heilkundliche Behandlung dar und ersetzt diese nicht. Ich stelle
-            keine Diagnosen und gebe keine Heilversprechen.
-          </p>
+        <div
+          class="flex gap-3 rounded-lg border border-[#03a18f]/20 bg-[#03a18f]/20 p-4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="text-manao mt-0.5 h-5 w-5 shrink-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+          <div class="text-base-content/70 space-y-2 text-sm">
+            <p>
+              Meine Arbeit versteht sich als begleitender Prozess zur
+              Selbsterfahrung und persönlichen Entwicklung.
+            </p>
+            <p>
+              Sie stellt keine medizinische, psychotherapeutische oder
+              heilkundliche Behandlung dar und ersetzt diese nicht.<br /> Ich stelle
+              keine Diagnosen und gebe keine Heilversprechen.
+            </p>
+            <p>
+              Die Methode ist wissenschaftlich und schulmedizinisch nicht
+              anerkannt.
+            </p>
+          </div>
         </div>
-
-        <ul class="text-manao list-['→_'] space-y-2 pl-6">
-          <li>
-            Bei Fragen oder für nähere Informationen kannst du mich gerne
-            kontaktieren.
-          </li>
-        </ul>
 
         <ContactButtons />
       </div>

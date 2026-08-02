@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactButtons from "../components/ContactButtons.astro";
+import { Picture } from "astro:assets";
+import sprung from "../assets/manao_sprung.webp";
 ---
 
 <Layout
@@ -10,55 +12,80 @@ import ContactButtons from "../components/ContactButtons.astro";
   <main>
     <section class="mx-auto max-w-3xl px-5 py-12 md:py-16">
       <div class="space-y-10">
-        <header class="space-y-5">
-          <h1
-            class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
-          >
-            SKYourself<sup class="align-super text-[0.5em]">®</sup>
-          </h1>
-          <p>
-            Aus der Sichtweise heraus, dass jedes Lebewesen über ein
-            energetisches System verfügt, kann diese Methode nicht nur bei
-            Erwachsenen sondern auch bei Babys, Kleinkindern und sogar bei
-            Tieren angewendet werden.
-          </p>
-        </header>
+        <div>
+          <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+            <header class="space-y-5 md:basis-3/5">
+              <h1
+                class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
+              >
+                SKYourself<sup class="align-super text-[0.5em]">®</sup>
+              </h1>
+              <p>
+                SKYourself<sup class="align-super text-[0.5em]">®</sup> versteht sich
+                als eine Methode zur Transformation emotionaler Muster.
+              </p>
+              <p>
+                Entwickelt wurde sie von Annette Müller, Gründerin der ersten
+                stationären Fachklinik für Geistiges Heilen in Deutschland sowie
+                Gründerin und Leiterin der Internationalen Heiler- und
+                Heilpraktikerschule ÉCOLE SAN ESPRIT.<br />Diese Methode
+                verbindet Jahrtausende altes energetisches Wissen mit modernen
+                Erkenntnissen über die menschliche Psyche und das Bewusstsein.
+              </p>
 
-        <p>
-          SKYourself<sup class="align-super text-[0.5em]">®</sup> wurde von Anette
-          Müller entwickelt, Gründerin der ersten stationären Fachklinik für Geistiges
-          Heilen in Deutschland sowie Gründerin und Leiterin der Internationalen Heiler-
-          und Heilpraktikerschule ÉCOLE SAN ESPRIT.
-        </p>
+              <div class="mx-auto w-full max-w-xs md:hidden">
+                <Picture
+                  src={sprung}
+                  alt="Springende Person am Meer, umrahmt vom manao-Symbol"
+                  class="w-full"
+                />
+              </div>
+            </header>
 
-        <div class="space-y-4">
-          <p>
-            Im Mittelpunkt steht die Annahme, dass Erfahrungen, Prägungen,
-            Stress und emotionale Belastungen, unser Erleben begleiten - oft
-            ohne, dass uns diese Zusammenhänge bewusst sind.
-          </p>
-          <p>
-            Sie können fortwährend wirken und unsere Lebensenergie beeinflussen
-            sowie:
-          </p>
-          <ul class="list-disc space-y-2 pl-6">
-            <li>Emotionen und innere Ruhe</li>
-            <li>Entscheidungen und Handeln</li>
-            <li>das Gefühl von Freiheit oder Begrenzung</li>
-            <li>Wohlbefinden und Lebensqualität</li>
-            <li>
-              körperliches und psychisches Wohlbefinden<br />(im Sinne der
-              ganzheitlichen Entspannung, nicht als Krankheitsbehandlung)
-            </li>
-          </ul>
-          <p>
-            Mit SKYourself<sup class="align-super text-[0.5em]">®</sup> können sich
-            neue Handlungsmöglichkeiten und Perspektiven eröffnen - für mehr Klarheit,
-            Leichtigkeit und innere Stabilität.
-          </p>
+            <div class="hidden w-full max-w-xs md:block">
+              <Picture
+                src={sprung}
+                alt="Springende Person am Meer, umrahmt vom manao-Symbol"
+                class="w-full"
+              />
+            </div>
+          </div>
+
+          <div class="space-y-5">
+            <p>
+              Aus Sicht der modernen Neurobiologie und Stressforschung
+              hinterlassen Erfahrungen, Prägungen, Leistungsdruck und emotionale
+              Belastungen Spuren auf psychischer Ebene, im Nervensystem und im
+              Körper.
+              <br />
+              Sie begleiten unser Erleben tiefgreifend - oft ohne, dass uns diese
+              Zusammenhänge bewusst sind.
+            </p><p>
+              Im Verständnis der energetischen Arbeit - so auch im SKYourself<sup
+                class="align-super text-[0.5em]">®</sup
+              > - manifestieren sich diese Muster gleichzeitig im feinstofflichen
+              Energiefeld, wo sie ebenfalls wie ein unsichtbares Hintergrundprogramm
+              wirken und unsere Lebensenergie beeinflussen sowie:
+            </p>
+            <ul class="list-disc space-y-2 pl-6">
+              <li>Emotionen und innere Ruhe</li>
+              <li>Entscheidungen und Handeln</li>
+              <li>das Gefühl von Freiheit oder Begrenzung</li>
+              <li>die allgemeine Lebensqualität</li>
+              <li>
+                körperliches und psychisches Wohlbefinden<br />(im Sinne der
+                ganzheitlichen Entspannung, nicht als Krankheitsbehandlung)
+              </li>
+            </ul>
+            <p class="mt-10">
+              Mit SKYourself<sup class="align-super text-[0.5em]">®</sup> können sich
+              neue Handlungsmöglichkeiten und Perspektiven eröffnen - für mehr Klarheit,
+              Leichtigkeit und innere Stabilität.
+            </p>
+          </div>
         </div>
 
-        <div class="space-y-2">
+        <div class="border-manao space-y-2 border-l-4 p-4">
           <p>
             Belastende Inhalte müssen nicht erzählt oder erneut intensiv
             durchlebt werden.
@@ -74,52 +101,21 @@ import ContactButtons from "../components/ContactButtons.astro";
               kontaktieren.
             </li>
           </ul>
-          <p>Weitere Informationen findest du zudem hier:</p>
-          <ul class="list-disc space-y-2 pl-6">
-            <li>
-              <a
-                href="https://www.skyourself.de"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-manao underline hover:no-underline"
-                >www.skyourself.de</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.san-esprit.de"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-manao underline hover:no-underline"
-                >www.san-esprit.de</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="space-y-3">
-          <h2 class="text-manao text-2xl font-semibold">
-            Bei Babys und Kleinkindern
-          </h2>
-          <p>Eine Anwendung kann erfahrungsgemäß sorgen für:</p>
-          <ul class="list-disc space-y-2 pl-6">
-            <li>mehr innere Ruhe und Ausgeglichenheit</li>
-            <li>besseres Einschlafen und Durchschlafen</li>
-            <li>weniger Überreizung und Reizbarkeit</li>
-            <li>ausgeglicheneres Verhalten im Alltag</li>
-          </ul>
-        </div>
-
-        <div class="space-y-3">
-          <h2 class="text-manao text-2xl font-semibold">Bei Tieren</h2>
-          <p>Nach einer Anwendung zeigt sich oft:</p>
-          <ul class="list-disc space-y-2 pl-6">
-            <li>mehr Ruhe und Gelassenheit</li>
-            <li>bessere Stressbewältigung</li>
-            <li>weniger Angst oder Unruhe</li>
-            <li>mehr Vertrauen und Ausgeglichenheit</li>
-            <li>sichtbare Entspannung in Körper und Verhalten</li>
-          </ul>
+          <p>
+            Weitere Informationen findest du zudem hier:
+            <a
+              href="https://www.skyourself.de"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-manao underline">www.skyourself.de</a
+            > /
+            <a
+              href="https://www.san-esprit.de"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-manao underline">www.san-esprit.de</a
+            >
+          </p>
         </div>
 
         <div class="space-y-3">
@@ -153,16 +149,39 @@ import ContactButtons from "../components/ContactButtons.astro";
           </dl>
         </div>
 
-        <div class="text-base-content/70 space-y-2 text-sm">
-          <p>
-            Meine Arbeit versteht sich als begleitender Prozess zur
-            Selbsterfahrung und persönlichen Entwicklung.
-          </p>
-          <p>
-            Sie stellt keine medizinische, psychotherapeutische oder
-            heilkundliche Behandlung dar und ersetzt diese nicht.<br /> Ich stelle
-            keine Diagnosen und gebe keine Heilversprechen.
-          </p>
+        <div
+          class="flex gap-3 rounded-lg border border-[#03a18f]/20 bg-[#03a18f]/20 p-4"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="text-manao mt-0.5 h-5 w-5 shrink-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+          <div class="text-base-content/70 space-y-2 text-sm">
+            <p>
+              Meine Arbeit versteht sich als begleitender Prozess zur
+              Selbsterfahrung und persönlichen Entwicklung.
+            </p>
+            <p>
+              Sie stellt keine medizinische, psychotherapeutische oder
+              heilkundliche Behandlung dar und ersetzt diese nicht.<br /> Ich stelle
+              keine Diagnosen und gebe keine Heilversprechen.
+            </p>
+            <p>
+              Die Methode ist wissenschaftlich und schulmedizinisch nicht
+              anerkannt.
+            </p>
+          </div>
         </div>
         <ContactButtons />
       </div>

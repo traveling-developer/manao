@@ -1,6 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Divider from "../components/Divider.astro";
+import { Picture } from "astro:assets";
+import van from "../assets/van.webp";
+import SymbolDivider from "../components/SymbolDivider.astro";
 ---
 
 <Layout title="Kontakt" description="Kontakt zu Kathrin Menzel - manao">
@@ -71,29 +74,44 @@ import Divider from "../components/Divider.astro";
         </div>
 
         <div class="lg:hidden">
-          <Divider />
+          <SymbolDivider />
         </div>
 
         <div class="space-y-5">
           <h2 class="font-licorice text-manao text-4xl md:text-5xl">
             Meine Angebote finden statt
           </h2>
-          <ul class="list-disc space-y-2 pl-6">
-            <li>
-              In meinen Räumen <span class="text-sm"
-                >(Am Wasserturm 17, 91413 Neustadt/Aisch)</span
-              >
-            </li>
-            <li>bei dir</li>
-            <li>in der Natur</li>
-            <li>mobil in meinem Van</li>
-            <li>telefonisch oder online</li>
-          </ul>
+          <div class="flex items-start gap-6">
+            <ul class="list-disc space-y-2 pl-6">
+              <li>
+                In meinen Räumen <span class="text-sm"
+                  >(Am Wasserturm 17, 91413 Neustadt/Aisch)</span
+                >
+              </li>
+              <li>bei dir</li>
+              <li>in der Natur</li>
+              <li>mobil in meinem Van</li>
+              <li>telefonisch oder online</li>
+            </ul>
+            <Picture
+              src={van}
+              alt="Gemütlicher Sitzbereich im Van"
+              class="mt-20 hidden aspect-square w-160 shrink-0 rounded-full object-cover object-[25%_50%] lg:block"
+            />
+          </div>
         </div>
+      </div>
+
+      <div class="mx-auto mt-10 w-full max-w-xs lg:hidden">
+        <Picture
+          src={van}
+          alt="Gemütlicher Sitzbereich im Van"
+          class="aspect-square w-full rounded-full object-cover object-[25%_50%]"
+        />
       </div>
     </section>
 
-    <Divider />
+    <SymbolDivider class="hidden lg:flex" />
 
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
       <div class="space-y-8">
@@ -104,7 +122,7 @@ import Divider from "../components/Divider.astro";
             <li>
               <span class="font-bold">Hinweis zu unserer Familienhündin</span
               ><br />
-              Zu unserer Familie gehört Hündin "Jala". Sie hat bei Therapiehunde Deutschland
+              Zu unserer Familie gehört Hündin „Jala". Sie hat bei Therapiehunde Deutschland
               e.V. ihren Eignungstest sowie mit mir gemeinsam die Ausbildung zum Therapiehund
               absolviert. Da Jala mit uns im Haushalt lebt, ist sie bei Begleitungen
               oder anderen Angeboten, die bei mir vor Ort stattfinden, mitunter anwesend.

@@ -2,7 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import ContactButtons from "../components/ContactButtons.astro";
 import { Picture } from "astro:assets";
-import lichtInMir from "../assets/licht_in_mir.webp";
+import lichtInMir from "../assets/licht_in_mir_neu.webp";
+import kind from "../assets/kind-wiese.webp";
 ---
 
 <Layout
@@ -58,7 +59,7 @@ import lichtInMir from "../assets/licht_in_mir.webp";
             class="w-full max-w-xs self-center md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
           >
             <Picture
-              src={lichtInMir}
+              src={kind}
               alt="Das Licht in mir"
               class="aspect-square w-full rounded-full object-cover"
             />
@@ -71,16 +72,18 @@ import lichtInMir from "../assets/licht_in_mir.webp";
           </p>
           <ul class="list-disc space-y-2 pl-6">
             <li>
-              Bewusste Selbstwahrnehmung:<br />Ein feines Gespür für eigene
-              Gefühle, Bedürfnisse, körperliche Signale und persönliche Grenzen.
+              <span class="font-bold">Bewusste Selbstwahrnehmung:</span><br
+              />Ein feines Gespür für eigene Gefühle, Bedürfnisse, körperliche
+              Signale und persönliche Grenzen.
             </li>
             <li>
-              Selbstregulation:<br />Die Fähigkeit, Emotionen und Stress
-              eigenständig auszubalancieren.
+              <span class="font-bold">Selbstregulation:</span><br />Die
+              Fähigkeit, Emotionen und Stress eigenständig auszubalancieren.
             </li>
             <li>
-              Selbstvertrauen:<br />Das Erkennen der eigenen Stärken und tiefes
-              Vertrauen in die eigenen Fähigkeiten.
+              <span class="font-bold">Selbstvertrauen:</span><br />Das Erkennen
+              der eigenen Stärken und tiefes Vertrauen in die eigenen
+              Fähigkeiten.
             </li>
           </ul>
         </div>
@@ -112,8 +115,17 @@ import lichtInMir from "../assets/licht_in_mir.webp";
           zu vertrauen. Sie erleben sich als Teil einer Gemeinschaft und lernen,
           sowohl sich selbst als auch andere besser zu verstehen.<br />So können
           sie ein Gefühl von Sicherheit, Sinn und Freude erfahren, ihr
-          einzigartiges Potenzial entfalten und ihren eigenen Weg gehen.
+          einzigartiges Potenzial entfalten und voller Zuversicht ihren eigenen
+          Weg gehen.
         </p>
+
+        <div class="mx-auto w-full max-w-xs md:hidden">
+          <Picture
+            src={lichtInMir}
+            alt="Das Licht in mir"
+            class="aspect-square w-full rounded-full object-cover"
+          />
+        </div>
 
         <div class="space-y-4">
           <h2 class="text-manao text-2xl font-semibold">
@@ -144,41 +156,66 @@ import lichtInMir from "../assets/licht_in_mir.webp";
             <li>Bewusstseins-, Körper- und Energiearbeit</li>
           </ul>
         </div>
-        <div class="space-y-3">
-          <h2 class="text-manao text-2xl font-semibold">Kursbausteine</h2>
-          <p>
-            Zum Konzept gehören folgende Kursbausteine, die unabhängig
-            voneinander gebucht werden können:
-          </p>
-          <ul class="marker:text-manao list-disc space-y-2 pl-6">
-            <li>
-              <a href="/kurs-licht-in-mir-1" class="hover:text-manao underline">
-                Das Licht in mir - entdecke deine innere Stärke (Kurs I)
-              </a><br />
-              <span>Schwerpunkt: Gefühle, Selbstvertrauen & innere Stärke</span>
-            </li>
-            <li>
-              <a href="/kurs-licht-in-mir-2" class="hover:text-manao underline">
-                Das Licht in mir - entfache deine innere Kraft (Kurs II)
-              </a><br />
-              <span>
-                Schwerpunkt: Intuition, Selbstwirksamkeit, innere Regulation &
-                Selbstheilungskräfte
-              </span>
-            </li>
-            <li>
-              <a
-                href="/licht-in-mir-freiraum"
-                class="hover:text-manao underline"
-              >
-                Das Licht in mir - Freiraum
-              </a><br />
-              <span>
-                Schwerpunkt: Pause vom Alltag - Raum für Selbstbestimmung und
-                Wohlbefinden
-              </span>
-            </li>
-          </ul>
+
+        <div
+          class="flex flex-col items-start gap-8 md:flex-row-reverse md:gap-12"
+        >
+          <div class="space-y-3 md:basis-3/5">
+            <h2 class="text-manao text-2xl font-semibold">
+              Bausteine des Konzepts
+            </h2>
+            <p>
+              Zum Konzept gehören folgende Bausteine, die unabhängig voneinander
+              gebucht werden können:
+            </p>
+            <ul class="marker:text-manao list-disc space-y-2 pl-6">
+              <li>
+                <a
+                  href="/kurs-licht-in-mir-1"
+                  class="hover:text-manao underline"
+                >
+                  Das Licht in mir - entdecke deine innere Stärke (Kurs I)
+                </a><br />
+                <span
+                  >Schwerpunkt: Gefühle, Selbstvertrauen & innere Stärke</span
+                >
+              </li>
+              <li>
+                <a
+                  href="/kurs-licht-in-mir-2"
+                  class="hover:text-manao underline"
+                >
+                  Das Licht in mir - entfache deine innere Kraft (Kurs II)
+                </a><br />
+                <span>
+                  Schwerpunkt: Intuition, Selbstwirksamkeit, innere Regulation &
+                  Selbstheilungskräfte
+                </span>
+              </li>
+              <li>
+                <a
+                  href="/licht-in-mir-freiraum"
+                  class="hover:text-manao underline"
+                >
+                  Das Licht in mir - Freiraum
+                </a><br />
+                <span>
+                  Schwerpunkt: Pause vom Alltag - Raum für Selbstbestimmung und
+                  Wohlbefinden
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="hidden w-full max-w-xs md:block md:max-w-sm md:basis-2/5 lg:max-w-md"
+          >
+            <Picture
+              src={lichtInMir}
+              alt="Das Licht in mir"
+              class="aspect-square w-full rounded-full object-cover"
+            />
+          </div>
         </div>
         <ContactButtons />
       </div>
