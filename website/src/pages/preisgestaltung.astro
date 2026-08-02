@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Picture } from "astro:assets";
+import haendeHerz from "../assets/haende-herz.webp";
 ---
 
 <Layout
@@ -21,6 +23,14 @@ import Layout from "../layouts/Layout.astro";
           Arbeit, die aus Überzeugung und mit Herz geschieht, folgt dem Sinn -
           im Vordergrund steht der Wert des Gebens.
         </p>
+        <div class="mx-auto w-full max-w-xs py-5">
+          <Picture
+            src={haendeHerz}
+            alt="Zwei Hände formen ein Herz vor der untergehenden Sonne"
+            class="aspect-square w-full rounded-full object-cover"
+          />
+        </div>
+
         <p>
           Gleichzeitig gehört dazu auch die Realität, dass diese Tätigkeit nicht
           kostenlos erfolgen kann und darf. Sie braucht eine bewusste Form der
@@ -103,14 +113,12 @@ import Layout from "../layouts/Layout.astro";
                 fördern.
               </p>
               <p>
-                Das Loslassen fällt verständlicherweise oft schwer.
-
-                <br />Wenn jedoch zu stark geklammert wird, kann das Kind
-                unbewusst in eine überfordernde Rolle geraten, in der es die
-                emotionalen Bedürfnisse der Eltern/Erziehungsberechtigten
-                mitträgt. Es entsteht eine Form von Abhängigkeit statt echter
-                Bindung.
+                Wird zu stark festgehalten, kann das Kind unbewusst in eine
+                überfordernde Rolle geraten, in der es die emotionalen
+                Bedürfnisse der Eltern/Erziehungsberechtigten mitträgt. Es
+                entsteht eine Form von Abhängigkeit statt echter Bindung.
               </p>
+              <p class="mt-5">Auch wenn das Loslassen manchmal schwerfällt</p>
               <p class="text-manao font-bold">
                 Für eine gesunde Entwicklung brauchen Kinder beides: Bindung und
                 Autonomie.

@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactButtons from "../components/ContactButtons.astro";
+import { Picture } from "astro:assets";
+import unterstuetzung from "../assets/unterstuetzung.webp";
+---
+
+<Layout
+  title="Alltagsassistenz"
+  description="Verlässliche Alltagsassistenz nach individueller Absprache - für Senioren, Menschen mit Beeinträchtigung und alle, die Unterstützung oder Gesellschaft wünschen."
+>
+  <main>
+    <section class="mx-auto max-w-3xl px-5 py-12 md:py-16">
+      <div class="space-y-10">
+        <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+          <header class="space-y-5 md:basis-3/5">
+            <h1
+              class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
+            >
+              Alltagsassistenz
+            </h1>
+            <p>
+              Ob Senioren, Menschen mit Beeinträchtigung oder Personen, die
+              vorübergehend Hilfe oder Gesellschaft wünschen – eine verlässliche
+              Unterstützung kann den Alltag erleichtern sowie Angehörige spürbar
+              entlasten.
+            </p>
+            <p>
+              Gemeinsame Spaziergänge, Beistand bei Terminen, Unterstützung bei
+              Einkäufen oder einfach Zeit für Gespräche – die Betreuung erfolgt
+              nach individueller Absprache.
+            </p>
+          </header>
+
+          <div
+            class="mx-auto w-full max-w-xs self-center overflow-hidden rounded-full md:mx-0 md:basis-2/5 md:self-auto"
+          >
+            <Picture
+              src={unterstuetzung}
+              alt="Jüngere Hände halten die Hände einer älteren Person"
+              class="aspect-square w-full scale-125 object-cover"
+            />
+          </div>
+        </div>
+
+        <p>Medizinische oder pflegerische Leistungen biete ich nicht an.</p>
+
+        <div class="space-y-4">
+          <h2 class="text-manao text-2xl font-semibold">Investition</h2>
+          <p class="text-sm">Preise pro 60 Minuten:</p>
+          <dl class="divide-manao/20 divide-y">
+            <div
+              class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0"
+            >
+              <dt>Einzelbetreuung</dt>
+              <dd class="text-manao font-semibold">23 €</dd>
+            </div>
+          </dl>
+          <p class="text-sm">zzgl. anfallender Fahrtkosten</p>
+        </div>
+
+        <div class="text-base-content/70 space-y-3 text-sm">
+          <p>
+            Sollte sich die vereinbarte Betreuungszeit verlängern, bitte ich –
+            sofern möglich – um eine kurze Nachricht. Im Sinne einer
+            verlässlichen und wertschätzenden Zusammenarbeit sowie meiner
+            weiteren Terminplanung wird bei Überschreitung der vereinbarten
+            Betreuungszeit jede angefangene Viertelstunde (15 Minuten) mit 10 €
+            zusätzlich berechnet.
+          </p>
+          <p>
+            Die Kosten für Alltagsassistenz sind in der Regel steuerlich als
+            haushaltsnahe Dienstleistungen absetzbar. Gerne erstelle ich eine
+            Rechnung.
+          </p>
+        </div>
+
+        <ContactButtons />
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -187,18 +187,36 @@ import Layout from "../layouts/Layout.astro";
               </ul>
               <p>
                 Du bist nicht fündig geworden und hast weitere Wünsche oder
-                Ideen für Kurse & Workshops?<br />Ich freue mich über
-                Anregungen, melde dich gerne bei mir!
+                Ideen?<br />Ich freue mich über Anregungen, melde dich gerne bei
+                mir!
               </p>
             </div>
           </div>
 
-          <a
-            href="/kinderbetreuung"
-            class="bg-manao hover:border-manao hover:text-manao flex items-center justify-between rounded-lg border border-transparent px-5 py-4 font-semibold text-white transition-colors duration-300 hover:bg-white"
+          <div
+            class="collapse-arrow border-manao bg-manao hover:text-manao collapse rounded-lg border text-white transition-colors duration-300 hover:bg-white"
           >
-            Kinderbetreuung
-          </a>
+            <input type="checkbox" data-accordion="angebote" />
+            <div class="collapse-title px-5 py-4 font-semibold">Betreuung</div>
+            <div class="collapse-content text-base-content bg-white">
+              <p class="mt-5">
+                Zuverlässige Betreuung und Unterstützung - individuell
+                abgestimmt auf die jeweiligen Bedürfnisse.
+              </p>
+              <ul class="marker:text-manao list-disc space-y-2 py-3 pl-6">
+                <li>
+                  <a href="/kinderbetreuung" class="hover:text-manao underline"
+                    >Kinderbetreuung</a
+                  >
+                </li>
+                <li>
+                  <a href="/alltagsassistenz" class="hover:text-manao underline"
+                    >Alltagsassistenz</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>

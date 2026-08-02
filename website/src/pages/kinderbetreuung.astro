@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactButtons from "../components/ContactButtons.astro";
+import { Picture } from "astro:assets";
+import kinderbetreuung from "../assets/kinderbetreuung.webp";
 ---
 
 <Layout
@@ -16,21 +18,42 @@ import ContactButtons from "../components/ContactButtons.astro";
           >
             Kinderbetreuung
           </h1>
-          <p>
-            Manchmal braucht es keine große Krise, sondern einfach eine helfende
-            Hand oder eine Auszeit für Mama & Papa.
-          </p>
-          <p>
-            Wenn der Alltag, Termine oder besondere Situationen es erfordern,
-            kann eine verlässliche Betreuung entlasten.
-          </p>
-          <p>
-            Dann tut es gut zu wissen, dass das eigene Kind liebevoll umsorgt
-            ist.
-          </p>
+          <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+            <div class="space-y-5 md:basis-3/5">
+              <p>
+                Manchmal braucht es keine große Krise, sondern einfach eine
+                helfende Hand oder eine Auszeit für Mama & Papa.
+              </p>
+              <p>
+                Wenn der Alltag, Termine oder besondere Situationen es
+                erfordern, kann eine verlässliche Betreuung entlasten.
+                <br /> Dann tut es gut zu wissen, dass das eigene Kind liebevoll umsorgt
+                ist.
+              </p>
+            </div>
+
+            <div class="hidden w-full max-w-xs md:block md:basis-2/5">
+              <Picture
+                src={kinderbetreuung}
+                alt="Kind lacht, im Hintergrund eine Betreuerin"
+                class="aspect-square w-full rounded-full object-cover object-right"
+              />
+            </div>
+          </div>
         </header>
 
-        <p>Die Betreuung erfolgt nach individueller Absprache.</p>
+        <p>
+          Die Betreuung findet bei mir vor Ort statt. Alles weitere erfolgt nach
+          individueller Absprache.
+        </p>
+
+        <div class="mx-auto w-full max-w-xs md:hidden">
+          <Picture
+            src={kinderbetreuung}
+            alt="Kind lacht, im Hintergrund eine Betreuerin"
+            class="aspect-square w-full rounded-full object-cover object-right"
+          />
+        </div>
 
         <div class="space-y-4">
           <h2 class="text-manao text-2xl font-semibold">Investition</h2>
