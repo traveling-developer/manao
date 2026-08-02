@@ -2,6 +2,7 @@
 import { Picture } from "astro:assets";
 import heroImage from "../assets/kathrin.webp";
 import Divider from "./Divider.astro";
+import SymbolDivider from "./SymbolDivider.astro";
 
 const keywords = [
   "Selbstwahrnehmung",
@@ -38,9 +39,37 @@ const keywords = [
       </p>
     </header>
 
+    <div class="space-y-5">
+      <p
+        class="border-manao/10 bg-manao/10 mb-15 rounded-lg border p-4 text-center"
+      >
+        Ich begleite Kinder, Jugendliche & Erwachsene dabei, ihre Verbindung zu
+        sich selbst zu stärken<br /> oder wiederzufinden - für mehr Ruhe, Klarheit
+        und innere Stabilität.
+      </p>
+      <p class="text-manao-dark font-caveat text-center text-3xl">
+        Glück, Zufriedenheit und Stabilität entstehen,<br /> wenn Körper, Geist und
+        Seele im Einklang sind und wir<br /> nach unseren Werten und Bedürfnissen
+        leben.
+      </p>
+      <p class="text-manao mt-10 text-center font-bold">
+        Die Basis der Orientierung bildet hierbei die innere Stimme.
+      </p>
+      <p class="mt-15 text-center">
+        Im Alltag oder im Laufe unseres Lebens kann es passieren, dass die
+        innere Stimme leiser wird.<br />Dadurch fällt es schwerer eigene
+        Bedürfnisse wahrzunehmen und stimmige Entscheidungen zu treffen. <br /> Oft
+        entstehen <span class="italic">Unruhe, Zweifel, Überforderung </span>-
+        wir geraten in einen Modus des „Funktionierens" und reagieren zunehmend
+        auf äußere Umstände, anstatt das eigene Leben aktiv zu gestalten.
+      </p>
+    </div>
+
+    <SymbolDivider class="hidden md:flex" />
+
     <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
       <div
-        class="hidden w-full max-w-xs self-center md:mt-20 md:block md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+        class="mx-auto w-full max-w-xs self-center md:mx-0 md:max-w-sm md:basis-2/5 lg:max-w-md"
       >
         <Picture
           src={heroImage}
@@ -49,38 +78,6 @@ const keywords = [
         />
       </div>
       <div class="space-y-5 md:basis-3/5">
-        <p>
-          Ich begleite Kinder, Jugendliche & Erwachsene dabei, ihre Verbindung
-          zu sich selbst zu stärken oder wiederzufinden - für mehr Ruhe,
-          Klarheit und innere Stabilität.
-        </p>
-        <Divider />
-        <p class="text-manao-dark font-caveat text-center text-3xl">
-          Glück, Zufriedenheit und Stabilität entstehen,<br /> wenn Körper, Geist
-          und Seele im Einklang sind und wir nach unseren Werten und Bedürfnissen
-          leben.
-        </p>
-        <Divider />
-        <p class="text-manao text-center font-bold">
-          Die Basis der Orientierung bildet hierbei die innere Stimme.
-        </p>
-        <p>
-          Im Alltag oder im Laufe unseres Lebens kann es passieren, dass die
-          innere Stimme leiser wird.<br />Dadurch fällt es schwerer eigene
-          Bedürfnisse wahrzunehmen und stimmige Entscheidungen zu treffen. <br
-          /> Oft entstehen <span class="italic"
-            >Unruhe, Zweifel, Überforderung
-          </span>- wir geraten in einen Modus des "Funktionierens" und reagieren
-          zunehmend auf äußere Umstände, anstatt das eigene Leben aktiv zu
-          gestalten.
-        </p>
-        <div class="mx-auto w-full max-w-xs md:hidden">
-          <Picture
-            src={heroImage}
-            alt="Ein Bild von Kathrin Menzel"
-            class="w-full"
-          />
-        </div>
         <p>
           Meine <span class="font-caveat text-manao text-2xl">Begleitung</span> &nbsp;richtet
           sich an Menschen jeden Alters, die Verantwortung für sich übernehmen wollen
@@ -93,16 +90,17 @@ const keywords = [
             mehr Sinn.</span
           >
         </p>
-        <p>Gleichzeitig ist meine Homepage keine reine Angebotsseite.</p>
+        <p>Gleichzeitig ist meine Website keine reine Angebotsseite.</p>
         <p>
           Ich habe sie bewusst auch als <span
             class="font-caveat text-manao text-2xl">Informationsraum</span
           > &nbsp;gestaltet.
           <br />
           Für den schnellen Überblick findest du die wichtigsten Inhalte kompakt direkt
-          hier auf der Startseite sowie unter „Arbeitsweise“ und „Angebote“. Darüber
-          hinaus lade ich dich ein, weiter in Themen einzutauchen oder mehr über Hintergründe
-          und meine Haltung zu erfahren - du entscheidest selbst.
+          hier auf der Startseite sowie unter „Arbeitsweise“ und „Angebote“.<br
+          />Darüber hinaus lade ich dich ein, weiter in Themen einzutauchen oder
+          mehr über Hintergründe und meine Haltung zu erfahren - du entscheidest
+          selbst.
         </p>
       </div>
     </div>

@@ -1,6 +1,6 @@
 ---
 import { Picture } from "astro:assets";
-import heroImage from "../assets/manao_sprung.webp";
+import heroImage from "../assets/mountain-men.webp";
 ---
 
 <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
@@ -9,7 +9,11 @@ import heroImage from "../assets/manao_sprung.webp";
       <div
         class="order-2 w-full max-w-xs self-center md:order-1 md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
       >
-        <Picture src={heroImage} alt="Kursraum" class="w-full" />
+        <Picture
+          src={heroImage}
+          alt="Person mit ausgebreiteten Armen auf einem Berggipfel im Sonnenaufgang"
+          class="aspect-square w-full rounded-full object-cover"
+        />
       </div>
       <div class="order-1 space-y-5 md:order-2 md:basis-3/5">
         <h1
@@ -35,8 +39,9 @@ import heroImage from "../assets/manao_sprung.webp";
           Ergänzend biete ich Impulsstunden für Fachpersonal an. Hier stehen
           Praxisnähe und alltagstaugliche Werkzeuge im Mittelpunkt, insbesondere
           im Umgang mit Kindern und Jugendlichen.
-          <br />Die eigene Selbstkompetenz und ein achtsamer Umgang mit den
-          eigenen Ressourcen spielen dabei ebenfalls eine wichtige Rolle.
+          <br />Ebenso geht es um das wichtigste Werkzeug: Die eigene
+          Persönlichkeit - Selbstkompetenz, individuelle Ressourcen und die
+          Stärkung der eigenen Resilienz.
         </p>
       </div>
     </div>
