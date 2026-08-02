@@ -87,6 +87,7 @@
 @theme {
   --color-manao: oklch(0.6818 0.1163 204.3);
   --color-manao-dark: oklch(0.48 0.1 204.3);
+  --color-manao-beige: #b89d82;
   --font-licorice: "Licorice", cursive;
   --font-caveat: "Caveat", cursive;
   --font-sans: "Ubuntu", sans-serif;
