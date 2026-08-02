@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import ContactButtons from "../components/ContactButtons.astro";
 import Divider from "../components/Divider.astro";
+import { Picture } from "astro:assets";
+import puzzle from "../assets/puzzle.webp";
+import SymbolDivider from "../components/SymbolDivider.astro";
 ---
 
 <Layout
@@ -11,19 +14,29 @@ import Divider from "../components/Divider.astro";
   <main>
     <section class="mx-auto max-w-3xl px-5 py-12 md:py-16">
       <div class="space-y-10">
-        <header class="space-y-5">
-          <h1
-            class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
-          >
-            Fachberatung
-          </h1>
-          <p>
-            Beratung & Unterstützung für Fachkräfte in Kita, Schule, Betreuung
-            und Jugendarbeit zu den Themen Hochsensibilität, Psychomotorik und
-            zum Konzept „Das Licht in mir" sowie zu Selbstkompetenz &
-            Selbstschutz.
-          </p>
-        </header>
+        <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+          <header class="space-y-5 md:basis-3/5">
+            <h1
+              class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
+            >
+              Fachberatung
+            </h1>
+            <p>
+              Beratung & Unterstützung für Fachkräfte in Kita, Schule, Betreuung
+              und Jugendarbeit zu den Themen Hochsensibilität, Psychomotorik und
+              zum Konzept „Das Licht in mir" sowie zu Selbstkompetenz &
+              Selbstschutz.
+            </p>
+          </header>
+
+          <div class="hidden w-full max-w-xs md:block md:basis-2/5">
+            <Picture
+              src={puzzle}
+              alt="Vier Hände fügen bunte Puzzleteile zusammen"
+              class="aspect-square w-50 rounded-full object-cover"
+            />
+          </div>
+        </div>
 
         <div class="space-y-6">
           <h2 class="text-manao text-2xl font-semibold">Impuls-Workshop</h2>
@@ -47,7 +60,15 @@ import Divider from "../components/Divider.astro";
             </p>
           </div>
 
-          <div class="space-y-3">
+          <div class="mx-auto w-full max-w-xs md:hidden">
+            <Picture
+              src={puzzle}
+              alt="Vier Hände fügen bunte Puzzleteile zusammen"
+              class="aspect-square w-full rounded-full object-cover"
+            />
+          </div>
+
+          <div class="mt-15 space-y-3">
             <h3 class="text-manao font-semibold">Haltung & Arbeitsweise</h3>
             <ul class="list-disc space-y-2 pl-6">
               <li>
@@ -62,7 +83,7 @@ import Divider from "../components/Divider.astro";
             </ul>
           </div>
 
-          <div class="space-y-3">
+          <div class="mt-10 space-y-3">
             <h3 class="text-manao font-semibold">Ziel des Impuls-Workshops</h3>
             <p>
               Die Inhalte sind so aufgebaut, dass sie nicht nur Wissen
@@ -86,27 +107,30 @@ import Divider from "../components/Divider.astro";
           </div>
         </div>
 
+        <SymbolDivider />
         <div class="space-y-3">
           <h2 class="text-manao text-2xl font-semibold">
             Das Licht in mir - Konzept
           </h2>
-          <p>
+          <p class="text-manao">
             Ein ressourcenorientierter und ganzheitlicher Ansatz zur
             individuellen Entwicklungsförderung von Kindern im Vorschulalter
-            sowie von Schulkindern der 1. bis 6. Klasse. Der Mensch wird hierbei
-            als Einheit von Körper, Geist und Seele betrachtet. Im Mittelpunkt
-            steht die Stärkung von Selbstwahrnehmung und Intuition als Grundlage
-            für innere Stabilität, Resilienz und soziale Kompetenz.
+            sowie von Schulkindern der 1. bis 6. Klasse.
+          </p><p>
+            Der Mensch wird hierbei als Einheit von Körper, Geist und Seele
+            betrachtet. Im Mittelpunkt steht die Stärkung von Selbstwahrnehmung
+            und Intuition als Grundlage für innere Stabilität, Resilienz und
+            soziale Kompetenz.
           </p>
           <p>
-            Kinder entwickeln ein tieferes Verständnis für sich selbst, ihre
+            Kinder entwickeln ein tieferes Verständnis für sich selbst, für ihre
             Emotionen, Bedürfnisse und vor allem für ihre eigenen Ressourcen.
-            Sie stärken ihre innere Kraftquelle. Dies schenkt ihnen Vertrauen
-            und Ruhe. Zudem unterstützt es sie im Umgang mit Herausforderungen
-            und wirkt sich positiv auf Konfliktverhalten, Beziehungsgestaltung
-            und Gruppendynamik aus.
+            <br />Sie stärken ihre innere Kraftquelle. Dies schenkt ihnen
+            Vertrauen und Ruhe. Zudem unterstützt es sie im Umgang mit
+            Herausforderungen und wirkt sich positiv auf Konfliktverhalten,
+            Beziehungsgestaltung und Gruppendynamik aus.
           </p>
-          <p>
+          <p class="mt-10">
             Das Angebot richtet sich entweder an Fachpersonal oder direkt an
             Kinder:
           </p>
@@ -121,7 +145,28 @@ import Divider from "../components/Divider.astro";
               Konzept vor Ort mit den Kindern um.
             </li>
           </ul>
-          <div class="mt-5 flex justify-center">
+          <p class="font-caveat text-manao-dark mt-10 text-center text-3xl">
+            Das wichtigste Werkzeug jeder professionellen pädagogischen Arbeit
+            ist die eigene Persönlichkeit.
+          </p><p>
+            Mein Nachfolgendes Angebot richtet den Fokus daher gezielt auf:
+          </p>
+          <ul class="list-disc space-y-2 pl-6">
+            <li>
+              <span class="font-bold">Selbstkompetenz & Selbstschutz:</span>
+
+              Anders als in klassischen Resilienztrainings liegt der Schwerpunkt
+              nicht nur auf Bewältigungsstrategien, sondern im Zentrum steht die
+              eigene Wahrnehmung zu vertiefen, persönliche Ressourcen bewusst zu
+              nutzen und das eigene Potenzial zu entfalten sowie für die eigenen
+              Bedürfnisse einzustehen.<br />So kann die professionelle Haltung
+              weiterentwickelt und Beziehungen wertschätzend gestaltet werden.
+              <br />Auch in herausfordernden Situationen bleiben Fachkräfte in
+              ihrer inneren Balance sowie im Kontakt mit Kindern, Familien und
+              Kolleg:innen präsent und handlungsfähig.
+            </li>
+          </ul>
+          <div class="mt-10 flex justify-center">
             <a
               href="/licht-in-mir-konzept"
               class="btn bg-manao hover:border-manao hover:text-manao text-white transition-colors duration-300 hover:bg-white"
@@ -133,7 +178,7 @@ import Divider from "../components/Divider.astro";
 
         <div class="space-y-3">
           <h2 class="text-manao text-2xl font-semibold">Hochsensibilität</h2>
-          <p>
+          <p class="text-manao">
             Verständnis für hochsensible Kinder und deren Wahrnehmungsweise im
             Alltag.
           </p>
@@ -147,7 +192,9 @@ import Divider from "../components/Divider.astro";
 
         <div class="space-y-3">
           <h2 class="text-manao text-2xl font-semibold">Psychomotorik</h2>
-          <p>Bewegung als entwicklungsfördernde Grundlage.</p>
+          <p class="text-manao">
+            Bewegung als entwicklungsfördernde Grundlage.
+          </p>
           <p>Psychomotorische Impulse unterstützen unter anderem:</p>
           <ul class="list-disc space-y-2 pl-6">
             <li>Körper- und Selbstwahrnehmung</li>
@@ -159,12 +206,12 @@ import Divider from "../components/Divider.astro";
               href="/psychomotorik"
               class="btn bg-manao hover:border-manao hover:text-manao text-white transition-colors duration-300 hover:bg-white"
             >
-              Mehr zur Psychomotorik (IPE)
+              Mehr über Psychomotorik (IPE)
             </a>
           </div>
         </div>
 
-        <Divider />
+        <SymbolDivider />
 
         <ContactButtons />
       </div>
