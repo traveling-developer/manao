@@ -1,0 +1,32 @@
+---
+const { quote, author, class: className } = Astro.props;
+---
+
+<figure
+  class:list={[
+    "border-manao-beige/20 bg-manao-beige/20 space-y-4 rounded-2xl border p-6",
+    className,
+  ]}
+>
+  <div class="flex items-center gap-4" aria-hidden="true">
+    <div class="bg-manao-beige h-0.5 flex-1 rounded-full"></div>
+    <span
+      class="text-manao-beige translate-y-[0.3em] font-serif text-6xl leading-none"
+      >”</span
+    >
+    <div class="bg-manao-beige h-0.5 flex-1 rounded-full"></div>
+  </div>
+
+  <blockquote class="text-center italic">{quote}<slot /></blockquote>
+
+  <div class="flex items-center gap-4" aria-hidden="true">
+    <div class="bg-manao-beige h-0.5 flex-1 rounded-full"></div>
+    <span
+      class="text-manao-beige translate-y-[0.3em] font-serif text-6xl leading-none"
+      >”</span
+    >
+    <div class="bg-manao-beige h-0.5 flex-1 rounded-full"></div>
+  </div>
+
+  {author && <figcaption class="text-sm">{author}</figcaption>}
+</figure>

@@ -2,12 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import { Picture } from "astro:assets";
 import wave from "../assets/intension.webp";
-import intentionImage from "../assets/seifenblasen.webp";
+import intentionImage from "../assets/young_boy.webp";
 import familie_wald from "../assets/familie_wald.webp";
 import rollstuhl from "../assets/rollstuhl.webp";
 import haende from "../assets/haende_baum.webp";
 import ImageTextSection from "../components/ImageTextSection.astro";
 import Divider from "../components/Divider.astro";
+import Quote from "../components/Quote.astro";
+import SymbolDivider from "../components/SymbolDivider.astro";
 ---
 
 <Layout title="Intention" description="tbd">
@@ -41,31 +43,9 @@ import Divider from "../components/Divider.astro";
             Papilio, OUPS, Schulfach Glück) die dahingehend wichtige Impulse
             setzen, doch es braucht mehr.
           </p>
-          <p>
-            <span class="italic">
-              "Viele Inhalte, die in der Schule gelehrt werden, geraten in
-              Vergessenheit, kaum dass die entsprechende Prüfung bestanden ist.
-              Die psychologische Prägung, die aus diesen Jahren resultiert,
-              bleibt jedoch ein Leben lang erhalten. Und obwohl wir wissen, dass
-              eine Landschaft aus Selbstzweifeln, Minderwertigkeitskomplexen und
-              Ängsten auch später noch positiv beeinflusst werden kann, wissen
-              wir auch wie viel Zeit, Mühe und Selbstdisziplin dies erfordert
-              und dass wir selbst dann in alte Muster zurückfallen können, wenn
-              es uns gelingt.<br /><span class="text-manao font-bold">
-                Wenn Kinder schon in jungen Jahren ein starkes Selbstbewusstsein
-                entwickeln, wenn sie lernen, einen positiven inneren Dialog zu
-                führen und achtsam mit sich und anderen umzugehen, werden sie
-                davon ihr Leben lang profitieren.</span
-              >"
-            </span>
-          </p>
-          <p>
-            Zitat aus dem Buch "Sophias Geheimnis - Ein Roman über das, was im
-            Leben wirklich zählt" von Dr. Katja Kruckeberg.
-          </p>
         </div>
         <div
-          class="w-full max-w-xs self-center md:mt-90 md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+          class="hidden w-full md:block md:max-w-sm md:basis-2/5 lg:max-w-md"
         >
           <Picture
             src={intentionImage}
@@ -74,9 +54,36 @@ import Divider from "../components/Divider.astro";
           />
         </div>
       </div>
-    </section>
 
-    <Divider />
+      <Quote
+        class="mt-10"
+        author="Zitat aus dem Buch „Sophias Geheimnis - Ein Roman über das, was im Leben wirklich zählt” von Dr. Katja Kruckeberg."
+      >
+        Viele Inhalte, die in der Schule gelehrt werden, geraten in
+        Vergessenheit, kaum dass die entsprechende Prüfung bestanden ist.<br
+        />Die psychologische Prägung, die aus diesen Jahren resultiert, bleibt
+        jedoch ein Leben lang erhalten.<br />Und obwohl wir wissen, dass eine
+        Landschaft aus Selbstzweifeln, Minderwertigkeitskomplexen und Ängsten
+        auch später noch positiv beeinflusst werden kann, wissen wir auch wie
+        viel Zeit, Mühe und Selbstdisziplin dies erfordert und dass wir selbst
+        dann in alte Muster zurückfallen können, wenn es uns gelingt.<br /><span
+          class="text-manao font-bold"
+        >
+          Wenn Kinder schon in jungen Jahren ein starkes Selbstbewusstsein
+          entwickeln, wenn sie lernen, einen positiven inneren Dialog zu führen
+          und achtsam mit sich und anderen umzugehen, werden sie davon ihr Leben
+          lang profitieren.</span
+        >
+      </Quote>
+
+      <div class="mx-auto mt-10 w-full max-w-xs md:hidden">
+        <Picture
+          src={intentionImage}
+          alt="Wasser, Wellen, Ozean"
+          class="aspect-square w-full rounded-full object-cover"
+        />
+      </div>
+    </section>
 
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
       <div class="space-y-5">
@@ -87,24 +94,51 @@ import Divider from "../components/Divider.astro";
           mit sich. Strukturierte Abläufe und standardisierte Inhalte bieten
           dabei Orientierung und erleichtern die Umsetzung.
         </p>
-        <p>
-          In der Praxis wird jedoch deutlich, dass der Fokus häufig stärker auf
-          den Programmen selbst liegt als auf dem einzelnen Menschen.
+        <p class="italic">
+          Doch obwohl das gesellschaftliche Bewusstsein für diese Themen wächst,
+          nehmen Stress, Überlastung und weitere vielschichtige Probleme immer
+          weiter zu.
         </p>
+        <p class="font-caveat text-manao-dark mt-10 text-center text-3xl">
+          Ein Paradox unserer Zeit
+        </p>
+        <p class="italic">
+          Wir suchen Antworten und Lösungen im „Außen" obwohl sie im „Innen" auf
+          uns warten.
+        </p>
+        <p>
+          Wir greifen zu "Tools", starren Plänen und optimierten Methoden. Diese
+          erzeugen jedoch häufig neuen Druck, statt Räume für echte Innenschau
+          zu öffnen.
+        </p><p>
+          Gleichzeitig wird in der Praxis deutlich, dass der Fokus häufig
+          stärker auf den Programmen selbst liegt, als auf dem einzelnen
+          Menschen.
+        </p>
+
         <p class="text-manao font-bold">
           Hier setze ich bewusst einen anderen Schwerpunkt.
         </p>
         <p>
-          Aus meiner langjährigen Erfahrung weiß ich: egal in welchem
-          Lebensalter - Entwicklung ist und bleibt im Kern ein individueller
-          Prozess.
+          Aus meiner langjährigen Erfahrung weiß ich - egal in welchem
+          Lebensalter:
         </p>
-        <p>
-          Veränderung, echtes Wachstum und Nachhaltigkeit entstehen dort, wo
-          persönliche Lebensgeschichten und die einzigartigen Dynamiken von
-          Menschen, Familien oder Gruppen Raum finden und individuelle
-          Bedürfnisse und Potenziale gezielt berücksichtigt werden.
+        <p class="text-manao font-bold">
+          Entwicklung ist und bleibt im Kern ein individueller Prozess.
         </p>
+        <div class="border-manao space-y-4 border-l-4 p-4">
+          <p>
+            Veränderung, echtes Wachstum und Nachhaltigkeit entstehen dort, wo
+            persönliche Lebensgeschichten und die einzigartigen Dynamiken von
+            Menschen, Familien oder Gruppen Raum finden und individuelle
+            Bedürfnisse und Potenziale gezielt berücksichtigt werden.
+          </p>
+          <p>
+            ...und weil jedem Menschen etwas anderes guttut, gestaltet sich auch
+            der Weg zur eigenen Innenschau und Rückverbindung für jeden völlig
+            einzigartig!
+          </p>
+        </div>
       </div>
     </section>
 
@@ -112,8 +146,9 @@ import Divider from "../components/Divider.astro";
       imageMetadata={haende}
       minHeightClass="lg:min-h-60"
       bgPositionClass="bg-left md:bg-center"
+      overlay
       ><span class="font-caveat text-3xl md:text-4xl"
-        >"Kinder sind die Seismografen der Gesellschaft. <br
+        >„Kinder sind die Seismografen der Gesellschaft. <br
           class="hidden lg:block"
         />Ihre Erschöpfung ist ein wichtiges Signal."</span
       >
@@ -124,9 +159,28 @@ import Divider from "../components/Divider.astro";
     </ImageTextSection>
 
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+      <div>
+        <p>
+          Pädagogische Fachkräfte haben den wichtigen Auftrag, Kinder achtsam zu
+          begleiten, sie in ihrer Entwicklung zu fördern und ihr Wohl zu
+          schützen. Viele erfüllen diese verantwortungsvolle Aufgabe mit großem
+          Engagement und hoher Professionalität.
+        </p><p>
+          Gleichzeitig können sie strukturelle Herausforderungen - wie
+          staatliche Vorgaben, Fachkräftemangel oder bestehende
+          Rahmenbedingungen - nicht ausgleichen.
+        </p>
+        <p class="font-caveat text-manao-dark my-10 text-center text-3xl">
+          Auch wenn wir das Bildungssystem und gesellschaftliche Strukturen
+          nicht von heute auf morgen ändern können, so hat doch jeder
+          Gestaltungsspielraum in seinem eigenen Denken,<br />in seiner Haltung
+          und in seinem Handeln.
+        </p>
+      </div>
+      <div></div>
       <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
         <div
-          class="order-2 w-full max-w-xs self-center md:order-1 md:mt-120 md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+          class="order-2 w-full max-w-xs self-center md:order-1 md:mt-40 md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
         >
           <Picture
             src={familie_wald}
@@ -135,24 +189,6 @@ import Divider from "../components/Divider.astro";
           />
         </div>
         <div class="order-1 space-y-5 md:order-2 md:basis-3/5">
-          <p>
-            Pädagogische Fachkräfte haben den wichtigen Auftrag, Kinder achtsam
-            zu begleiten, sie in ihrer Entwicklung zu fördern und ihr Wohl zu
-            schützen. Viele erfüllen diese verantwortungsvolle Aufgabe mit
-            großem Engagement und hoher Professionalität.
-          </p><p>
-            Gleichzeitig können sie strukturelle Herausforderungen - wie
-            staatliche Vorgaben, Fachkräftemangel oder bestehende
-            Rahmenbedingungen - nicht ausgleichen.
-          </p>
-          <Divider />
-          <p class="font-caveat text-manao-dark text-center text-3xl">
-            Auch wenn wir das Bildungssystem und gesellschaftliche Strukturen
-            nicht von heute auf morgen ändern können, so hat doch jeder
-            Gestaltungsspielraum in seinem eigenen Denken, in seiner Haltung und
-            in seinem Handeln.
-          </p>
-          <Divider />
           <p class="text-manao mt-10 font-bold">
             Eltern/Erziehungsberechtigten kommt dabei eine besondere Rolle zu:
           </p><p class="text-manao font-bold">
@@ -181,7 +217,7 @@ import Divider from "../components/Divider.astro";
           <p>
             Dabei geht es <span class="text-manao font-bold"
               >nicht um Perfektion</span
-            >, sondern in erster Linie um Bewusstsein. Der Umgang der
+            >, sondern in erster Linie um Bewusstheit. Der Umgang der
             Eltern/Erziehungsberechtigten mit ihren eigenen Gefühlen, ihrer
             Selbstregulation und Selbstfürsorge sowie ihr Verhalten im Kontakt
             mit dem Kind, prägen maßgeblich, wie dieses später in Beziehung zu
@@ -195,26 +231,32 @@ import Divider from "../components/Divider.astro";
             nicht jedoch was sie brauchen. Hier ist die Führungsrolle durch die
             Eltern/Erziehungsberechtigten notwendig.
           </p>
-          <p>
-            Bildungs- und Betreuungseinrichtungen bieten Kindern einen
-            wertvollen Entwicklungsrahmen, unterstützen und entlasten Familien
-            und ermöglichen Einkommenssicherung. Sie übernehmen damit eine
-            wichtige, ergänzende Funktion.
-          </p>
-          <p>
-            Zentrale Entwicklungs- und Lernprozesse sind jedoch nicht
-            vollständig delegierbar, da sie wesentlich durch frühe
-            Bindungserfahrungen und alltägliche Interaktion mit den
-            Eltern/Erziehungsberechtigten geprägt werden (vgl. u. a. Manfred
-            Spitzer).
-          </p>
-          <p class="border-manao border-l-4 p-4">
-            Auch wenn nicht immer alles ideal verläuft oder verlaufen ist:<br />
-            Elternsein bleibt ein fortlaufender Prozess, der nicht auf Perfektion
-            abzielt, sondern auf Bewusstheit, Kontakt und die Bereitschaft, Beziehung
-            immer wieder neu zu gestalten.
-          </p>
         </div>
+      </div>
+      <div class="mt-10 space-y-4">
+        <p>
+          Bildungs- und Betreuungseinrichtungen bieten Kindern einen wertvollen
+          Entwicklungsrahmen, unterstützen und entlasten Familien und
+          ermöglichen Einkommenssicherung. Sie übernehmen damit eine wichtige,
+          ergänzende Funktion.
+        </p>
+        <p class="border-manao border-l-4 p-4">
+          Zentrale Entwicklungs- und Lernprozesse sind jedoch nicht vollständig
+          delegierbar, da sie wesentlich durch frühe Bindungserfahrungen und
+          alltägliche Interaktion mit den Eltern/Erziehungsberechtigten geprägt
+          werden (vgl. u. a. Manfred Spitzer).
+        </p>
+        <p class="my-10">
+          <span class="text-manao font-bold"
+            >Auch wenn nicht immer alles ideal verläuft oder verlaufen ist:</span
+          ><br />
+        </p>
+        <p class="font-caveat text-manao-dark text-center text-3xl">
+          Elternsein bleibt ein fortlaufender Prozess, der nicht auf Perfektion
+          abzielt, sondern auf Bewusstheit, Selbstreflexion und die
+          Bereitschaft, gemeinsam zu lernen, zu wachsen und Beziehung immer
+          wieder neu zu gestalten.
+        </p>
       </div>
     </section>
     <section class="mx-auto max-w-5xl px-5">
@@ -227,22 +269,24 @@ import Divider from "../components/Divider.astro";
         </a>
       </div>
     </section>
-    <Divider />
+    <SymbolDivider />
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+      <div class="mb-5 space-y-5">
+        <p class="text-manao font-bold">
+          Nachhaltige Gesundheit entsteht, wenn wir den Menschen in seiner
+          Ganzheit betrachten.
+        </p>
+        <p>
+          Daher möchte ich mit meiner Arbeit eine Brücke schaffen, zwischen
+          wissenschaftlich fundierten Erkenntnissen und einer bewussten
+          Auseinandersetzung mit den grundlegenden Fragen des Menschseins - im
+          Sinne einer <span class="text-manao font-bold"
+            >offenen, greifbaren und bodenständigen Spiritualität</span
+          >, frei von religiösen oder dogmatischen Konzepten:
+        </p>
+      </div>
       <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
         <div class="space-y-5 md:basis-3/5">
-          <p class="text-manao font-bold">
-            Nachhaltige Gesundheit entsteht, wenn wir den Menschen in seiner
-            Ganzheit betrachten.
-          </p>
-          <p>
-            Daher möchte ich mit meiner Arbeit eine Brücke schaffen, zwischen
-            wissenschaftlich fundierten Erkenntnissen und einer bewussten
-            Auseinandersetzung mit den grundlegenden Fragen des Menschseins - im
-            Sinne einer <span class="text-manao font-bold"
-              >offenen und greifbaren Spiritualität</span
-            >, frei von religiösen oder dogmatischen Konzepten:
-          </p>
           <ul class="list-disc space-y-2 pl-6">
             <li>Wo komme ich her?</li>
             <li>Was gibt meinem Leben Bedeutung?</li>
@@ -251,7 +295,7 @@ import Divider from "../components/Divider.astro";
             <li>Was bedeutet für mich Gesundheit und Heilung?</li>
             <li>Wie gehe ich mit Vergänglichkeit und Tod um?</li>
           </ul>
-          <p>
+          <p class="mt-10">
             Moderne Bewusstseinsforschung sowie entwicklungs- und
             gesundheitspsychologische Ansätze (z. B. Positive Psychologie mit
             dem PERMA-Modell von Martin Seligman oder Broaden-and-Build-Theorie
@@ -300,7 +344,7 @@ import Divider from "../components/Divider.astro";
           </div>
         </div>
         <div
-          class="hidden w-full max-w-xs self-center md:mt-100 md:block md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+          class="hidden w-full max-w-xs self-center md:mt-60 md:block md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
         >
           <Picture
             src={rollstuhl}
@@ -310,15 +354,17 @@ import Divider from "../components/Divider.astro";
         </div>
       </div>
     </section>
-    <Divider />
 
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
       <div class="space-y-5">
-        <p>
+        <p class="font-caveat text-manao-dark text-center text-3xl">
           Ein spiritueller Weg geht über eine rein ich-zentrierte Perspektive
-          hinaus. <br /> Die Identifikation mit Gedanken, Gefühlen und inneren Mustern
-          lockert sich, sodass Erfahrungen bewusster als Prozesse wahrgenommen werden
-          - mit Anfang, Verlauf und Ende.
+          hinaus.
+        </p>
+        <p>
+          Die Identifikation mit Gedanken, Gefühlen und inneren Mustern lockert
+          sich, sodass Erfahrungen bewusster als Prozesse wahrgenommen werden -
+          mit Anfang, Verlauf und Ende.
         </p>
         <p>
           Gleichzeitig vertieft sich die Verbundenheit - mit sich selbst, mit
@@ -326,19 +372,21 @@ import Divider from "../components/Divider.astro";
         </p>
         <p>
           Präsenz und unmittelbares Erleben treten stärker in den Vordergrund.
-          Dadurch entsteht mehr innere Ruhe und Klarheit:<br />Die Fähigkeit zu
-          erkennen, was heilsam ist und was nicht, wann Akzeptanz sinnvoll ist
-          und wann Veränderung notwendig wird - und wie perfekt und manchmal
+          Dadurch entsteht mehr innere Ruhe und Klarheit:
+          <br /> Die Fähigkeit zu erkennen, was heilsam ist und was nicht, wann Akzeptanz
+          sinnvoll ist und wann Veränderung notwendig wird - und wie perfekt und manchmal
           absurd die Lektionen des Lebens uns Aufgaben zum Wachsen schenken.
         </p>
       </div>
     </section>
     <ImageTextSection imageMetadata={wave} overlay
       ><span class="font-caveat text-3xl md:text-4xl"
-        >"Wer still ist, erkennt den Fluss des Lebens und bleibt
-        unerschütterlich."</span
+        >Wer still ist, erkennt den Fluss des Lebens und bleibt
+        unerschütterlich.</span
       >
-      <br /><span class="text-sm">Lao Tse - chinesischer Philosoph</span>
+      <br /><span class="text-sm">
+        Frei nach Lao Tse - chinesischer Philosoph</span
+      >
     </ImageTextSection>
   </main>
 </Layout>

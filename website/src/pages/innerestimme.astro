@@ -6,6 +6,7 @@ import haende from "../assets/kind_haende.webp";
 import aquarell from "../assets/aquarell.webp";
 import ImageTextSection from "../components/ImageTextSection.astro";
 import Divider from "../components/Divider.astro";
+import Quote from "../components/Quote.astro";
 ---
 
 <Layout
@@ -39,55 +40,11 @@ import Divider from "../components/Divider.astro";
             Klarheit. Sie zeigt Wege auf, warnt und korrigiert. Dabei steht sie
             oft nicht im Einklang mit dem Verstand, sondern kommt aus einer viel
             tieferen Ebene.
-          </p><p class="mt-10">
-            <span class="italic"
-              >„Die Intuition ist die am meisten unterschätzte und
-              missverstandene menschliche Kompetenz.<br />Das ist fatal, denn
-              <span class="text-manao font-semibold">
-                wir brauchen die Intuition um kraftvolle Entscheidungen in
-                Übereinstimmung mit unserer Vision und entsprechend unserem
-                Potential treffen zu können</span
-              >.<br />In der aktuellen Zeit ist die Intuition der Future Skill,
-              der die Richtung, die wir individuell und kollektiv einschlagen,
-              entscheidend beeinflussen wird."</span
-            >
-          </p><p>
-            Zitat von Alexandra Sorgenicht - Intuitionstrainerin & Gründerin der
-            Academy for Intuitive Living
           </p>
-          <Divider />
-          <p class="text-manao-dark font-caveat text-center text-3xl">
-            Wenn wir Sensitivität und Intuition Raum geben, können wir unser
-            Leben bewusster, selbstbestimmter und stimmiger gestalten.
-          </p>
-          <Divider />
-          <div class="mx-auto w-full max-w-xs md:hidden">
-            <Picture
-              src={intentionImage}
-              alt="Wasser, Wellen, Ozean"
-              class="aspect-square w-full rounded-full object-cover"
-            />
-          </div>
-          <p class="text-manao mt-10 font-bold">
-            Auf diesen Fähigkeiten basierend entwickeln wir:
-          </p>
-          <ul class="list-disc space-y-3 pl-5">
-            <li>
-              <span class="text-manao font-bold">Emotionale Intelligenz</span>:
-              Die Fähigkeit innere Zustände nicht nur wahrzunehmen, sondern auch
-              zu verstehen und zu steuern sowie Selbstmotivation, Empathie und
-              soziale Kompetenz (Daniel Goleman).
-            </li>
-            <li>
-              <span class="text-manao font-bold">Resilienz</span>: Die
-              Fähigkeit, sich positiv an widrige Lebensumstände anzupassen,
-              Stress zu bewältigen und sich nach Belastungen psychisch zu
-              erholen.
-            </li>
-          </ul>
         </div>
+
         <div
-          class="hidden w-full max-w-xs self-center md:mt-70 md:block md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+          class="hidden w-full max-w-xs md:block md:max-w-sm md:basis-2/5 lg:max-w-md"
         >
           <Picture
             src={intentionImage}
@@ -96,12 +53,60 @@ import Divider from "../components/Divider.astro";
           />
         </div>
       </div>
+
+      <div class="space-y-5">
+        <Quote
+          class="mt-10"
+          author="Zitat von Alexandra Sorgenicht - Intuitionstrainerin & Gründerin der Academy for Intuitive Living"
+        >
+          Die Intuition ist die am meisten unterschätzte und missverstandene
+          menschliche Kompetenz.<br />Das ist fatal, denn
+          <span class="text-manao font-semibold">
+            wir brauchen die Intuition um kraftvolle Entscheidungen in
+            Übereinstimmung mit unserer Vision und entsprechend unserem
+            Potential treffen zu können</span
+          >.<br />In der aktuellen Zeit ist die Intuition der Future Skill, der
+          die Richtung, die wir individuell und kollektiv einschlagen,
+          <br />entscheidend beeinflussen wird.
+        </Quote>
+
+        <p
+          class="text-manao-dark font-caveat mt-20 text-center text-3xl md:mt-30 md:mb-10"
+        >
+          Wenn wir Sensitivität und Intuition Raum geben, können wir unser Leben
+          bewusster, selbstbestimmter und stimmiger gestalten.
+        </p>
+
+        <div class="mx-auto w-full max-w-xs md:hidden">
+          <Picture
+            src={intentionImage}
+            alt="Wasser, Wellen, Ozean"
+            class="aspect-square w-full rounded-full object-cover"
+          />
+        </div>
+        <p class="text-manao mt-10 font-bold">
+          Auf diesen Fähigkeiten basierend entwickeln wir:
+        </p>
+        <ul class="list-disc space-y-3 pl-5">
+          <li>
+            <span class="text-manao font-bold">Emotionale Intelligenz</span>:
+            Die Fähigkeit innere Zustände nicht nur wahrzunehmen, sondern auch
+            zu verstehen und zu steuern sowie Selbstmotivation, Empathie und
+            soziale Kompetenz (Daniel Goleman).
+          </li>
+          <li>
+            <span class="text-manao font-bold">Resilienz</span>: Die Fähigkeit,
+            sich positiv an widrige Lebensumstände anzupassen, Stress zu
+            bewältigen und sich nach Belastungen psychisch zu erholen.
+          </li>
+        </ul>
+      </div>
     </section>
 
     <ImageTextSection imageMetadata={haende} minHeightClass="min-h-60" overlay
       ><span class="font-caveat text-3xl md:text-4xl"
-        >„Resilienz entsteht nicht durch Leistung,<br /> sondern durch die Fähigkeit,
-        mit Emotionen und Beziehungen gesund umzugehen."</span
+        >Resilienz entsteht nicht durch Leistung,<br /> sondern durch die Fähigkeit,
+        mit Emotionen und Beziehungen gesund umzugehen.</span
       >
       <br /><span class="text-sm">
         nach Ann S. Masten - amerikanische Psychologin, weltweit führende
@@ -114,19 +119,27 @@ import Divider from "../components/Divider.astro";
         <p>
           In unserer <span class="italic"
             >zunehmend leistungsorientierten Gesellschaft</span
-          > stehen jedoch Effizienz, Anpassung und Funktionieren im Vordergrund. Hinzu
-          kommen Digitalisierung und die allgegenwärtigen sozialen Medien, die mit
-          Lebensstil-Konzepten, Methoden, Normen und Erwartungen vorschreiben, was
-          man „braucht" und wie man zu „sein" hat.
+          > stehen jedoch Effizienz, Anpassung und Funktionieren im Vordergrund.<br
+          />Hinzu kommen <span class="italic">Digitalisierung</span> und die allgegenwärtigen
+          <span class="italic">sozialen Medien</span>, die mit
+          Lebensstil-Konzepten, Methoden, Normen und Erwartungen vorschreiben,
+          was man „braucht" und wie man zu „sein" hat.
         </p>
         <p>
           Zum einen werden dabei Stabilität und Lebensfreude immer stärker von
           äußeren Faktoren abhängig gemacht, zum anderen ist das Nervensystem
-          vieler Menschen durch Schnelllebigkeit und hohe Reizdichte stark
-          belastet.<br /> Auch weitere Einflussfaktoren wie biografische Prägungen
-          sowie individuelle Schutz- und Bewältigungsmechanismen wirken dabei mit.<br
-          /> Akute Lebenskrisen und Verluste können das innere Gleichgewicht zusätzlich
-          erschüttern und zu intensiven emotionalen und körperlichen Reaktionen führen.
+          vieler Menschen durch <span class="italic">Schnelllebigkeit</span> und <span
+            class="italic">hohe Reizdichte</span
+          > stark belastet.<br /> Auch weitere Einflussfaktoren wie <span
+            class="italic">biografische Prägungen</span
+          >
+          sowie individuelle <span class="italic"
+            >Schutz- und Bewältigungsmechanismen</span
+          > wirken dabei mit.<br /> Akute <span class="italic"
+            >Lebenskrisen</span
+          > und <span class="italic">Verluste</span> können das innere Gleichgewicht
+          zusätzlich erschüttern und zu intensiven emotionalen und körperlichen Reaktionen
+          führen.
         </p>
         <p class="italic">
           In der Folge fällt es vielen Menschen schwer, Sensitivität und
@@ -144,12 +157,12 @@ import Divider from "../components/Divider.astro";
 
     <ImageTextSection imageMetadata={aquarell} minHeightClass="min-h-60"
       ><span class="text-manao-dark font-caveat text-3xl md:text-4xl"
-        >„Wenn Kinder nur lernen, Erwartungen zu erfüllen und sich anzupassen,
-        <br />verlieren sie den Kontakt zu sich selbst."
+        >Wenn Kinder nur lernen, Erwartungen zu erfüllen und sich anzupassen,
+        <br />verlieren sie den Kontakt zu sich selbst.
       </span>
 
       <br /><span class="text-manao-dark text-sm"
-        >nach Gerald Hüther - deutscher Neurobiologe, Hirnforscher</span
+        >inspiriert von Gerald Hüther - deutscher Neurobiologe, Hirnforscher</span
       >
     </ImageTextSection>
 
@@ -163,8 +176,8 @@ import Divider from "../components/Divider.astro";
         </p>
         <p class="border-manao border-l-4 p-4">
           Wenn ihre Bedürfnisse gesehen und verlässlich beantwortet werden,
-          entsteht Vertrauen in sich selbst.<br />Kinder lernen: Das, was ich
-          fühle, ist bedeutsam und richtig.
+          entwickeln sie Vertrauen in sich selbst.<br />Kinder lernen: Das, was
+          ich fühle, ist bedeutsam und richtig.
         </p>
         <p>
           Frühe Bindungserfahrungen prägen die emotionale, soziale und
