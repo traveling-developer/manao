@@ -1,11 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Picture } from "astro:assets";
+import { Image, Picture } from "astro:assets";
+import symbol from "../assets/manao_symbol.webp";
 import portrait from "../assets/portrait.webp";
 import himmel from "../assets/himmel.webp";
 import bird from "../assets/bird.webp";
 import ImageTextSection from "../components/ImageTextSection.astro";
 import Divider from "../components/Divider.astro";
+import SymbolDivider from "../components/SymbolDivider.astro";
 ---
 
 <Layout title="Über mich" description="tbd">
@@ -33,8 +35,8 @@ import Divider from "../components/Divider.astro";
           <p>
             Als Mama von zwei wundervollen Kindern und Ehefrau eines ebenso
             wundervollen Mannes, erlebe ich täglich das bunte Spektrum an
-            Entwicklungsräumen, das mit diesen Rollen einhergeht. Dafür bin ich
-            zutiefst dankbar.
+            Entwicklungsräumen, das mit diesen Rollen einhergeht.<br />Dafür bin
+            ich zutiefst dankbar.
           </p>
           <p>
             Geboren wurde ich 1982. Ausgestattet mit einer ausgeprägten
@@ -61,7 +63,9 @@ import Divider from "../components/Divider.astro";
       </div>
     </section>
 
-    <Divider />
+    <div class="hidden md:flex">
+      <SymbolDivider />
+    </div>
 
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
       <div class="space-y-5">
@@ -80,12 +84,14 @@ import Divider from "../components/Divider.astro";
         </p>
         <p>
           Auch die Zusammenarbeit mit Eltern/Erziehungsberechtigten ist mir sehr
-          wichtig. <br />Sie im Alltag zu unterstützen und gemeinsam zum Wohl
-          des Kindes beizutragen, sodass Lösungen entstehen, die für - alle
-          Beteiligten - tragfähig und entlastend sind, empfinde ich als wertvoll
-          und sinnstiftend.<br />Dabei investiere ich meine Zeit, mein Wissen
-          und meine Energie dort, wo Respekt und Wertschätzung sowie die
-          Bereitschaft zur Zusammenarbeit erkennbar ist.
+          wichtig. <br />Sie zu unterstützen und gemeinsam zum Wohl des Kindes
+          beizutragen, sodass Lösungen entstehen, die für - alle Beteiligten -
+          tragfähig und entlastend sind, empfinde ich als wertvoll und
+          sinnstiftend.
+        </p><p>
+          Dabei investiere ich meine Zeit, mein Wissen und meine Energie dort,
+          wo Respekt und Wertschätzung sowie die Bereitschaft zur Zusammenarbeit
+          erkennbar ist.
         </p>
 
         <p>Unabhängig davon, steht das Wohl des Kindes immer im Vordergrund.</p>
@@ -93,7 +99,8 @@ import Divider from "../components/Divider.astro";
           Eine gelingende Entwicklungsbegleitung setzt jedoch voraus, dass alle
           Beteiligten aktiv am Prozess mitwirken.
         </p>
-        <p class="mt-10">
+        <SymbolDivider />
+        <p>
           Parallel beschäftigen mich seit jeher Sinnfragen und die tieferen
           Zusammenhänge des Lebens - ebenso wie die Tatsache, wie
           unterschiedlich Menschen mit ihren Lebensumständen umgehen und wie
@@ -115,13 +122,11 @@ import Divider from "../components/Divider.astro";
           Am Sterbebett meiner Oma hatte ich als junge Erwachsene ein sehr
           einschneidendes Erlebnis, das mich erneut bestätigte:
         </p>
-        <Divider />
-        <p class="font-caveat text-manao-dark text-center text-3xl">
+        <p class="font-caveat text-manao-dark mt-15 text-center text-3xl">
           Das Leben ist weit mehr als das Sichtbare,<br
             class="hidden lg:block"
           /> es gibt noch viel tiefere Dimensionen.
         </p>
-        <Divider />
         <div class="mx-auto mt-10 w-full max-w-xs md:max-w-sm">
           <Picture
             src={himmel}
@@ -148,17 +153,15 @@ import Divider from "../components/Divider.astro";
           Fasziniert davon begann ein bewusster Weg der persönlichen inneren
           Arbeit und der fachlichen Weiterbildung in diesem Bereich.
         </p>
-        <Divider />
         <p class="mt-5 text-center">
           <span class="text-manao-dark font-caveat text-3xl"
-            >"Geist" ist der Maschinist, der die Maschine (Körper)<br /> mittels Kraftstoff
+            >„Geist ist der Maschinist, der die Maschine (Körper)<br /> mittels Kraftstoff
             (Seele) zum Laufen bringt."</span
           >
           <br /><span class="text-sm"
             >Aldo Berti - Geistheilung und Energiearbeit</span
           >
         </p>
-        <Divider />
       </div>
     </section>
 
@@ -175,7 +178,7 @@ import Divider from "../components/Divider.astro";
           Diese geben mir die Kraft, selbst in stürmischen Zeiten im Vertrauen
           zu bleiben. Auch wenn ich nicht immer verstehen kann, warum manche
           Dinge geschehen, erkenne ich doch, dass das Leben einem größeren
-          Zusammenhang folgt. Alles hat seine Zeit – und vieles auch seinen
+          Zusammenhang folgt. Alles hat seine Zeit – und Vieles auch seinen
           Sinn. Dadurch erlebe ich mehr Zufriedenheit, Leichtigkeit und
           Lebensfreude.
         </p>
@@ -187,12 +190,12 @@ import Divider from "../components/Divider.astro";
       minHeightClass="lg:min-h-50 2xl:min-h-100"
       textPosition="left"
       ><span class="font-caveat text-3xl md:text-4xl"
-        >"Hinter jedem Winter steckt ein zitternder Frühling und hinter dem
-        Schleier jeder Nacht <br />verbirgt sich ein lächelnder Morgen."</span
+        >Hinter jedem Winter steckt ein zitternder Frühling und hinter dem
+        Schleier jeder Nacht <br />verbirgt sich ein lächelnder Morgen.</span
       >
       <br /><span class="text-sm"
-        >Khalil Gibran - libanesisch-amerikanischer Dichter, Philosoph, Maler
-        und Schriftsteller</span
+        >Frei nach Khalil Gibran - libanesisch-amerikanischer Dichter,
+        Philosoph, Maler und Schriftsteller</span
       >
     </ImageTextSection>
 
@@ -206,18 +209,20 @@ import Divider from "../components/Divider.astro";
           Fachliche Expertise und meine persönlichen Lebenserfahrungen bilden
           die Grundlage meiner Arbeit.
         </p>
-        <p class="text-manao-dark font-caveat text-center text-3xl">
+        <p
+          class="border-manao/10 bg-manao/10 rounded-lg border p-4 text-center"
+        >
           Mein Ziel ist es, Menschen dabei zu unterstützen,<br />ihre Verbindung
           zu sich selbst zu stärken oder wiederzufinden.
         </p>
-        <p>
-          Eine gute Selbstverbindung ermöglicht, Zusammenhänge klarer zu
-          erkennen, Stärken zu entdecken, Vertrauen in die eigenen Fähigkeiten
-          zu entwickeln und stimmige, nachhaltige Lösungen zu finden.
-        </p>
         <p class="border-manao border-l-4 p-4">
-          Sie der Schlüssel für innere Stabilität, Resilienz und ganzheitliche
-          Gesundheit.
+          Das schafft die Voraussetzung, um Zusammenhänge klarer zu erkennen,
+          Stärken zu entdecken, Vertrauen in die eigenen Fähigkeiten zu
+          entwickeln und stimmige, nachhaltige Lösungen zu finden.
+        </p>
+        <p class="text-manao-dark font-caveat text-center text-3xl">
+          Eine gute Selbstverbindung ist der Schlüssel für innere Stabilität,
+          Resilienz<br />und ganzheitliche Gesundheit.
         </p>
         <p class="text-xs">
           (Rechtlicher Hinweis: Ich bin keine Ärztin, Heilpraktikerin oder
@@ -225,11 +230,20 @@ import Divider from "../components/Divider.astro";
           therapeutische Behandlung, sondern versteht sich als
           eigenverantwortliche Begleitung auf deinem Lebensweg.)
         </p>
-        <p class="mt-15 text-center">
-          <span class="text-manao-dark font-caveat text-3xl"
-            >"Glücklich zu sein ist keine Kunst.<br />Die wirkliche Kunst ist zu
-            wissen, was man tun kann, wenn man unglücklich ist."</span
-          >
+
+        <div class="flex justify-center py-5">
+          <Image
+            src={symbol}
+            alt=""
+            width={128}
+            class="w-32"
+            loading="lazy"
+          />
+        </div>
+
+        <p class="border-manao border-l-4 p-4">
+          „Glücklich zu sein ist keine Kunst.<br />Die wirkliche Kunst ist zu
+          wissen, was man tun kann, wenn man unglücklich ist."
           <br /><span class="text-sm"
             >Jesper Juul - dänischer Familientherapeut, Pädagoge und Autor</span
           >
