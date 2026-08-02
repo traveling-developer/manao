@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactButtons from "../components/ContactButtons.astro";
+import { Picture } from "astro:assets";
+import chakren from "../assets/chakren.webp";
 ---
 
 <Layout
@@ -21,17 +23,32 @@ import ContactButtons from "../components/ContactButtons.astro";
             Energiezentren
           </p>
 
-          <p>
-            In diesem Workshop begeben sich die Kinder auf eine spielerische
-            Entdeckungsreise zu den sieben Chakren. Diese werden dabei als
-            „Energieräder” im Körper verstanden – ein symbolisches Modell, das
-            verschiedene Bereiche unseres Erlebens beschreibt, wie Gefühle,
-            Körperwahrnehmung und innere Zustände.
-          </p>
-          <p>
-            Im Mittelpunkt steht nicht das Erlernen eines theoretischen Systems,
-            sondern die spielerische Begegnung mit den Energiezentren.
-          </p>
+          <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+            <div class="space-y-5 md:basis-3/5">
+              <p>
+                In diesem Workshop begeben sich die Kinder auf eine spielerische
+                Entdeckungsreise zu den sieben Chakren. Diese werden dabei als
+                „Energieräder” im Körper verstanden – ein symbolisches Modell,
+                das verschiedene Bereiche unseres Erlebens beschreibt, wie
+                Gefühle, Körperwahrnehmung und innere Zustände.
+              </p>
+              <p>
+                Im Mittelpunkt steht nicht das Erlernen eines theoretischen
+                Systems, sondern die spielerische Begegnung mit den
+                Energiezentren.
+              </p>
+            </div>
+
+            <div
+              class="mx-auto w-full max-w-xs self-center md:mx-0 md:basis-2/5 md:self-auto"
+            >
+              <Picture
+                src={chakren}
+                alt="Heilsteine und eine Karte mit den Symbolen der sieben Chakren"
+                class="aspect-square w-full rounded-full object-cover object-right"
+              />
+            </div>
+          </div>
         </header>
 
         <div class="space-y-3">
@@ -42,20 +59,20 @@ import ContactButtons from "../components/ContactButtons.astro";
               Körperempfindungen und innere Zustände bewusster wahrnehmen und ausdrücken.
             </li>
             <li>
-              <span class="font-semibold"
-                >Erste Begegnung mit innerer Wahrnehmung:</span
-              > Spielerische Impulse zu unbewussten Gefühls- und Erlebnisräumen erhalten.
+              <span class="font-semibold">Die eigene Innenwelt entdecken:</span> Durch
+              einfache, spielerische Übungen einen ersten Zugang zu verborgenen Gefühlen
+              und inneren Erlebnissen finden.
             </li>
             <li>
               <span class="font-semibold"
-                >Emotionale Integration und innere Stärke:</span
-              > Gefühle dürfen integriert werden - in die eigene, natürliche Kraft
-              zurückfinden.
+                >Emotionale Integration & innere Stärke:</span
+              > Unterdrückte oder schwierige Gefühle annehmen und integrieren, um
+              in die eigene, natürliche Kraft zurückzufinden.
             </li>
             <li>
-              <span class="font-semibold">Spirituelle Tiefe:</span> Im Mittelpunkt
-              steht die Entwicklung eines erweiterten Bewusstseins für die Zusammenhänge
-              des eigenen Erlebens sowie für die Verbundenheit mit dem Leben als Ganzem.
+              <span class="font-semibold">Spirituelle Tiefe:</span> Ein erweitertes
+              Bewusstsein für die Zusammenhänge des eigenen Erlebens sowie für die
+              Verbundenheit mit dem Leben als Ganzem entwickeln.
             </li>
           </ul>
         </div>
@@ -72,55 +89,30 @@ import ContactButtons from "../components/ContactButtons.astro";
 
         <div class="space-y-3">
           <h2 class="text-manao text-2xl font-semibold">Zielgruppe</h2>
-          <p>Für Kinder zwischen 10 und 11 Jahren</p>
+          <p>Kinder im Vorschulalter sowie Schulkinder der 1. bis 6. Klasse</p>
         </div>
 
         <div class="space-y-6">
           <h2 class="text-manao text-2xl font-semibold">Termine</h2>
+          <p>
+            Die jeweilige Altersgruppe, Kursbeginn sowie weitere Informationen
+            zur Anmeldung findest du unter <a
+              href="/news"
+              class="hover:text-manao underline">Aktuelles</a
+            >.
+          </p>
 
-          <dl class="divide-manao/20 divide-y">
-            <div
-              class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0"
-            >
-              <dt>Termin</dt>
-              <dd class="font-semibold">Fr, 06. November 2026 (Herbstferien)</dd>
-            </div>
-            <div
-              class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0"
-            >
-              <dt>Dauer von</dt>
-              <dd class="">10:00 – 14:00 Uhr</dd>
-            </div>
-            <div
-              class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0"
-            >
-              <dt>Anmeldung bis</dt>
-              <dd class="">spät. Fr, 23. Oktober 2026</dd>
-            </div>
-          </dl>
           <ul class="text-manao list-['→_'] space-y-2 pl-6 font-semibold">
             <li>
-              Bitte eine Decke & ein kleines Kissen mitbringen sowie
-              wettergerechte Kleidung.
+              Bitte zu den Terminen eine Decke & ein kleines Kissen mitbringen
+              sowie wettergerechte Kleidung.
             </li>
           </ul>
         </div>
 
         <div class="space-y-4">
           <h2 class="text-manao text-2xl font-semibold">Investition</h2>
-          <dl class="divide-manao/20 divide-y">
-            <div
-              class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0"
-            >
-              <dt>Pro Kind</dt>
-              <dd class="text-manao font-semibold">90 €</dd>
-            </div>
-          </dl>
-          <p class="text-sm">
-            Inklusive Getränke (Saftschorlen, Wasser), Mittagessen und
-            Obstmahlzeit zwischendurch. Allergien, Unverträglichkeiten sowie
-            weitere wichtige Infos bitte bei der Anmeldung mit angeben.
-          </p>
+          <p>Diese richtet sich nach dem Format.</p>
         </div>
         <ContactButtons />
       </div>

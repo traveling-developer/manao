@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactButtons from "../components/ContactButtons.astro";
+import { Picture } from "astro:assets";
+import youth from "../assets/youth.webp";
 ---
 
 <Layout
@@ -14,7 +16,7 @@ import ContactButtons from "../components/ContactButtons.astro";
           <h1
             class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
           >
-            Deep Talk
+            Deep Talk - Spiritualität trifft Wissenschaft
           </h1>
           <div class="text-manao space-y-2 text-lg font-semibold md:text-xl">
             <p>Du hast Fragen, die im Alltag oft keinen Raum finden?</p>
@@ -24,27 +26,44 @@ import ContactButtons from "../components/ContactButtons.astro";
           </div>
         </header>
 
-        <div class="space-y-4">
-          <p>
-            Deep Talk bietet einen offenen Gesprächsraum für Jugendliche und
-            junge Erwachsene, die sich mit den großen Fragen des Lebens
-            auseinandersetzen möchten.
-          </p>
-          <p>
-            Im Mittelpunkt stehen Austausch, Reflexion und neue Perspektiven –
-            alltagsnah, achtsam und fachlich begleitet in lockerer Atmosphäre.
-          </p>
-          <p>
-            Dabei geht es nicht um Religion oder Glaubenszugehörigkeit. Alle
-            persönlichen Hintergründe spielen in diesem Rahmen keine Rolle.
-            Ebenso ist das Angebot nicht dogmatisch oder missionarisch
-            ausgerichtet, sondern offen, reflektiert und frei von vorgegebenen
-            Weltbildern.
-          </p>
-          <p>
-            Im Mittelpunkt steht die Verbindung zu sich selbst, zu anderen und
-            zur Natur – zum großen Ganzen.
-          </p>
+        <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+          <div class="space-y-4 md:basis-3/5">
+            <p>
+              Deep Talk bietet einen offenen Gesprächsraum für Jugendliche und
+              junge Erwachsene, die sich mit den großen Fragen des Lebens
+              auseinandersetzen möchten.
+            </p>
+            <p>
+              Im Mittelpunkt stehen Austausch, Reflexion und neue Perspektiven –
+              alltagsnah, achtsam und fachlich begleitet in lockerer Atmosphäre.
+            </p>
+            <p>
+              Dabei geht es nicht um Religion oder Glaubenszugehörigkeit,
+              sondern um die Verbindung zu sich selbst, zu anderen, zur Natur
+              und zum Leben an sich – zum großen Ganzen.
+            </p><p>
+              Alle persönlichen Hintergründe und Lebenswege werden respektiert,
+              ohne dass sie im Mittelpunkt stehen oder geteilt werden müssen.
+            </p><p>
+              Ebenso ist das Angebot nicht dogmatisch oder missionarisch
+              ausgerichtet, sondern offen, reflektiert und frei von vorgegebenen
+              Weltbildern.
+            </p>
+            <p>
+              Im Mittelpunkt steht die Verbindung zu sich selbst, zu anderen und
+              zur Natur – zum großen Ganzen.
+            </p>
+          </div>
+
+          <div
+            class="mx-auto w-full max-w-xs self-center md:mx-0 md:basis-2/5 md:self-auto"
+          >
+            <Picture
+              src={youth}
+              alt="Jugendliche sitzen bei Sonnenuntergang im Gras und unterhalten sich"
+              class="aspect-square w-full rounded-full object-cover"
+            />
+          </div>
         </div>
 
         <div class="space-y-3">
@@ -52,10 +71,13 @@ import ContactButtons from "../components/ContactButtons.astro";
           <ul class="list-disc space-y-2 pl-6">
             <li>Wo komme ich her und wohin gehe ich?</li>
             <li>Was ist der Sinn des Lebens?</li>
+            <li>Was macht mich wirklich glücklich?</li>
             <li>Gibt es mehr zwischen Himmel und Erde?</li>
+            <li>Zufall, Schicksal, Karma?</li>
             <li>Wie lassen sich Wissenschaft und Spiritualität verbinden?</li>
             <li>Was bedeutet Bewusstsein eigentlich?</li>
             <li>Wie finde ich meinen eigenen Weg?</li>
+            <li>Lebensaufgabe, Bestimmung, freier Wille?</li>
             <li>Wie beeinflussen meine Gedanken mein körperliches Erleben?</li>
             <li>Was gibt mir Halt in unsicheren Zeiten?</li>
             <li>…</li>
@@ -65,44 +87,31 @@ import ContactButtons from "../components/ContactButtons.astro";
         <p class="text-manao text-lg font-semibold">Ich freue mich auf dich!</p>
 
         <div class="space-y-3">
+          <h2 class="text-manao text-2xl font-semibold">Rahmenbedingungen</h2>
+          <p>
+            Deep Talk ist ein freiwilliges Gesprächsangebot und ersetzt keine
+            Betreuung oder professionelle Beratung.<br />Die Treffen finden in
+            einem vereinbarten Rahmen statt, die Verantwortung für den Weg zum
+            und vom Treffpunkt sowie für die Zeit außerhalb des vereinbarten
+            Treffens liegt bei den Teilnehmenden bzw. bei minderjährigen
+            Teilnehmenden bei den Eltern/Erziehungsberechtigten.
+          </p>
+        </div>
+
+        <div class="space-y-3">
           <h2 class="text-manao text-2xl font-semibold">Zielgruppen</h2>
           <ul class="list-disc space-y-2 pl-6">
             <li>Deep Talk für Jugendliche (13 – 16 Jahre)</li>
             <li>Deep Talk für junge Erwachsene (ab 17 Jahre)</li>
           </ul>
-          <p>
-            Die Treffen finden jeweils von
-            <span class="text-manao font-semibold">19:00 – ca. 20:30 Uhr</span>
-            statt.
-          </p>
-          <p>
-            Aktuelle Termine werden rechtzeitig hier auf meiner Homepage
-            veröffentlicht. Gern auch auf Anfrage.
-          </p>
         </div>
 
         <div class="space-y-6">
-          <h2 class="text-manao text-2xl font-semibold">Nächster Deep Talk</h2>
-
-          <div class="space-y-3">
-            <h3 class="text-manao font-semibold">
-              Jugendliche (13 – 16 Jahre)
-            </h3>
-            <dl class="divide-manao/20 divide-y">
-              <div
-                class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0"
-              >
-                <dt>Termin</dt>
-                <dd class="font-semibold">Dienstag, 04. August 2026</dd>
-              </div>
-            </dl>
-          </div>
-
+          <h2 class="text-manao text-2xl font-semibold">Termine</h2>
           <p>
-            Den Treffpunkt erfährst du bei Anmeldung – gerne telefonisch, über
-            WhatsApp oder per E-Mail bis spätestens
-            <span class="text-manao font-semibold"
-              >Donnerstag, den 30. Juli 2026</span
+            Die jeweilige Altersgruppe sowie weitere Informationen zur Anmeldung
+            findest du unter <a href="/news" class="hover:text-manao underline"
+              >Aktuelles</a
             >.
           </p>
         </div>
