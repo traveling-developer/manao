@@ -8,6 +8,7 @@ import himmel from "../assets/himmel.webp";
 import kathrin from "../assets/kathrin.webp";
 import ImageTextSection from "../components/ImageTextSection.astro";
 import Divider from "../components/Divider.astro";
+import SymbolDivider from "../components/SymbolDivider.astro";
 ---
 
 <Layout title="Arbeitsweise" description="tbd">
@@ -27,42 +28,43 @@ import Divider from "../components/Divider.astro";
           </p>
           <p>
             Sowohl beruflich als auch privat orientiere ich mich an einem
-            ganzheitlichen Verständnis des Mensch-Seins, bei dem körperliche,
-            psychische und feinstoffliche Ebenen miteinander verbunden sind.
+            ganzheitlichen Verständnis des Mensch-Seins: Körperliche, psychische
+            und feinstoffliche Ebenen stehen nie isoliert. Zudem ist der Mensch
+            zutiefst eingewoben in das große Ganze und verbunden mit allem Sein.
           </p>
           <p>
-            Der Mensch wird dabei im Kontext seines Lebens gesehen - beeinflusst
-            durch Umfeld, Beziehungen, biografische Erfahrungen, familiäre
-            Einflüsse sowie einschneidende Lebensereignisse, Verluste und
-            unerfüllte Wünsche.
+            Entsprechend sehe ich jeden Einzelnen in der Gesamtheit seines
+            Lebenskontextes:
           </p>
+          <ul class="list-disc space-y-2 pl-6">
+            <li>
+              <span class="font-bold">Umfeld & Beziehungen:</span><br />Das
+              aktuelle soziale Netzwerk, der Beruf und alltägliche Lebensräume.
+            </li>
+            <li>
+              <span class="font-bold">Biografie & Herkunftsfamilie:</span><br
+              />Prägende Erfahrungen, familiäre Einflüsse und transgenerationale
+              Linien.
+            </li>
+            <li>
+              <span class="font-bold"
+                >Lebensereignisse & unbewusste Dynamiken:</span
+              ><br />Einschneidende Veränderungen, Verluste, unerfüllte
+              Lebensentwürfe sowie kollektive, energetische Felder.
+            </li>
+          </ul>
           <p class="border-manao border-l-4 p-4">
             Diese Faktoren wirken auf unsere Wahrnehmung, unser Erleben und den
             Umgang mit uns selbst, mit anderen und der Welt.
           </p>
-          <p>
+          <p class="mt-10">
             Vor diesem Hintergrund ergänzen sich in meiner Lebens- und
             Sichtweise verschiedene Methoden – darunter Schulmedizin,
             Naturheilkunde und energetisch-spirituelle Praxis – um persönliche
             Entwicklung zu begleiten sowie innere Stabilität und ganzheitliche
             Gesundheit zu erhalten und zu fördern.
           </p>
-          <Divider />
-          <p class="text-manao-dark font-caveat text-center text-3xl">
-            Da stetige Veränderung unser Dasein bestimmt, dürfen wir lernen, der
-            inneren Stimme zu lauschen, unserer Intuition zu vertrauen und uns
-            so dem Wandel zu öffnen.
-          </p>
-          <Divider />
-          <p class="border-manao border-l-4 p-4">
-            Die tiefe Rückverbindung und eine solche Ausrichtung schenken
-            Klarheit und neue Kraft. <br /> Auf diese Weise entdecken wir unsere ganz
-            eigenen Wege und Möglichkeiten - mana'o.
-          </p>
-          <p>
-            Diesen Ansatz haben meine eigenen Lebensaufgaben und die bewusste
-            Auseinandersetzung damit geprägt.
-          </p>
+
           <div class="mx-auto w-full max-w-xs md:hidden">
             <Picture
               src={steine}
@@ -70,13 +72,6 @@ import Divider from "../components/Divider.astro";
               class="aspect-square w-full rounded-full object-cover"
             />
           </div>
-          <p class="mt-10 md:mt-0">
-            Mich persönlich erfüllt es sehr, mein Wissen über das Wunder des
-            Lebens stetig zu vertiefen. So konnte ich mein Fundament und meine
-            Expertise als Erzieherin und Motopädagogin (Psychomotorik IPE) durch
-            zusätzliche Aus- und Weiterbildungen in ganzheitlich orientierten
-            Arbeitsfeldern um ein breites Spektrum erweitern.
-          </p>
         </div>
         <div
           class="hidden w-full max-w-xs self-center md:mt-20 md:block md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
@@ -90,13 +85,52 @@ import Divider from "../components/Divider.astro";
       </div>
     </section>
 
+    <section class="mx-auto max-w-5xl px-5 pb-12 md:pb-16">
+      <div class="space-y-5">
+        <p class="text-manao-dark font-caveat text-center text-3xl">
+          Da stetige Veränderung unser Dasein bestimmt, dürfen wir lernen, der
+          inneren Stimme zu lauschen, unserer Intuition zu vertrauen und uns so
+          dem Wandel zu öffnen.
+        </p>
+        <p
+          class="border-manao/10 bg-manao/10 rounded-lg border p-4 text-center"
+        >
+          Die tiefe Rückverbindung und eine solche Ausrichtung schenken Klarheit
+          und neue Kraft. <br /><br />Auf diese Weise entdecken wir unsere ganz
+          eigenen
+          <span class="text-manao font-bold">Wege</span> und <span
+            class="text-manao font-bold">Möglichkeiten</span
+          > - <span class="text-manao font-bold">mana'o</span>.
+        </p>
+        <p class="mt-10">
+          Diesen Ansatz haben meine eigenen Lebensaufgaben und die bewusste
+          Auseinandersetzung damit geprägt, ebenso wie Erfahrungen und
+          Beobachtungen aus dem privaten Umfeld und meiner langjährigen
+          beruflichen Praxis.
+        </p>
+        <SymbolDivider />
+        <p>
+          Mich persönlich erfüllt es sehr, mein Wissen über das Wunder des
+          Lebens stetig zu vertiefen. So konnte ich mein Fundament und meine
+          Expertise als Erzieherin und Motopädagogin (Psychomotorik IPE) durch
+          zusätzliche Aus- und Weiterbildungen in ganzheitlich orientierten
+          Arbeitsfeldern um ein breites Spektrum erweitern.
+        </p>
+        <p>
+          Im Bereich der Hochsensibilität durfte und darf ich zudem wertvolle
+          Erfahrungen sammeln – sowohl aus meinem eigenen Erleben als auch aus
+          der Perspektive der Mutterschaft.
+        </p>
+      </div>
+    </section>
+
     <ImageTextSection imageMetadata={aquarell}
       ><span class="text-manao-dark font-caveat text-3xl md:text-4xl"
-        >„Im Leben kommt es nicht darauf an, welche Karten du hast, <br
-        />sondern wie du sie spielst.”</span
+        >Im Leben kommt es nicht darauf an, welche Karten du hast, <br />sondern
+        wie du sie spielst.</span
       >
       <br /><span class="text-manao-dark text-sm"
-        >frei nach Robert Louis Stevenson</span
+        >Frei nach Robert Louis Stevenson</span
       >
     </ImageTextSection>
 
@@ -142,7 +176,7 @@ import Divider from "../components/Divider.astro";
           Stattdessen fordern sie Verantwortung, Geduld und Selbstreflexion,
           sowie Präsenz und die Fähigkeit bewusst zu handeln.
         </p>
-        <p class="font-caveat text-manao-dark text-center text-3xl">
+        <p class="font-caveat text-manao-dark mt-10 text-center text-3xl">
           Tiere öffnen das Herz, erden die Seele <br
             class="hidden lg:block"
           />und erinnern an das Wesentliche.
@@ -165,33 +199,38 @@ import Divider from "../components/Divider.astro";
         </a>
       </div>
     </section>
-    <Divider />
+    <SymbolDivider />
 
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
-      <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+      <div class="space-y-5">
+        <p class="text-manao font-bold">
+          Mein Fundament als Erzieherin und Motopädagogin ergänzen Aus- und
+          Weiterbildungen in ganzheitlich orientierten Arbeitsfeldern.
+        </p>
+        <p>
+          Im Zentrum steht dabei die Methode SKYourself<sup
+            class="align-super text-[0.5em]">®</sup
+          > (Annette Müller, ÉCOLE SAN ESPRIT). Sie bildet für mich das wesentliche
+          Fundament, um festsitzende emotionale Themen und Reaktionsmuster sowie transgenerationale
+          Prägungen direkt an der Basis sanft zu harmonisieren.
+        </p>
+        <p>
+          Da solche Prägungen und übernommenen Muster schon in frühester
+          Kindheit wirken und das Erleben tief begleiten, ist diese Methode
+          nicht nur für Erwachsene sondern auch für Kinder eine äußerst
+          wertvolle Unterstützung.
+        </p>
+        <p>
+          Eine aktive energetische Begleitung für Kinder biete ich jedoch
+          ausschließlich im Rahmen von mana'o und in enger Absprache mit den
+          Eltern an.
+        </p>
+      </div>
+
+      <div
+        class="mt-8 flex flex-col items-start gap-8 md:mt-20 md:flex-row md:gap-12"
+      >
         <div class="space-y-5 md:basis-3/5">
-          <p class="text-manao font-bold">
-            Mein Fundament als Erzieherin und Motopädagogin ergänzen Aus- und
-            Weiterbildungen in ganzheitlich orientierten Arbeitsfeldern.
-          </p>
-          <p>
-            Im Zentrum steht dabei die Methode SKYourself® (Annette Müller,
-            ÉCOLE SAN ESPRIT). Sie bildet für mich das wesentliche Fundament, um
-            festsitzende emotionale Themen und Reaktionsmuster sowie
-            transgenerationale Prägungen direkt an der Basis sanft zu
-            harmonisieren.
-          </p>
-          <p>
-            Da solche Prägungen und übernommenen Muster schon in frühester
-            Kindheit wirken und das Erleben tief begleiten, ist diese Methode
-            nicht nur für Erwachsene sondern auch für Kinder eine äußerst
-            wertvolle Unterstützung.
-          </p>
-          <p>
-            Eine aktive energetische Begleitung für Kinder biete ich jedoch
-            ausschließlich im Rahmen von mana'o und in enger Absprache mit den
-            Eltern an.
-          </p>
           <div class="mx-auto w-full max-w-xs md:hidden">
             <Picture
               src={arbeitsweiseImage}
@@ -199,30 +238,32 @@ import Divider from "../components/Divider.astro";
               class="aspect-square w-full rounded-full object-cover"
             />
           </div>
-          <p class="text-manao mt-10 font-bold">
+          <p class="text-manao font-bold">
             Ebenso wertvolle Aus- und Weiterbildungen sowie Fachwissen aus
             Selbststudium und Selbsterfahrung:
           </p>
           <ul class="list-disc space-y-2 pl-6">
             <li>
-              GFK - Gewaltfreie Kommunikation inklusive Giraffentraum® (GFK für
-              Kinder)
+              GFK - Gewaltfreie Kommunikation inklusive Giraffentraum<sup
+                class="align-super text-[0.5em]">®</sup
+              > (GFK für Kinder)
             </li>
             <li>
               Basisausbildung „Therapiehunde im Einsatz" inklusive Eignungstest
               bei Therapiehunde Deutschland e. V. mit Familienhündin Jala
             </li>
             <li>
-              Ausbildung in der HMO® (heilmagnetische Ordnungstherapie nach
-              Johanna Arnold) und weitere energetisch-spirituelle Methoden (u.
-              a. Matrix Energetics® nach Dr. Richard Bartlett, Quantenheilung
-              nach Dr. Frank Kinslow einschließlich der Zwei-Punkt-Methode sowie
-              Psychologische Astrologie)
+              Ausbildung in der HMO<sup class="align-super text-[0.5em]">®</sup> (Heilmagnetische
+              Ordnungstherapie nach Johanna Arnold) sowie weitere Bereiche der energetisch-spirituellen
+              Transformations- und Entwicklungsarbeit, u. a. Matrix Energetics<sup
+                class="align-super text-[0.5em]">®</sup
+              > nach Dr. Richard Bartlett, Quantenheilung nach Dr. Frank Kinslow einschließlich
+              der Zwei-Punkt-Methode sowie Psychologische Astrologie
             </li>
             <li>Trauma und Traumafolgen</li>
             <li>
               Energetische Psychotherapie (u. a. Dr. Fred Gallo, Dr. Michael
-              Bohne - PEP®-Methode)
+              Bohne - PEP<sup class="align-super text-[0.5em]">®</sup>-Methode)
             </li>
             <li>
               Qigong für Frauen (Paracelsus Akademie) sowie weitere Methoden der
@@ -231,7 +272,7 @@ import Divider from "../components/Divider.astro";
             </li>
             <li>
               Nervensystembezogene Regulation (u. a. Polyvagaltheorie sowie
-              Skills aus der Dialektisch-Behavioralen Therapie)
+              Skills aus der DBT / Dialektisch-Behavioralen Therapie)
             </li>
             <li>
               Schatten- und Innenweltarbeit (u. a. nach C. G. Jung - Integration
@@ -242,14 +283,18 @@ import Divider from "../components/Divider.astro";
             </li>
             <li>
               Ausbildung zum Medium-Higher Class nach dem englischen
-              Spiritualismus (u. a. innere Bilder, Aurareading, Trance Healing,
-              Jenseitskontakte)
+              Spiritualismus (mediale und intuitive Wahrnehmungsschulung, u. a.
+              innere Bilder, Aurareading, Trance Healing, Jenseitskontakte)
             </li>
             <li>
               Unser Körper als Barometer der Seele (Jacques Martel, Louise L.
               Hay)
             </li>
-            <li>TCM/Lichtakupunktur/Biophotonen - Lifewave®</li>
+            <li>
+              TCM/Lichtakupunktur/Biophotonen - Lifewave<sup
+                class="align-super text-[0.5em]">®</sup
+              >
+            </li>
             <li>
               Paare auf dem Weg in eine gleichwertige und glückliche
               Partnerschaft (u. a. Ich, Du, Wir - sowie Liebende bleiben, Jesper
@@ -269,10 +314,14 @@ import Divider from "../components/Divider.astro";
             </div>
             <div class="collapse-content">
               <ul class="list-disc space-y-2 pl-6">
-                <li>Edu-Kinestetik - Brain-Gym®</li>
                 <li>
-                  Bandschi®-Konzept (Rückenschule für Kinder nach Sabine
-                  Kollmuß)
+                  Edu-Kinestetik - Brain-Gym<sup
+                    class="align-super text-[0.5em]">®</sup
+                  >
+                </li>
+                <li>
+                  Bandschi<sup class="align-super text-[0.5em]">®</sup>-Konzept
+                  (Rückenschule für Kinder nach Sabine Kollmuß)
                 </li>
                 <li>Babymassage nach Frédérick Leboyer</li>
                 <li>Thematik des alleingeborenen Zwillings</li>
@@ -322,7 +371,7 @@ import Divider from "../components/Divider.astro";
           </p>
         </div>
         <div
-          class="hidden w-full max-w-xs self-center md:block md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+          class="hidden w-full max-w-xs self-center md:mt-10 md:block md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
         >
           <Picture
             src={arbeitsweiseImage}
@@ -335,11 +384,12 @@ import Divider from "../components/Divider.astro";
 
     <ImageTextSection imageMetadata={himmel}
       ><span class="font-caveat text-manao-dark text-3xl md:text-4xl"
-        >"Ganzheitliche Gesundheit beginnt dort, wo wir Körper, Geist und Seele
-        nicht länger trennen."</span
+        >Ganzheitliche Gesundheit beginnt dort,<br />wo wir Körper, Geist und
+        Seele nicht länger trennen.</span
       >
       <br /><span class="text-manao-dark text-sm"
-        >Deepak Chopra - internationaler Autor, Arzt, Speaker</span
+        >Inspiriert von Deepak Chopra – Arzt, Pionier der integrativen Medizin
+        und Gründer der Chopra Foundation</span
       >
     </ImageTextSection>
 
@@ -367,16 +417,6 @@ import Divider from "../components/Divider.astro";
             Und so freue ich mich auf jede Begegnung!
           </p>
           <p class="font-licorice text-manao text-5xl md:text-6xl">Kathrin</p>
-          <blockquote class="border-manao space-y-2 border-l-4 pl-4 italic">
-            <p>
-              „Jeder Mensch, dem du begegnest, weiß etwas, das du nicht weißt.
-              <br class="hidden lg:block" />Lerne von ihm.”
-            </p>
-            <footer class="text-sm not-italic">
-              H. Jackson Brown Jr. - US-amerikanischer Autor und
-              Motivationstrainer
-            </footer>
-          </blockquote>
         </div>
         <div
           class="w-full max-w-xs self-center md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"

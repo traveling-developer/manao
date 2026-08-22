@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactButtons from "../components/ContactButtons.astro";
+import { Picture } from "astro:assets";
+import sand from "../assets/sand.webp";
 ---
 
 <Layout
@@ -8,42 +10,66 @@ import ContactButtons from "../components/ContactButtons.astro";
   description="tbd"
 >
   <main>
-    <section class="mx-auto max-w-3xl px-5 py-12 md:py-16">
+    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
       <div class="space-y-10">
-        <header class="space-y-5">
-          <h1
-            class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
-          >
-            Begleitung für Kinder, Jugendliche & Erwachsene
-          </h1>
+        <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+          <header class="space-y-5 md:basis-3/5">
+            <h1
+              class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
+            >
+              Begleitung für Kinder, Jugendliche & Erwachsene
+            </h1>
 
-          <p>
-            Gemeinsam erarbeiten wir alltagsnahe Impulse oder gehen
-            ganzheitlichere Wege. Je nach Anliegen können daher in Absprache
-            verschiedene Methoden aus meinem gesamten Spektrum in unsere
-            Zusammenarbeit einfließen – ohne zusätzliche Kosten.
-          </p>
-          <p>
-            Es braucht jedoch nicht immer einen längeren Prozess: Bestimmte
-            Methoden kannst du daher auch unabhängig als separate Sitzung
-            buchen. Details dazu findest du unter <a
-              href="/angebote"
-              class="text-manao underline hover:no-underline"
-              >Bewusstseins-, Körper- und Energiearbeit</a
-            >.
-          </p>
+            <p>
+              Gemeinsam erarbeiten wir alltagsnahe Impulse oder gehen
+              ganzheitlichere Wege. Je nach Anliegen können daher in Absprache
+              verschiedene Methoden aus meinem gesamten Spektrum in unsere
+              Zusammenarbeit einfließen – ohne zusätzliche Kosten.
+            </p>
+            <p>
+              Es braucht jedoch nicht immer einen längeren Prozess: Bestimmte
+              Methoden kannst du daher auch unabhängig als separate Sitzung
+              buchen. Details dazu findest du unter <a
+                href="/angebote"
+                class="text-manao underline hover:no-underline"
+                >Bewusstseins-, Körper- und Energiearbeit</a
+              >.
+            </p>
+          </header>
+
+          <div class="mx-auto w-full max-w-xs md:hidden">
+            <Picture
+              src={sand}
+              alt="Sand"
+              class="aspect-square w-full rounded-full object-cover"
+            />
+          </div>
+
+          <div
+            class="hidden w-full max-w-xs self-center md:block md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+          >
+            <Picture
+              src={sand}
+              alt="Sand"
+              class="aspect-square w-full rounded-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div class="space-y-5">
           <p class="font-bold">
             Für den Einstieg in die Begleitung bildet ein einmaliges
             Orientierungsgespräch die Basis vorab.
           </p>
           <p>
-            <span class="font-bold">Auch hier gilt:</span> Die Begleitung muss kein
-            starrer Prozess sein. Du entscheidest, ob die Sitzung ausgereicht hat
-            oder ob du Folgesitzungen vereinbaren möchtest.
+            Die Begleitung muss kein Prozess sein. Du entscheidest, ob die
+            Sitzung ausgereicht hat, oder ob du Folgesitzungen vereinbaren
+            möchtest - das gilt genauso für die Begleitung deines Kindes oder
+            Jugendlichen.
           </p>
 
           <div class="space-y-4">
-            <h2 class="text-manao text-2xl font-semibold">Investition</h2>
+            <h2 class="text-manao mt-15 text-2xl font-semibold">Investition</h2>
             <dl class="divide-manao/20 divide-y">
               <div
                 class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3 first:pt-0 last:pb-0"
@@ -85,7 +111,7 @@ import ContactButtons from "../components/ContactButtons.astro";
           </div>
 
           <ContactButtons />
-        </header>
+        </div>
       </div>
     </section>
   </main>

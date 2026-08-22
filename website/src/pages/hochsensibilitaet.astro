@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import ContactButtons from "../components/ContactButtons.astro";
 import { Picture } from "astro:assets";
 import schmetterling from "../assets/schmetterlin.webp";
+import SymbolDivider from "../components/SymbolDivider.astro";
 ---
 
 <Layout
@@ -66,6 +67,8 @@ import schmetterling from "../assets/schmetterlin.webp";
           </p>
         </div>
 
+        <SymbolDivider />
+
         <div class="mx-auto w-full max-w-xs md:hidden">
           <Picture
             src={schmetterling}
@@ -76,14 +79,14 @@ import schmetterling from "../assets/schmetterlin.webp";
 
         <div class="space-y-4">
           <p>
-            Vielleicht ahnst du schon, dass du oder dein Kind hochsensibel bist,
-            aber du möchtest mehr Klarheit?
+            Vielleicht ahnst du schon, dass du oder dein Kind hochsensibel
+            b:ist, aber du möchtest mehr Klarheit?
           </p>
           <p class="text-manao font-semibold">
             Hier helfe ich gerne weiter. Den gemeinsamen Einstieg bildet ein
             Orientierungsgespräch.
           </p>
-          <p>Zudem können mögliche Themen sein:</p>
+          <p class="mt-10">Zudem können mögliche Themen sein:</p>
           <ul class="list-disc space-y-2 pl-6">
             <li>Verständnis, Orientierung</li>
             <li>Selbstliebe entwickeln</li>

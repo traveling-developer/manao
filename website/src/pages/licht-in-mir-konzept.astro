@@ -4,6 +4,7 @@ import ContactButtons from "../components/ContactButtons.astro";
 import { Picture } from "astro:assets";
 import lichtInMir from "../assets/licht_in_mir_neu.webp";
 import kind from "../assets/kind-wiese.webp";
+import SymbolDivider from "../components/SymbolDivider.astro";
 ---
 
 <Layout
@@ -29,34 +30,48 @@ import kind from "../assets/kind-wiese.webp";
             <p>
               Kinder wachsen heute in einer komplexen Welt mit hohen
               Anforderungen, Reizüberflutung und zunehmendem Leistungsdruck auf.
-              Umso wichtiger ist es, ihnen einen achtsamen, sicheren
-              Entwicklungsraum zu ermöglichen, in dem sie zur Ruhe kommen und
-              sich selbst wahrnehmen können, um eine stabile innere Orientierung
-              zu entwickeln.
+              <br />Gerade deshalb ist es wichtig, ihnen achtsame, sichere
+              Entwicklungsräume zu ermöglichen, in denen sie zur Ruhe kommen und
+              sich selbst wahrnehmen können – als wesentliche Grundlage für eine
+              stabile innere Orientierung.
             </p>
+            <p>
+              Solche Räume können überall dort entstehen, wo Kinder mit
+              Wertschätzung, Achtsamkeit und echter Präsenz begleitet werden -
+              in Familien, pädagogischen Einrichtungen, Schulen und darüber
+              hinaus.
+            </p>
+            <p>
+              Mit meinem Angebot möchte ich so einen Entwicklungsraum schaffen.
+            </p>
+            <div class="mx-auto w-full max-w-xs py-4 md:hidden">
+              <Picture
+                src={kind}
+                alt="Das Licht in mir"
+                class="aspect-square w-full rounded-full object-cover"
+              />
+            </div>
+            <SymbolDivider class="hidden md:flex" />
             <p>
               „Das Licht in mir" ist ein ganzheitlich ausgerichtetes Konzept zur
               individuellen Entwicklungsförderung von Kindern im Vorschulalter
-              sowie von Schulkindern der 1. bis 6. Klasse. Es stellt den
+              sowie von Schulkindern der 1. bis 6. Klasse.<br />Es stellt den
               Menschen als Einheit von Körper, Geist und Seele in den
-              Mittelpunkt sowie die Verbindung mit sich selbst, mit anderen und
-              mit der Weisheit der Natur – dem Leben als Ganzem.
+              Mittelpunkt. Gleichzeitig öffnet der Ansatz den Blick für die
+              Beziehungen zu den Mitmenschen und zur Weisheit der Natur -
+              getragen von dem Bewusstsein, Teil eines größeren Ganzen zu sein.
             </p>
             <div class="border-manao space-y-4 border-l-4 p-4">
               <p>
                 Ziel ist vor allem, die Verbindung zur eigenen inneren
-                Kraftquelle zu stärken – verstanden als einen Zustand von
-                innerer Ruhe, Klarheit und Verbundenheit.
-              </p>
-              <p>
-                Eine gute Selbstverbindung ist eine zentrale Voraussetzung für
-                innere Stabilität, Resilienz und ganzheitliches Wohlbefinden.
+                Kraftquelle zu stärken – verstanden als ein Zustand von innerer
+                Ruhe, Klarheit und Verbundenheit, denn:
               </p>
             </div>
           </div>
 
           <div
-            class="w-full max-w-xs self-center md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+            class="hidden w-full max-w-xs self-center md:block md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
           >
             <Picture
               src={kind}
@@ -66,9 +81,41 @@ import kind from "../assets/kind-wiese.webp";
           </div>
         </div>
 
-        <div class="space-y-3">
+        <div class="space-y-4">
+          <p class="font-caveat text-manao-dark text-center text-3xl">
+            Eine gute Selbstverbindung ist der Schlüssel, damit wir unsere
+            wichtige Ressource – die innere Stimme – als sichere Orientierung
+            nutzen können.
+          </p>
+          <p class="mt-10 mb-10">
+            Ihre zentrale Rolle ist seit Jahrtausenden in vielen Kulturen
+            verankert und wird heute auch durch <span
+              class="text-manao font-bold"
+            >
+              wissenschaftliche Erkenntnisse</span
+            >
+            als eine wesentliche Grundlage für <span
+              class="text-manao font-bold"
+              >innere Stabilität, Resilienz und ganzheitliche Gesundheit</span
+            > bestätigt.
+          </p>
+          <p>
+            Dabei ist eine „gute“ Verbindung weit mehr, als in rein funktionalen
+            oder verhaltensbasierten Ansätzen zu Selbstwahrnehmung oder
+            Achtsamkeit oft vermittelt wird.
+          </p>
+          <div class="border-manao space-y-4 border-l-4 p-4">
+            Eine <span class="text-manao font-bold">ganzheitliche Stärkung</span
+            > der Selbstverbindung nutzt somatische (körperorientierte) Verfahren
+            als wesentliche Basis, doch geht weit darüber hinaus:
+          </div>
+          <p class="font-caveat text-manao-dark text-center text-3xl">
+            Sie bringt Körper, Geist und Seele in Einklang.
+          </p>
+          <SymbolDivider />
           <p class="text-manao font-bold">
-            Die frühzeitige Stärkung dieser Verbindung fördert zunächst:
+            Eine frühzeitige Stärkung der Selbstverbindung in dieser Form
+            fördert zunächst:
           </p>
           <ul class="list-disc space-y-2 pl-6">
             <li>
@@ -94,18 +141,19 @@ import kind from "../assets/kind-wiese.webp";
           </p>
           <ul class="list-disc space-y-2 pl-6">
             <li>
-              Soziale Kompetenz:<br />Die Fähigkeit, empathische Beziehungen
-              aufzubauen, Verbundenheit zu erleben und Konflikte konstruktiv zu
-              lösen.
+              <span class="font-bold">Soziale Kompetenz:</span><br />Die
+              Fähigkeit, empathische Beziehungen aufzubauen, Verbundenheit zu
+              erleben und Konflikte konstruktiv zu lösen.
             </li>
             <li>
-              Handlungskompetenz:<br />Die Fähigkeit, aus eigener Klarheit
-              heraus Entscheidungen zu treffen und das eigene Leben aktiv zu
-              gestalten.
+              <span class="font-bold">Handlungskompetenz:</span><br />Die
+              Fähigkeit, aus eigener Klarheit heraus Entscheidungen zu treffen
+              und das eigene Leben aktiv zu gestalten.
             </li>
             <li>
-              Innere Stärke:<br />Die Fähigkeit, auch in herausfordernden Zeiten
-              innere Klarheit und Ausrichtung zu bewahren.
+              <span class="font-bold">Innere Stärke:</span><br />Die Fähigkeit,
+              auch in herausfordernden Zeiten innere Klarheit und Ausrichtung zu
+              bewahren.
             </li>
           </ul>
         </div>
@@ -150,6 +198,11 @@ import kind from "../assets/kind-wiese.webp";
           <ul class="list-disc space-y-2 pl-6">
             <li>Social-emotional Learning (SEL)</li>
             <li>Humanistischer Psychologie</li>
+            <li>
+              Gewaltfreier Kommunikation (GFK) mit Giraffentraum<sup
+                class="align-super text-[0.5em]">®</sup
+              >
+            </li>
             <li>Trauma-sensibler Pädagogik</li>
             <li>Psychomotorik (IPE)</li>
             <li>Achtsamkeits-, Intuitions- und Resilienztraining</li>
@@ -189,7 +242,7 @@ import kind from "../assets/kind-wiese.webp";
                 </a><br />
                 <span>
                   Schwerpunkt: Intuition, Selbstwirksamkeit, innere Regulation &
-                  Selbstheilungskräfte
+                  körpereigene Regulationskräfte
                 </span>
               </li>
               <li>

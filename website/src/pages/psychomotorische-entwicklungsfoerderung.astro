@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ContactButtons from "../components/ContactButtons.astro";
+import { Picture } from "astro:assets";
+import baby from "../assets/baby.webp";
 ---
 
 <Layout
@@ -8,28 +10,48 @@ import ContactButtons from "../components/ContactButtons.astro";
   description="Einzel- und Kleinstgruppenförderung für Babys, Kleinkinder und Schulkinder - mit Freude am Lernen, ohne Leistungsdruck."
 >
   <main>
-    <section class="mx-auto max-w-3xl px-5 py-12 md:py-16">
+    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
       <div class="space-y-10">
-        <header class="space-y-5">
-          <h1
-            class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
+        <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+          <header class="space-y-5 md:basis-3/5">
+            <h1
+              class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
+            >
+              Psychomotorische Entwicklungsförderung
+            </h1>
+            <p>
+              Jedes Kind hat seinen eigenen Entwicklungsweg und sein Lerntempo.
+            </p>
+            <p>
+              Schon Babys und Kleinkinder profitieren von gezielter
+              Unterstützung, z.B. in Motorik, Sprache oder im alltäglichen Tun.
+            </p>
+            <p>
+              Auch Schulkindern gibt Einzelförderung oder die Förderung in der
+              Kleinstgruppe Raum, ihre Stärken zu entdecken, Neues
+              auszuprobieren und selbstbewusst zu wachsen – ohne Leistungsdruck,
+              ohne Überforderung, dafür mit ganz viel Freude am Lernen.
+            </p>
+          </header>
+
+          <div class="mx-auto w-full max-w-xs md:hidden">
+            <Picture
+              src={baby}
+              alt="Baby"
+              class="aspect-square w-full rounded-full object-cover"
+            />
+          </div>
+
+          <div
+            class="hidden w-full max-w-xs self-center md:block md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
           >
-            Psychomotorische Entwicklungsförderung
-          </h1>
-          <p>
-            Jedes Kind hat seinen eigenen Entwicklungsweg und sein Lerntempo.
-          </p>
-          <p>
-            Schon Babys und Kleinkinder profitieren von gezielter Unterstützung,
-            z.B. in Motorik, Sprache oder im alltäglichen Tun.
-          </p>
-          <p>
-            Auch Schulkindern gibt Einzelförderung oder die Förderung in der
-            Kleinstgruppe Raum, ihre Stärken zu entdecken, Neues auszuprobieren
-            und selbstbewusst zu wachsen – ohne Leistungsdruck, ohne
-            Überforderung, dafür mit ganz viel Freude am Lernen.
-          </p>
-        </header>
+            <Picture
+              src={baby}
+              alt="Baby"
+              class="aspect-square w-full rounded-full object-cover"
+            />
+          </div>
+        </div>
 
         <div class="space-y-4">
           <p>Dieses Angebot erfolgt nach individueller Absprache.</p>
@@ -39,7 +61,7 @@ import ContactButtons from "../components/ContactButtons.astro";
             Konzentration, Geschicklichkeit, Sprache und alltagspraktische
             Fähigkeiten stärken.
           </p>
-          <div class="mb-10 flex justify-center">
+          <div class="mt-10 mb-15 flex justify-center">
             <a
               href="/psychomotorik"
               class="btn bg-manao hover:border-manao hover:text-manao w-full text-white transition-colors duration-300 hover:bg-white sm:w-auto"
@@ -47,14 +69,14 @@ import ContactButtons from "../components/ContactButtons.astro";
               Mehr über die Psychomotorik (IPE)
             </a>
           </div>
-          <p>
-            Bei Babys und Kleinkindern versteht sich der Preis inklusive 1
-            Elternteil.
-          </p>
         </div>
 
         <div class="space-y-4">
           <h2 class="text-manao text-2xl font-semibold">Investition</h2>
+          <p class="text-manao">
+            Bei Babys und Kleinkindern versteht sich der Preis inklusive 1
+            Elternteil.
+          </p>
           <div class="hidden overflow-x-auto md:block">
             <table class="w-full border-collapse text-left">
               <thead>
@@ -175,11 +197,8 @@ import ContactButtons from "../components/ContactButtons.astro";
           <p>
             Eltern können sich gerne vernetzen und die Kleinstgruppe somit
             selbst zusammenstellen.
-          </p>
-          <p>
-            Ich kann nicht garantieren, dass ich ein Kind mit passenden
-            Entwicklungsthemen für denselben Tag und dieselbe Uhrzeit zur
-            Verfügung habe.
+            <br /> Ich kann nicht garantieren, dass ich ein Kind mit passenden Entwicklungsthemen
+            für denselben Tag und dieselbe Uhrzeit zur Verfügung habe.
           </p>
           <p>
             Sollte ein Kind erkranken, so kann dieser Termin gegen Aufpreis zur
@@ -191,7 +210,7 @@ import ContactButtons from "../components/ContactButtons.astro";
           <h2 class="text-manao text-2xl font-semibold">Kostenübernahme</h2>
           <p>
             Manche Krankenkassen übernehmen einen Teil der Kosten für eine
-            zusätzliche individuelle psychomotorische Fördermaßnahme.
+            psychomotorische Fördermaßnahme.
           </p>
           <p>
             Dafür ist in der Regel eine ärztliche Verordnung oder eine

@@ -7,7 +7,6 @@ import familie_wald from "../assets/familie_wald.webp";
 import rollstuhl from "../assets/rollstuhl.webp";
 import haende from "../assets/haende_baum.webp";
 import ImageTextSection from "../components/ImageTextSection.astro";
-import Divider from "../components/Divider.astro";
 import Quote from "../components/Quote.astro";
 import SymbolDivider from "../components/SymbolDivider.astro";
 ---
@@ -15,44 +14,32 @@ import SymbolDivider from "../components/SymbolDivider.astro";
 <Layout title="Intention" description="tbd">
   <main>
     <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
-      <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
-        <div class="space-y-5 md:basis-3/5">
-          <h1
-            class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
-          >
-            Meine Intention
-          </h1>
-          <p>
-            Moderne Forschung, insbesondere die Psychoneuroimmunologie, belegt
-            die enge Verbindung von Psyche, Nervensystem, Hormon- und
-            Immunsystem.
-          </p>
-          <p class="border-manao border-l-4 p-4">
-            Gedanken, Emotionen, Stress und soziale Beziehungen beeinflussen
-            nachweislich unser Wohlbefinden und unsere Gesundheit.
-          </p>
-          <p>
-            Ergänzend dazu zeigen bereits einige Länder mit Konzepten wie Social
-            Emotional Learning (SEL), dass fachliches Wissen allein nicht
-            ausreicht, um dem Leben in all seinen Facetten stabil begegnen zu
-            können.
-          </p>
-          <p>
-            Auch bei uns in Deutschland gibt es Bildungsansätze (z.B.
-            Montessori, Waldorf, Jenaplan-Schulen) und diverse Programme (z.B.
-            Papilio, OUPS, Schulfach Glück) die dahingehend wichtige Impulse
-            setzen, doch es braucht mehr.
-          </p>
-        </div>
-        <div
-          class="hidden w-full md:block md:max-w-sm md:basis-2/5 lg:max-w-md"
+      <div class="space-y-5">
+        <h1
+          class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
         >
-          <Picture
-            src={intentionImage}
-            alt="Wasser, Wellen, Ozean"
-            class="aspect-square w-full rounded-full object-cover"
-          />
-        </div>
+          Meine Intention
+        </h1>
+        <p>
+          Moderne Forschung, insbesondere die Psychoneuroimmunologie, belegt die
+          enge Verbindung von Psyche, Nervensystem, Hormon- und Immunsystem.
+        </p>
+        <p class="border-manao border-l-4 p-4">
+          Gedanken, Emotionen, Stress und soziale Beziehungen beeinflussen
+          nachweislich unser Wohlbefinden und unsere Gesundheit.
+        </p>
+        <p>
+          Ergänzend dazu zeigen bereits einige Länder mit Konzepten wie Social
+          Emotional Learning (SEL), dass fachliches Wissen allein nicht
+          ausreicht, um dem Leben in all seinen Facetten stabil begegnen zu
+          können.
+        </p>
+        <p>
+          Auch bei uns in Deutschland gibt es Bildungsansätze (z.B. Montessori,
+          Waldorf, Jenaplan-Schulen) und diverse Programme (z.B. Papilio, OUPS,
+          Schulfach Glück) die dahingehend wichtige Impulse setzen, doch es
+          braucht mehr.
+        </p>
       </div>
 
       <Quote
@@ -76,7 +63,7 @@ import SymbolDivider from "../components/SymbolDivider.astro";
         >
       </Quote>
 
-      <div class="mx-auto mt-10 w-full max-w-xs md:hidden">
+      <div class="mx-auto mt-10 w-full max-w-xs md:max-w-sm">
         <Picture
           src={intentionImage}
           alt="Wasser, Wellen, Ozean"
@@ -85,7 +72,7 @@ import SymbolDivider from "../components/SymbolDivider.astro";
       </div>
     </section>
 
-    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+    <section class="mx-auto max-w-5xl px-5 pt-6 pb-12 md:pt-8 md:pb-16">
       <div class="space-y-5">
         <p>
           Vor diesem Hintergrund entstehen zahlreiche Kurse für alle
@@ -96,8 +83,8 @@ import SymbolDivider from "../components/SymbolDivider.astro";
         </p>
         <p class="italic">
           Doch obwohl das gesellschaftliche Bewusstsein für diese Themen wächst,
-          nehmen Stress, Überlastung und weitere vielschichtige Probleme immer
-          weiter zu.
+          nehmen Stress, Überlastung und vielschichtige Probleme immer weiter
+          zu.
         </p>
         <p class="font-caveat text-manao-dark mt-10 text-center text-3xl">
           Ein Paradox unserer Zeit
@@ -106,10 +93,10 @@ import SymbolDivider from "../components/SymbolDivider.astro";
           Wir suchen Antworten und Lösungen im „Außen" obwohl sie im „Innen" auf
           uns warten.
         </p>
-        <p>
-          Wir greifen zu "Tools", starren Plänen und optimierten Methoden. Diese
-          erzeugen jedoch häufig neuen Druck, statt Räume für echte Innenschau
-          zu öffnen.
+        <p class="mb-15">
+          Wir greifen zu "Tools", starren Plänen und optimierten Methoden.<br
+          />Diese erzeugen jedoch häufig neuen Druck, statt Räume für echte
+          Innenschau zu öffnen.
         </p><p>
           Gleichzeitig wird in der Praxis deutlich, dass der Fokus häufig
           stärker auf den Programmen selbst liegt, als auf dem einzelnen
@@ -259,7 +246,7 @@ import SymbolDivider from "../components/SymbolDivider.astro";
         </p>
       </div>
     </section>
-    <section class="mx-auto max-w-5xl px-5">
+    <section class="mx-auto mb-10 max-w-5xl px-5">
       <div class="flex justify-center">
         <a
           href="/wuensche-eines-kindes"
@@ -299,7 +286,8 @@ import SymbolDivider from "../components/SymbolDivider.astro";
             Moderne Bewusstseinsforschung sowie entwicklungs- und
             gesundheitspsychologische Ansätze (z. B. Positive Psychologie mit
             dem PERMA-Modell von Martin Seligman oder Broaden-and-Build-Theorie
-            von Barbara Fredrickson) verstehen:
+            von Barbara Fredrickson) gründen auf der Salutogenese und belegen
+            deutlich:
           </p>
           <p class="border-manao border-l-4 p-4">
             Gesundheit ist nicht nur die Abwesenheit von Krankheit, sondern die
@@ -355,7 +343,7 @@ import SymbolDivider from "../components/SymbolDivider.astro";
       </div>
     </section>
 
-    <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
+    <section class="mx-auto max-w-5xl px-5 pt-6 pb-12 md:pt-8 md:pb-16">
       <div class="space-y-5">
         <p class="font-caveat text-manao-dark text-center text-3xl">
           Ein spiritueller Weg geht über eine rein ich-zentrierte Perspektive
@@ -368,7 +356,8 @@ import SymbolDivider from "../components/SymbolDivider.astro";
         </p>
         <p>
           Gleichzeitig vertieft sich die Verbundenheit - mit sich selbst, mit
-          anderen und mit der Weisheit unserer Natur - mit dem Leben als Ganzes.
+          anderen und mit der Weisheit unserer Natur - ebenso wie das
+          Bewusstsein, Teil eines größeren Ganzen zu sein.
         </p>
         <p>
           Präsenz und unmittelbares Erleben treten stärker in den Vordergrund.

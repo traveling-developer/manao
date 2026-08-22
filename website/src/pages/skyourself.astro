@@ -2,7 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import ContactButtons from "../components/ContactButtons.astro";
 import { Picture } from "astro:assets";
-import sprung from "../assets/manao_sprung.webp";
+import sprung from "../assets/sprung.webp";
+import SymbolDivider from "../components/SymbolDivider.astro";
 ---
 
 <Layout
@@ -22,24 +23,16 @@ import sprung from "../assets/manao_sprung.webp";
               </h1>
               <p>
                 SKYourself<sup class="align-super text-[0.5em]">®</sup> versteht sich
-                als eine Methode zur Transformation emotionaler Muster.
+                als eine prozessfreie Methode, die darauf abzielt, tiefsitzende emotionale
+                Muster, Prägungen und Blockaden – die sich auf ganzheitlicher Ebene
+                widerspiegeln können – zu transformieren.
               </p>
-              <p>
-                Entwickelt wurde sie von Annette Müller, Gründerin der ersten
-                stationären Fachklinik für Geistiges Heilen in Deutschland sowie
-                Gründerin und Leiterin der Internationalen Heiler- und
-                Heilpraktikerschule ÉCOLE SAN ESPRIT.<br />Diese Methode
-                verbindet Jahrtausende altes energetisches Wissen mit modernen
-                Erkenntnissen über die menschliche Psyche und das Bewusstsein.
+              <p class="mt-10">
+                Aus Sicht der modernen Neurobiologie und Stressforschung
+                hinterlassen Erfahrungen, Prägungen, Leistungsdruck und
+                emotionale Belastungen Spuren auf psychischer Ebene, im
+                Nervensystem und im Körper.
               </p>
-
-              <div class="mx-auto w-full max-w-xs md:hidden">
-                <Picture
-                  src={sprung}
-                  alt="Springende Person am Meer, umrahmt vom manao-Symbol"
-                  class="w-full"
-                />
-              </div>
             </header>
 
             <div class="hidden w-full max-w-xs md:block">
@@ -53,14 +46,11 @@ import sprung from "../assets/manao_sprung.webp";
 
           <div class="space-y-5">
             <p>
-              Aus Sicht der modernen Neurobiologie und Stressforschung
-              hinterlassen Erfahrungen, Prägungen, Leistungsdruck und emotionale
-              Belastungen Spuren auf psychischer Ebene, im Nervensystem und im
-              Körper.
-              <br />
-              Sie begleiten unser Erleben tiefgreifend - oft ohne, dass uns diese
-              Zusammenhänge bewusst sind.
-            </p><p>
+              Sie begleiten unser Erleben und unser allgemeines Wohlbefinden
+              tiefgreifend - oft ohne, dass uns diese Zusammenhänge bewusst
+              sind.
+            </p>
+            <p>
               Im Verständnis der energetischen Arbeit - so auch im SKYourself<sup
                 class="align-super text-[0.5em]">®</sup
               > - manifestieren sich diese Muster gleichzeitig im feinstofflichen
@@ -79,12 +69,47 @@ import sprung from "../assets/manao_sprung.webp";
             </ul>
             <p class="mt-10">
               Mit SKYourself<sup class="align-super text-[0.5em]">®</sup> können sich
-              neue Handlungsmöglichkeiten und Perspektiven eröffnen - für mehr Klarheit,
-              Leichtigkeit und innere Stabilität.
+              neue Handlungsmöglichkeiten, persönliche Potentiale und Perspektiven
+              eröffnen - für mehr Klarheit, Leichtigkeit und innere Stabilität.
+            </p>
+            <div class="mx-auto w-full max-w-xs py-4 md:hidden">
+              <Picture
+                src={sprung}
+                alt="Springende Person am Meer, umrahmt vom manao-Symbol"
+                class="w-full"
+              />
+            </div>
+            <SymbolDivider class="hidden md:flex" />
+            <p>
+              Entwickelt wurde sie von Annette Müller, Gründerin der Klinik SAN
+              ESPRIT in Deutschland sowie Gründerin und Leiterin der
+              Internationalen Heiler- und Heilpraktikerschule ÉCOLE SAN ESPRIT.<br
+              />Diese Methode verbindet Jahrtausende altes energetisches Wissen
+              mit modernen Erkenntnissen über die menschliche Psyche und das
+              Bewusstsein.
+            </p>
+            <p>
+              Annette Müllers Weg zu dieser Methode entsprang einer tiefen
+              persönlichen Erfahrung: Nach einem schweren Autounfall fand sie
+              selbst durch energetisches Heilen zurück zu Kraft und
+              Wohlbefinden. Inspiriert von diesem Erlebnis widmete sie ihr Leben
+              der Erforschung ganzheitlicher Heilweisen.
+            </p>
+            <p>
+              Herkömmliche Wege erfordern oft ein langes, schmerzhaftes Reden
+              oder das wiederholte Durchleben alter Geschichten. Ihr Ziel war es
+              daher, eine Methode zu kreieren, die emotionalen Ballast direkt,
+              prozessfrei und ohne lange Gesprächsschleifen transformiert.
             </p>
           </div>
         </div>
 
+        <SymbolDivider />
+
+        <p>
+          Diese sanfte Methode setze ich auch gern bei Kindern und Jugendlichen
+          ein.
+        </p>
         <div class="border-manao space-y-2 border-l-4 p-4">
           <p>
             Belastende Inhalte müssen nicht erzählt oder erneut intensiv
@@ -169,7 +194,7 @@ import sprung from "../assets/manao_sprung.webp";
           </svg>
           <div class="text-base-content/70 space-y-2 text-sm">
             <p>
-              Meine Arbeit versteht sich als begleitender Prozess zur
+              Meine Arbeit versteht sich als begleitender Impuls zur
               Selbsterfahrung und persönlichen Entwicklung.
             </p>
             <p>
