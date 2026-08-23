@@ -5,9 +5,14 @@ import heroImage from "../assets/portrait_outdoor.webp";
 
 <section class="mx-auto max-w-5xl px-5 py-12 md:py-16">
   <div class="space-y-10 md:space-y-14">
-    <div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-5 md:gap-x-12 md:gap-y-5">
+      <h1
+        class="font-licorice text-manao text-5xl text-balance md:col-span-3 md:col-start-3 md:row-start-1 md:text-6xl lg:text-7xl"
+      >
+        Ich bin Kathrin - mitten im Leben mit all seinen Facetten.
+      </h1>
       <div
-        class="w-full max-w-xs self-center md:max-w-sm md:basis-2/5 md:self-auto lg:max-w-md"
+        class="mx-auto w-full max-w-xs md:col-span-2 md:col-start-1 md:row-span-2 md:row-start-1 md:mx-0 md:max-w-sm lg:max-w-md"
       >
         <Picture
           src={heroImage}
@@ -15,12 +20,7 @@ import heroImage from "../assets/portrait_outdoor.webp";
           class="aspect-square w-full rounded-full object-cover"
         />
       </div>
-      <div class="space-y-5 md:basis-3/5">
-        <h1
-          class="font-licorice text-manao text-5xl text-balance md:text-6xl lg:text-7xl"
-        >
-          Ich bin Kathrin - mitten im Leben mit all seinen Facetten.
-        </h1>
+      <div class="space-y-5 md:col-span-3 md:col-start-3 md:row-start-2">
         <p>
           Mein Herz gehört der täglichen Selbstfürsorge – wohlwissend, dass sie
           auch heute noch immer wieder bewusste Hinwendung braucht – es gehört
